@@ -16,8 +16,7 @@ If you are the designated person on your team, follow these steps to get ready:
 * Create a directory underneath this one with your team name and project - this is what will appear on GitHub
 * Add your files, do an initial commit of only the files you want to share using your Git client
 * Click the "Sync" button in your Git client
-* Code away, add new files etc, Commit and Sync
-* 
+* Code away, add new files etc, Commit and Sync often
 
 Please do not submit any pull requests until we have all teams in place and repos created. I have created a "MattEnglishSampleProject" which contains a WebApp Builder widget to demonstrate the end result. 
 
