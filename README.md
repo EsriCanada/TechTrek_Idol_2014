@@ -1,7 +1,7 @@
 Tech Trek Idol 2014
 ==================
 
-These are the instructions for sharing your work on GitHub. You should share your code here, and minimally you need to fill out your ReadMe.md to at least show a presence on GitHub and so we know you have a team.  Designate someone on your team to create a repo for your project. The general flow will be to fork the "TechTrek_Idol_2014" repo to your own account, clone it in desktop, commit and sync often.  
+These are the instructions for sharing your work on GitHub. Even if you're not coding, you should create a repo here and minimally fill out a ReadMe.md with a creative description of your project. This will give everyone a presence on GitHub plus we'll know you have a team.  Designate someone on your team to create a repo for your project. The general flow will be to fork the "TechTrek_Idol_2014" repo to your own account, clone it in desktop, commit and sync often.  
 
 If you are the designated person on your team, follow these steps to get ready:
 
@@ -19,6 +19,9 @@ If you are the designated person on your team, follow these steps to get ready:
 * Code away, add new files etc, Commit and Sync often
 
 **Please do not submit any pull requests until we have all teams in place and repos created.** I have created a "MattEnglishSampleProject" which contains a WebApp Builder widget to demonstrate the end result of a merged pull request. 
+
+
+All repos need to be merged into this repo by September 15, 2014. Prizes will be awarded September 30, 2014.
 
 
 Happy Hacking, Matt (call me if you're lost)
