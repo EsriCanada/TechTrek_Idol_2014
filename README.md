@@ -3,8 +3,11 @@ Tech Trek Idol 2014
 
 Mini Hackathon
 
-* [Download Windows Client](https://windows.github.com)  
-* [Download Mac Client](https://mac.github.com)
+* Creat a GitHub account
+* Email Matt English your GitHub username and he will add it to the Esri Canada Team
+* [Download Windows client](https://windows.github.com), or 
+* [Download Mac client](https://mac.github.com)
+* open your Git client app
 
 
 
