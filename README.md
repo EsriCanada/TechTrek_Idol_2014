@@ -1,7 +1,7 @@
 Tech Trek Idol 2014
 ==================
 
-These are the instructions for sharing your work on GitHub. Even if you're not coding, you should create a repo here and minimally fill out a ReadMe.md with a creative description of your project. This will give everyone a presence on GitHub plus we'll know you have a team.  Designate someone on your team to create a repo for your project. The general flow will be to fork the "TechTrek_Idol_2014" repo to your own account, clone it in desktop, commit and sync often.  
+These are the instructions for sharing your work on GitHub. Even if you're not coding, you should create a repo here and minimally fill out a ReadMe.md [This link will show you how to create cool markdown](http://markdownlivepreview.com).  Designate someone on your team to create a repo for your project; the general flow will be to fork the "TechTrek_Idol_2014" repo to your own account, clone it in desktop, commit and sync often.  
 
 If you are the designated person on your team, follow these steps to get ready:
 
