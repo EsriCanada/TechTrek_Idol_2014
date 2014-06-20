@@ -1,0 +1,20 @@
+{
+  "layers": [],
+  "zoomScale": 10000,
+  "shareResult":false,
+  "symbols": {
+    "simplemarkersymbol": {
+      "type": "esriSMS",
+      "style": "esriSMSSquare",
+      "color": [76, 115, 0, 255],
+      "size": 8,
+      "outline": {
+        "color": [152, 230, 0, 255],
+        "width": 1
+      }
+    },
+    "picturemarkersymbol": null,
+    "simplelinesymbol": null,
+    "simplefillsymbol": null
+  }
+}

@@ -1,0 +1,43 @@
+<div>
+  <div data-dojo-attach-point="tabSearch">
+    <div class="search-tab-node" data-dojo-attach-point="tabNode1">
+      <div>
+        <label>${nls.searchLayer}</label>
+        <br>
+        <select  style="width:96%;margin-top:10px;" data-dojo-attach-point="selectLayer1" data-dojo-type="dijit/form/Select"></select>
+      </div>
+      <br>
+      <label>${nls.selectFeaturesBy}</label>
+      <br>
+      <div data-dojo-attach-point="drawBox" data-dojo-type="jimu/dijit/DrawBox" data-dojo-props='types:["point","polyline","polygon"],showClear:false'></div>
+    </div>
+    <div class="search-tab-node" data-dojo-attach-point="tabNode2">
+      <div>
+        <label>${nls.searchLayer}</label>
+        <br>
+        <select style="width:96%;margin-top:10px;" data-dojo-attach-point="selectLayer2" data-dojo-type="dijit/form/Select"></select>
+      </div>
+      <div style="margin:15px 0 50px 0;float:left;">
+        <label data-dojo-attach-point="labelSearchName"></label>
+        <br>
+        <input type="text" style="width:100%;margin-top:10px;" data-dojo-type="dijit/form/TextBox" data-dojo-attach-point="inputSearchName"
+             data-dojo-props="trim:true" />
+      </div>
+      <div class="jimu-r-row play-section">
+        <div class="col-1-2">
+          <div class="jimu-btn" data-dojo-attach-point="btnSearch" data-dojo-attach-event="onclick:onSearch">${nls.search}</div>
+        </div>
+      </div>
+    </div>
+    <div class="search-tab-node" data-dojo-attach-point="tabNode3">
+      <div data-dojo-attach-point="progressbar"></div>
+      <div class="result-div" data-dojo-attach-point="divResult">
+        <label data-dojo-attach-point="divResultMessage">${nls.noResults}</label>
+        <a style="float:right; margin-right:10px" href="#" data-dojo-attach-point="btnClear">${nls.clear}</a>
+      </div>
+      <hr>
+      <div data-dojo-type="jimu/dijit/List" data-dojo-attach-point="list" data-dojo-attach-event="click:_selectResultItem" style="position:absolute;width:100%;height:auto;left:0;right:0;top:43px;bottom:0;overflow-x:hidden;overflow-y:auto;"></div>
+    </div>
+  </div>
+  <div data-dojo-type="jimu/dijit/LoadingShelter" data-dojo-attach-point="shelter" data-dojo-props="hidden:true"></div>
+</div>
