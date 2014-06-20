@@ -1,14 +1,14 @@
 Tech Trek Idol 2014
 ==================
 
-Mini Hackathon
+These are the instructions for sharing your work on GitHub. Designate someone on your team to create a repo for your project. This person needs to do the following:
 
 * Creat a GitHub account
 * Email Matt English your GitHub username and he will add it to the Esri Canada Team
 * [Download Windows client](https://windows.github.com), or 
 * [Download Mac client](https://mac.github.com)
 * Open your Git client app, and set the "Clone Path" to a directory of your choice
-* Fork your own copy (button in uper right of this page) of this repo to your own account
+* Fork your own copy (button in upper right of this page) of this repo to your own account
 * Click the "Clone in Desktop" button, you'll see a clone of this forked repo in your Git client app
 * Open up the directory on your computer where you set the clone path in the above step, you'll see a folder named "TechTrek_Idol_2014"
 * Create a directory underneath this one with your team name and project - this is what will appear on GitHub
