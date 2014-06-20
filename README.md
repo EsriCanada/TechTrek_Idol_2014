@@ -3,7 +3,7 @@ Tech Trek Idol 2014
 
 Mini Hackathon
 
-https://windows.github.com/
+[Windows Client](https://windows.github.com)
 
 https://mac.github.com/
 set clone path in git client
