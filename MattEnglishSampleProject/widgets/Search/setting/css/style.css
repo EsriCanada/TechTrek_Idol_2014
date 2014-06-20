@@ -1,0 +1,71 @@
+/* jimu-widget-search-setting */
+.jimu-widget-search-setting{
+  margin:0;
+  padding:0;
+  font-size:15px;
+}
+
+.jimu-widget-search-setting .searches-table .actions{
+  width:150px;
+}
+
+.jimu-widget-search-setting .jimu-tab{
+  height:auto;
+}
+
+.jimu-widget-search-setting .btn-add-section{
+  display:inline-block;
+  overflow:hidden;
+  height:24px;
+  margin-left:1px;
+  margin-bottom:3px;
+  cursor:pointer;
+  font-size:13px;
+  color:#538ec8;
+}
+
+.jimu-widget-search-setting .btn-add-section .btn-add-icon{
+  float:left;
+  height:100%;
+  width:14px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url(images/add.png);
+}
+
+.jimu-widget-search-setting .btn-add-section .btn-add-label{
+  float:left;
+  height:100%;
+  line-height:24px;
+  vertical-align:middle;
+  margin-left:7px;
+  text-decoration: underline;
+}
+
+.jimu-widget-search-setting .setting-table{
+  width:100%;border-collapse:collapse;
+}
+
+.jimu-widget-search-setting .zoom-scale-table{
+  margin-top:12px;
+}
+
+/* jimu-widget-singlesearch-setting */
+.jimu-widget-singlesearch-setting .input-table{
+  width:100%;
+}
+
+.jimu-widget-singlesearch-setting .input-table > tbody > tr > td{
+  height: 30px;
+  line-height: 30px;
+  vertical-align: middle;
+  padding:4px 0;
+}
+
+.jimu-widget-singlesearch-setting .operate-footer div{
+  float:right;
+  color:#538ec8;
+  text-decoration:underline;
+  cursor:pointer;
+  margin-left:10px;
+}
