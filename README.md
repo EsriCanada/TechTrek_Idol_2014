@@ -3,9 +3,11 @@ Tech Trek Idol 2014
 
 Mini Hackathon
 
-[Windows Client](https://windows.github.com)
+* [Download Windows Client](https://windows.github.com)  
+* [Download Mac Client](https://mac.github.com)
 
-https://mac.github.com/
+
+
 set clone path in git client
 fork to your own account
 clone that fork in desktop
