@@ -7,7 +7,9 @@ Mini Hackathon
 * Email Matt English your GitHub username and he will add it to the Esri Canada Team
 * [Download Windows client](https://windows.github.com), or 
 * [Download Mac client](https://mac.github.com)
-* open your Git client app
+* Open your Git client app, and set the "Clone Path" to a directory of your choice
+* Fork your own copy (button in uper right of this page) of this repo to your own account
+* 
 
 
 
