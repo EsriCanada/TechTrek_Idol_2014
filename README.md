@@ -11,23 +11,8 @@ Mini Hackathon
 * Fork your own copy (button in uper right of this page) of this repo to your own account
 * Click the "Clone in Desktop" button, you'll see a clone of this forked repo in your Git client app
 * Open up the directory on your computer where you set the clone path in the above step, you'll see a folder named "TechTrek_Idol_2014"
+* Create a directory underneath this one with your team name and project - this is what will appear on GitHub
 * Add your files, do an initial commit of the files using your Git client
 * Click the "Sync" button in your Git client
-* code away, add new files etc, Commit and Sync
+* Code away, add new files etc, Commit and Sync
 
-
-
-set clone path in git client
-fork to your own account
-clone that fork in desktop
-folder created on disk ith team name
-add your files
-
-Initial commit of Search Widget for WAB
-commit to master
-Sync this branch
-
-code,code
-\
-
-create pull request
