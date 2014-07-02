@@ -1,4 +1,4 @@
-Team name: AWAB Newbies
+# AWAB Newbies #
 
 Erica Morra, Amr Eldib, Adam Marinelli
 
