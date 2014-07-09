@@ -45,30 +45,20 @@ require([
       zoom : 13
     });
 
-    /*
-     * Step: Add the Geocoder widget
-     */
-    var dijitGeocoder = new Geocoder({
-      map : mapMain,
-      autoComplete : true,
-      arcgisGeocoder : {
-        suffix : " Redlands, CA"
-      }
-    }, "divGeocoder");
-    dijitGeocoder.startup();
+    
 
     /*
-    * Step: Construct and bind the Locator task
+    * Locator
     */
     taskLocator = new Locator("http://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer");
 
     /*
-     * Step: Wire the button's onclick event handler
+     * Locate button's onclick event handler
      */
     on(dom.byId("btnLocate"), "click", doAddressToLocations);
 
     /*
-     * Step: Wire the task's completion event handler
+     * Wire the task's completion event handler
      */
     taskLocator.on("address-to-locations-complete", showResults);
 
@@ -125,11 +115,6 @@ require([
           var graphicResult = new Graphic(geometryLocation, symbolMarker, attributesCandidate);
           mapMain.graphics.add(graphicResult);
 
-          // display the candidate's address as text
-          /* var sAddress = candidate.address;
-          var textSymbol = new TextSymbol(sAddress, font, new Color("#000000"));
-          textSymbol.setOffset(0, -22);
-          mapMain.graphics.add(new Graphic(geometryLocation, textSymbol)); */
 
           // exit the loop after displaying the first good match
           return false;
