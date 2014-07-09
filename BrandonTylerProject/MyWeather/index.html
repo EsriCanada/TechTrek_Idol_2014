@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>MyWeather</title>
+
+    <!-- Configure dojo for asynchronous module loading -->
+    <script>
+      var dojoConfig = {
+        async : true
+      };
+    </script>
+
+    <!-- Reference libraries. The first CSS is a Dojo theme that gives dijits a consistent style. -->
+    <link rel="stylesheet" href="http://js.arcgis.com/3.8/js/dojo/dijit/themes/nihilo/nihilo.css">
+    <link rel="stylesheet" href="http://js.arcgis.com/3.8/js/esri/css/esri.css">
+    <link rel="stylesheet" href="css/MyWeather.css"/>
+    <script src="http://js.arcgis.com/3.8/"></script>
+    <script src="js/map.js"></script>
+  </head>
+
+  <body class="nihilo">
+    <div id="bcMain" data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="design:'headline'" >
+      <div id="cpHeader" align="right" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'top'">
+          <textarea id="taAddress" type="text">12 Concorde pl, Toronto</textarea>
+          <button id="btnLocate" data-dojo-type="dijit/form/Button">Locate</button>
+      </div>
+      <div id="cpCenter" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'center'">
+        <div id="divGeocoder"></div>
+      </div>
+    </div>
+  </body>
+</html>
