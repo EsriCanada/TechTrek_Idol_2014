@@ -13,18 +13,16 @@ body {
   width: 100%;
   height: 100%;
 }
-#divGeocoder {
-  display: block;
-  position: absolute;
-  z-index: 2;
-  top: 25px;
-  left: 75px;
-}
 #cpHeader {
   height: auto;
 }
 #taAddress {
   height:20px; 
-  width:250px;
-  vertical-align: middle;
+  width:150px;
 }
+
+#taAddress2 {
+	height:20px;
+	width:150px;
+}
+

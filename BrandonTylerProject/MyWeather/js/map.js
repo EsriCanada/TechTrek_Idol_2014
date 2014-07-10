@@ -105,12 +105,12 @@ require([
           };
 
           /*
-           * Step: Retrieve the result's geometry
+           *  Retrieve the result's geometry
            */
           geometryLocation = candidate.location;
 
           /*
-           * Step: Display the geocoded location on the map
+           * Display the geocoded location on the map
            */
           var graphicResult = new Graphic(geometryLocation, symbolMarker, attributesCandidate);
           mapMain.graphics.add(graphicResult);
@@ -123,7 +123,7 @@ require([
 
       // Center and zoom the map on the result
       if (geometryLocation !== undefined) {
-        mapMain.centerAndZoom(geometryLocation, 15);
+        mapMain.centerAndZoom(geometryLocation, 10);
       }
     }
 
