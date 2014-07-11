@@ -17,12 +17,22 @@ body {
   height: auto;
 }
 #taAddress {
-  height:20px; 
+  position:relative;
+  top:10px;
+  height:24px;
   width:150px;
+  font-size:1.2em;
+  font-family:Verdana, Geneva, sans-serif;
+  white-space: nowrap;
+  overflow-x: hidden;
 }
-
-#taAddress2 {
-	height:20px;
-	width:150px;
+.taAddressClass {
+  position:relative;
+  left:0px;
+  height:24px;
+  width:150px;
+  font-size:1.2em;
+  font-family:Verdana, Geneva, sans-serif;
+  white-space: nowrap;
+  overflow-x: hidden;
 }
-

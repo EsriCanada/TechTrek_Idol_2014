@@ -21,15 +21,26 @@
 
   <body class="nihilo">
     <div id="bcMain" data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="design:'headline'" >
-      <div id="cpHeader" align="middle" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'left'">
+      <!--Div to hold the city textareas  -->
+      <div id="cpHeader" align="left" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'bottom'">
+          <!-- Divs to organize/stack the City textareas -->
           <div id="FirstCityDiv">
-			<textarea id="taAddress" type="text" placeholder="First City"></textarea>
-			<button id="btnLocate" data-dojo-type="dijit/form/Button">Locate</button>
-		  </div>
-		  <div id="SecCityDiv">
-			<textarea id="taAddress2" type="text" placeholder="Second City"></textarea>
-			<button id="btnLocate2" data-dojo-type="dijit/form/Button">Locate</button>
-		  </div>
+			      <textarea id="taAddress" type="text" placeholder="First City"></textarea>
+			      <button id="btnLocate" data-dojo-type="dijit/form/Button">Locate</button>
+		      </div>
+		      <div id="SecCityDiv">
+			      <textarea id="taAddress2" class="taAddressClass" type="text" placeholder="Second City"></textarea>
+		      </div>
+          <div id="ThirdCityDiv">
+            <textarea id="taAddress3" class="taAddressClass" type="text" placeholder="Third City"></textarea>
+          </div>
+          <div id="FourthCityDiv">
+            <textarea id="taAddress4" class="taAddressClass" type="text" placeholder="Fourth City"></textarea>
+          </div>
+          <div id="FifthCityDiv">
+            <textarea id="taAddress5" class="taAddressClass" type="text" placeholder="Fifth City"></textarea>
+          </div>
+
       </div>
       <div id="cpCenter" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'center'">
       </div>

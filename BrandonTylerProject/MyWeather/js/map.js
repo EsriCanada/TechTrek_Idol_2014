@@ -2,25 +2,25 @@ var mapMain;
 
 // @formatter:off
 require([
-  "esri/map", 
-  "esri/graphic", 
+  "esri/map",
+  "esri/graphic",
   "esri/dijit/Geocoder",
   "esri/tasks/locator",
 
-  "esri/symbols/SimpleMarkerSymbol", 
-  "esri/symbols/TextSymbol", 
-  "esri/symbols/Font", 
+  "esri/symbols/SimpleMarkerSymbol",
+  "esri/symbols/TextSymbol",
+  "esri/symbols/Font",
 
-  "dojo/_base/Color", 
-  "dojo/_base/array", 
+  "dojo/_base/Color",
+  "dojo/_base/array",
 
-  "dojo/dom", 
-  "dojo/on", 
-  "dojo/parser", 
-  "dojo/ready", 
+  "dojo/dom",
+  "dojo/on",
+  "dojo/parser",
+  "dojo/ready",
 
-  "dijit/layout/BorderContainer", 
-  "dijit/layout/ContentPane"], 
+  "dijit/layout/BorderContainer",
+  "dijit/layout/ContentPane"],
   function(
     Map, Graphic, Geocoder, Locator,
     SimpleMarkerSymbol, TextSymbol, Font,
@@ -45,7 +45,7 @@ require([
       zoom : 13
     });
 
-    
+
 
     /*
     * Locator
@@ -66,21 +66,21 @@ require([
       mapMain.graphics.clear();
 
       /*
-       * Step: Complete the Locator input parameters
+       * Complete the Locator input parameters
        */
-      var objAddress = { 
+      var objAddress = {
         "SingleLine" : dom.byId("taAddress").value
         }
-      var params = { 
+      var params = {
         address : objAddress,
         outFields : ["Loc_name"]
         }
-      
+
       /*
        * Step: Execute the task
        */
       taskLocator.addressToLocations(params);
-    
+
     }
 
     function showResults(candidates) {
@@ -93,7 +93,7 @@ require([
       // loop through the array of AddressCandidate objects
       var geometryLocation;
       array.every(candidates.addresses, function(candidate) {
-        
+
         // if the candidate was a good match
         if (candidate.score > 80) {
 
