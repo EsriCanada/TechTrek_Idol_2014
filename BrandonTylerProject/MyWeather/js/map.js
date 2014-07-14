@@ -66,7 +66,7 @@ require([
       mapMain.graphics.clear();
 
       /*
-       * Complete the Locator input parameters
+       * Locator input parameters for the first City
        */
       var objAddress = {
         "SingleLine" : dom.byId("taAddress").value
@@ -77,7 +77,15 @@ require([
         }
 
       /*
-       * Step: Execute the task
+       * make a list of the cities from the Textareas
+       */
+    function makeCityList(){
+        var cities = [taAddress,taAddress2,taAddress3,taAddress4,taAddress5];
+        document.getElementById("test").innerHTML = cities;
+      }
+
+      /*
+       * Execution method
        */
       taskLocator.addressToLocations(params);
 
@@ -88,7 +96,7 @@ require([
       var symbolMarker = new SimpleMarkerSymbol();
       symbolMarker.setStyle(SimpleMarkerSymbol.STYLE_CIRCLE);
       symbolMarker.setColor(new Color("#6699FF"));
-      var font = new Font("14pt", Font.STYLE_NORMAL, Font.VARIANT_NORMAL, "Helvetica");
+      var font = new Font("14pt", Font.STYLE_NORMAL, Font.VARIANT_NORMAL, "Halvetica");
 
       // loop through the array of AddressCandidate objects
       var geometryLocation;
