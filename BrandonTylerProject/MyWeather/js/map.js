@@ -65,9 +65,7 @@ require([
     function doAddressToLocations() {
       mapMain.graphics.clear();
 
-      /*
-       * Locator input parameters for the first City
-       */
+      //  Locator input parameters 
       var objAddress = {
         "SingleLine" : dom.byId("taAddress").value
         }
@@ -76,13 +74,7 @@ require([
         outFields : ["Loc_name"]
         }
 
-      /*
-       * make a list of the cities from the Textareas
-       */
-    function makeCityList(){
-        var cities = [taAddress,taAddress2,taAddress3,taAddress4,taAddress5];
-        document.getElementById("test").innerHTML = cities;
-      }
+
 
       /*
        * Execution method
@@ -138,3 +130,16 @@ require([
   });
 
 });
+
+/*
+ * make a list of the cities from the Textareas
+ */
+function makeCityList(){
+  var cities = [document.getElementById("taAddress").value,
+                document.getElementById("taAddress2").value,
+                document.getElementById("taAddress3").value,
+                document.getElementById("taAddress4").value,
+                document.getElementById("taAddress5").value];
+  document.getElementById("test").innerHTML = cities;
+  console.log(cities);
+}
