@@ -6,7 +6,7 @@ These are the instructions for sharing your work on GitHub. Even if you're not c
 If you are the designated person on your team, follow these steps to get ready:
 
 * Creat a GitHub account
-* Email me, Matt English, your GitHub username and I will add it to the Esri Canada Team
+* Email me, Matt English, or Amr Eldib your GitHub username and we will add it to the Esri Canada Team
 * [Download Windows client](https://windows.github.com), or 
 * [Download Mac client](https://mac.github.com)
 * Open your Git client app, and set the "Clone Path" to a directory of your choice
