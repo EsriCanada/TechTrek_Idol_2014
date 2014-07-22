@@ -1,5 +1,9 @@
-Team Charleston341
+Team: 
+Charleston341
 
+Team Members: 
 Mike Gregotski, Colleen Raymond
 
-Put together a creative description of your project and why it's cool here.
+Description: 
+
+
