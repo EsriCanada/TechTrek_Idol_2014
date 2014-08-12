@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
+<title>CBC News Map</title>
+<link rel="stylesheet" href="http://js.arcgis.com/3.10/js/dojo/dijit/themes/claro/claro.css" />
+<link rel="stylesheet" href="http://js.arcgis.com/3.10/js/esri/css/esri.css" />
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open Sans">
+
+<style type="text/css">
+    html, body {
+        height:100%;
+        width:100%;
+        margin:0;
+        padding:0;
+        font-family: "Open Sans";
+    }
+    #leftPane {
+        width:30%;
+        margin:0;
+        #border:none;
+    }
+    #map {
+        padding:0;
+		
+    }
+	#HomeButton {
+      position: relative;
+      top: 95px;
+      left: 20px;
+      z-index: 50;
+    }
+	#LocateButton {
+      position: relative;
+      top: 115px;
+      left: 20px;
+      z-index: 50;
+    }
+    .nav {
+        padding: 5px 5px;
+        background: #4479BA;
+        color: #FFF;
+        border-radius: 5px;
+        border: solid 1px #20538D;
+        text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+        -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+
+    }
+    #header {
+        text-align: center;
+        height:60px;
+        border-bottom: solid 1px #ccc;
+    }
+	h3 { margin: 0 0 5px 0; border-bottom: 1px solid #444; }
+      .shadow {
+        -moz-box-shadow: 0 0 5px #888;
+        -webkit-box-shadow: 0 0 5px #888;
+        box-shadow: 0 0 5px #888;
+      }
+      .map { opacity: 0; }
+      #feedback {
+        background: #fff;
+        color: #444;
+        position: absolute;
+        font-family: arial;
+		
+        margin: 5px;
+        padding: 10px;
+        right: 30px;
+        top: 30px;
+
+        z-index: 40;
+      }
+      #note { font-size: 80%; font-weight: 700; padding: 0 0 10px 0; }
+      #show_next { 
+        cursor: pointer; 
+        font-size: 80%;
+      }
+	  #show_next:hover { border-bottom: 1px solid #444; }
+</style>
+    
+<script src="http://js.arcgis.com/3.10/"></script>
+<script>
+    require([
+        "dojo/ready", 
+        "dojo/on",
+        "dojo/_base/connect", 
+        "dojo/dom",
+        "dijit/registry",
+        "dojo/dom-construct",
+        "dojo/parser", 
+        "dijit/layout/BorderContainer", 
+        "dijit/layout/ContentPane", 
+        "esri/map",
+        "esri/arcgis/utils",
+        "esri/domUtils",
+        "esri/dijit/Popup",
+		"esri/dijit/HomeButton",
+		"esri/dijit/Scalebar",
+		"esri/dijit/LocateButton",
+		"dojo/fx",
+        "dojo/_base/fx"
+    ], function(
+        ready, 
+        on, 
+        connect,
+        dom,
+        registry,
+        domConstruct,
+        parser, 
+        BorderContainer, 
+        ContentPane,
+        Map,
+        arcgisUtils,
+        domUtils,
+        Popup,
+		HomeButton,
+		Scalebar,
+		LocateButton,
+		coreFx,
+        baseFx
+    ) {
+        ready(function(){
+
+            parser.parse();
+			
+			var currentMap, previousMap, resizeHandle, counter = -1, webmaps = [
+            "e67b38315a4845219595e0442e42198d", // world news
+            "27bfa107fb8c416995b902fde1ee4f3b", // top stories
+            "48627105dd7a4f0e82b029195390ffe2", // canada news
+            "2ea8cc95f4f04b1f8f92098ad1b72d5c" // sports news
+          ];
+
+          on(dom.byId("show_next"), "click", nextMap);
+          loadNext();
+			
+            //setup event handlers for the next/previous buttons
+            on(dom.byId("previous"), "click", selectPrevious);
+            on(dom.byId("next"), "click", selectNext);
+
+			function loadNext(map) {
+            //create the content pane for the map
+            var mapPane = new ContentPane({
+              "content": "",
+              "id": "map" + (++counter),
+              "region": "center"
+            }, domConstruct.create("div"));
+			
+            //add the newly constructed content pane to the page 
+            registry.byId("map").addChild(mapPane);
+
+            var deferred;
+            if( map && map.hasOwnProperty("extent") ){
+              deferred = arcgisUtils.createMap((webmaps[counter % webmaps.length]),mapPane.domNode.id,{
+                mapOptions: {extent: map.extent,slider: true,nav:false,showAttribution:false,fadeOnZoom:true}
+              });
+            } else {
+              deferred = arcgisUtils.createMap((webmaps[counter % webmaps.length]), mapPane.domNode.id,{
+                mapOptions: {slider: true,nav:false,showAttribution:false,fadeOnZoom:true}
+				});
+            }
+            deferred.then(function(response){
+              dom.byId("current_map").innerHTML = response.itemInfo.item.title;
+              fadeMap(response.map);
+            });
+			
+		}	
+	
+          function fadeMap(map){
+            currentMap = map;
+
+            //set the popup's popupWindow property to false. This prevents the popup from displaying
+            map.infoWindow.set("popupWindow", false);
+            initializeSidebar(currentMap);
+				
+            if ( currentMap.loaded ) {
+              if ( previousMap ) {
+                // References:
+                // http://dojotoolkit.org/documentation/tutorials/1.6/effects/
+                // http://dojotoolkit.org/documentation/tutorials/1.6/animation/
+                var combinedAnim = coreFx.combine([
+                  baseFx.fadeIn({ 
+                    node: currentMap.container, 
+                    duration: 1000
+                  }),
+                  baseFx.fadeOut({ 
+                    node: previousMap.container, 
+                    duration: 1000, 
+                    onEnd: removePrevious 
+                  })
+                ]);
+                combinedAnim.play();
+              } else {
+                baseFx.fadeIn({ node: currentMap.container }).play();
+              }
+            } else {
+              // handle map onLoad from webmap
+              map.on("load", function(){
+                fadeMap(map);
+              });
+            }
+          }
+
+          function removePrevious() {
+            previousMap.destroy();
+            domConstruct.destroy(previousMap.container);
+          }
+
+          function nextMap(){
+            if( currentMap ){
+              previousMap = currentMap;
+              loadNext(currentMap);
+            }
+          }
+
+
+            function initializeSidebar(map){
+                var popup = map.infoWindow;
+				
+                //when the selection changes update the side panel to display the popup info for the 
+                //currently selected feature. 
+                connect.connect(popup, "onSelectionChange", function(){
+                    displayPopupContent(popup.getSelectedFeature());
+                });
+
+                //when the selection is cleared remove the popup content from the side panel. 
+                connect.connect(popup, "onClearFeatures", function(){
+                    //dom.byId replaces dojo.byId
+                    dom.byId("featureCount").innerHTML = "Click to select a CBC News Story";
+                    //registry.byId replaces dijit.byId
+                    registry.byId("leftPane").set("content", "");
+                    domUtils.hide(dom.byId("pager"));
+                });
+
+                //When features are associated with the  map's info window update the sidebar with the new content. 
+                connect.connect(popup, "onSetFeatures", function(){
+                    displayPopupContent(popup.getSelectedFeature());
+                    dom.byId("featureCount").innerHTML = popup.features.length + " CBC news stories";
+
+                    //enable navigation if more than one feature is selected 
+                    popup.features.length > 1 ? domUtils.show(dom.byId("pager")) : domUtils.hide(dom.byId("pager"));
+                });
+				
+				
+            }
+
+            function displayPopupContent(feature){
+                if(feature){
+                    var content = feature.getContent();
+                    registry.byId("leftPane").set("content", content);
+                }
+            }
+
+            function selectPrevious(){
+                currentMap.infoWindow.selectPrevious();
+            }
+
+            function selectNext(){
+                currentMap.infoWindow.selectNext();
+            }
+						
+        });
+    });
+
+</script>
+</head>
+
+<body class="claro">
+<div id="mainWindow" data-dojo-type="dijit.layout.BorderContainer" 
+    data-dojo-props="design:'headline',gutters:true" 
+    style="width:100%; height:100%;">
+    <div data-dojo-type="dijit.layout.BorderContainer" data-dojo-props="gutters:true" 
+        region="left" style="width: 35%;height:100%;">
+        <div id="leftPane" data-dojo-type="dijit.layout.ContentPane" 
+            data-dojo-props="region:'center'"></div>
+        <div id="header" data-dojo-type="dijit.layout.ContentPane" 
+            data-dojo-props="region:'top'">
+            <div id="featureCount" style="margin-bottom:5px;">Click to select a CBC News Story</div>
+            <div id="pager" style="display:none;"> 
+                <a href='javascript:void(0);' id ="previous" class='nav' style="text-decoration: none;">
+                    < Prev
+                </a>
+                  
+                <a href='javascript:void(0);' id="next" class='nav'  style="text-decoration: none;">
+                    Next >
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="map" data-dojo-type="dijit.layout.BorderContainer" data-dojo-props="region:'center'">
+		<div id="HomeButton"></div>
+		<div id="LocateButton"></div>
+	</div>
+	<div id="feedback" class="shadow">
+	<img src="http://mistergo.wikispaces.com/file/view/cbc_logo.png/197011876/cbc_logo.png" height="22" width="22" <h3> CBC News Feeds
+	</img>	
+        <div id="info">
+          <div id="note">
+            <span id="current_map"></span>
+          </div>
+		  
+          <span id="show_next">Show Next Feed</span>
+        </div>
+      </div>
+	</div>
+
+</body>
+
+</html> 
