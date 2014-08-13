@@ -213,6 +213,11 @@
             if( currentMap ){
               previousMap = currentMap;
               loadNext(currentMap);
+			  //dom.byId replaces dojo.byId
+              dom.byId("featureCount").innerHTML = "Click to select a CBC News Story";
+              //registry.byId replaces dijit.byId
+              registry.byId("leftPane").set("content", "");
+              domUtils.hide(dom.byId("pager"));
             }
           }
 
