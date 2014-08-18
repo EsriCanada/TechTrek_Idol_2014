@@ -1,3 +1,6 @@
+
+
+
 var mapMain;
 
 // @formatter:off
@@ -47,41 +50,37 @@ require([
 
 
 
-    /*
-    * Locator
-    */
+
+    // Locator
+
     taskLocator = new Locator("http://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer");
 
-    /*
-     * Locate button's onclick event handler
-     */
-    on(dom.byId("btnLocate"), "click", doAddressToLocations);
 
-    /*
-     * Wire the task's completion event handler
-     */
-    taskLocator.on("address-to-locations-complete", showResults);
+    //  Locate button's onclick event handler
 
-    function doAddressToLocations() {
-      mapMain.graphics.clear();
+    on(dom.byId("btnLocate"), "click", makeCityList);
 
-      //  Locator input parameters 
+
+    //  Wire the task's completion event handler
+
+    taskLocator.on("address-to-locations-complete", showResults)
+
+
+    function doAddressToLocations(singlePlace) {
+      console.log(singlePlace);
+      //  Locator input parameters
       var objAddress = {
-        "SingleLine" : dom.byId("taAddress").value
+        "SingleLine" : singlePlace
+        // "SingleLine" : dom.byId("taAddress").value
         }
       var params = {
         address : objAddress,
         outFields : ["Loc_name"]
         }
 
-
-
-      /*
-       * Execution method
-       */
       taskLocator.addressToLocations(params);
 
-    }
+    } 
 
     function showResults(candidates) {
       // Define the symbology used to display the results
@@ -104,14 +103,14 @@ require([
             locatorName : candidate.attributes.Loc_name
           };
 
-          /*
-           *  Retrieve the result's geometry
-           */
+
+            // Retrieve the result's geometry
+
           geometryLocation = candidate.location;
 
-          /*
-           * Display the geocoded location on the map
-           */
+
+          //  Display the geocoded location on the map
+
           var graphicResult = new Graphic(geometryLocation, symbolMarker, attributesCandidate);
           mapMain.graphics.add(graphicResult);
 
@@ -127,19 +126,29 @@ require([
       }
     }
 
+    /*
+     * make a list of the cities from the Textareas
+     *  and place the list results into the testing pane
+     */
+    function makeCityList(){
+      var cities = [document.getElementById("taAddress").value,
+                    document.getElementById("taAddress2").value,
+                    document.getElementById("taAddress3").value,
+                    document.getElementById("taAddress4").value,
+                    document.getElementById("taAddress5").value];
+      // testing console log
+      console.log(cities);
+      createArray(cities)
+    }
+
+    function createArray (cities) {
+      // looping through the cities array
+      for (var code = 0; code < cities.length; code++) {
+         doAddressToLocations(cities[code]);
+        }
+      }
+
   });
 
-});
 
-/*
- * make a list of the cities from the Textareas
- */
-function makeCityList(){
-  var cities = [document.getElementById("taAddress").value,
-                document.getElementById("taAddress2").value,
-                document.getElementById("taAddress3").value,
-                document.getElementById("taAddress4").value,
-                document.getElementById("taAddress5").value];
-  document.getElementById("test").innerHTML = cities;
-  console.log(cities);
-}
+});

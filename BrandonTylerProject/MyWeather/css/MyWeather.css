@@ -7,7 +7,7 @@ html, body, #map {
 body {
   background-color: #FFF;
   overflow: hidden;
-  font-family: Verdana, Geneva, sans-serif;
+  font-family: 'Play', sans-serif;
 }
 #bcMain {
   width: 100%;
@@ -24,7 +24,7 @@ body {
   height:24px;
   width:150px;
   font-size:1.2em;
-  font-family:Verdana, Geneva, sans-serif;
+  font-family: 'Play', sans-serif;
   white-space: nowrap;
   overflow-x: hidden;
 }
@@ -35,7 +35,7 @@ body {
   height:24px;
   width:150px;
   font-size:1.2em;
-  font-family:Verdana, Geneva, sans-serif;
+  font-family: 'Play', sans-serif;
   white-space: nowrap;
   overflow-x: hidden;
 }
@@ -47,20 +47,22 @@ body {
   width:900px;
   height:150px;
   font-size:1.2em;
-  font-family:Verdana, Geneva, sans-serif;
+  font-family: 'Play', sans-serif;
   border:dashed;
   }
+  /* a sample div to review the weather condition icons */
 #weatherImgs {
   background-color:#3385FF;
 }
+/* class for the weather images*/
 .weatherIcons {
   position:relative;
   top:-150px;
   float:left;
   width:140px;
   height:140px;
-}
-
-.BottomContent {
-  display:inline-block;
+  border-top:solid;
+  border-bottom:solid;
+  border-right:solid;
+  border-color:#60abec;
 }

@@ -27,35 +27,41 @@
     <!-- Reference libraries. The first CSS is a Dojo theme that gives dijits a consistent style. -->
     <link rel="stylesheet" href="http://js.arcgis.com/3.8/js/dojo/dijit/themes/nihilo/nihilo.css">
     <link rel="stylesheet" href="http://js.arcgis.com/3.8/js/esri/css/esri.css">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+    <link href='http://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/MyWeather.css"/>
     <script src="http://js.arcgis.com/3.8/"></script>
     <script src="js/map.js"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
   </head>
 
-  <body class="nihilo">
+  <body class="nihilo"> <!-- left over from the example document -->
     <div id="bcMain" data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="design:'headline'" >
       <!--Div to hold the city textareas  -->
       <div id="cpHeader" class="BottomContent" align="left" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'bottom'">
           <!-- Divs to organize/stack the City textareas -->
           <div id="FirstCityDiv">
-			      <textarea id="taAddress" class="taAddressClass" type="text" placeholder="First City"></textarea>
+			      <textarea id="taAddress" class="taAddressClass" type="text" placeholder="First City" tabindex=0></textarea>
 			      <button id="btnLocate" data-dojo-type="dijit/form/Button" onClick="makeCityList()" >Locate</button>
 		      </div>
 		      <div id="SecCityDiv">
-			      <textarea id="taAddress2" class="taAddressClass" type="text" placeholder="Second City"></textarea>
+			      <textarea id="taAddress2" class="taAddressClass" type="text" placeholder="Second City" tabindex=1></textarea>
 		      </div>
           <div id="ThirdCityDiv">
-            <textarea id="taAddress3" class="taAddressClass" type="text" placeholder="Third City"></textarea>
+            <textarea id="taAddress3" class="taAddressClass" type="text" placeholder="Third City" tabindex=2></textarea>
           </div>
           <div id="FourthCityDiv">
-            <textarea id="taAddress4" class="taAddressClass" type="text" placeholder="Fourth City"></textarea>
+            <textarea id="taAddress4" class="taAddressClass" type="text" placeholder="Fourth City" tabindex=3></textarea>
           </div>
           <div id="FifthCityDiv">
-            <textarea id="taAddress5" class="taAddressClass" type="text" placeholder="Fifth City"></textarea>
+            <textarea id="taAddress5" class="taAddressClass" type="text" placeholder="Fifth City" tabindex=4></textarea>
           </div>
-          <div ID="testResults" class="BottomContent">
+            <!-- sample pane to place testing results in  -->
+          <div ID="testResults">
             <p id=test></p>
           </div>
+          <!-- just temp displaying the weather icons so we can review them -->
             <div id="weatherImgs">
               <img class="weatherIcons" src="images/Sunny.png"></img>
               <img class="weatherIcons" src="images/Mostly Cloudy.png"></img>
