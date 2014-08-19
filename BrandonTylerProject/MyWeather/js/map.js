@@ -21,6 +21,8 @@ require([
   "dojo/on",
   "dojo/parser",
   "dojo/ready",
+  "dijit/form/DateTextBox",
+
 
   "dijit/layout/BorderContainer",
   "dijit/layout/ContentPane"],
@@ -32,7 +34,10 @@ require([
     BorderContainer, ContentPane
     ) {
 // @formatter:on
-
+  dojo.query(".xspInputFieldDateTimePicker .dijitTextBox").style({
+  width:"100px",
+  height:"24px"
+});
   // Wait until DOM is ready *and* all outstanding require() calls have been resolved
   ready(function() {
 
@@ -80,7 +85,7 @@ require([
 
       taskLocator.addressToLocations(params);
 
-    } 
+    }
 
     function showResults(candidates) {
       // Define the symbology used to display the results
