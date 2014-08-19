@@ -99,13 +99,14 @@ body {
 .dijitDateTextBox {
   width:17px;
 }
+
 #FirstCityDateDiv {
   position:relative;
   float:left;
   height:90%;
   width:10%;
   padding-top:5px;
-  padding-left:10px;
+  padding-left:15px;
 
 }
 #SecCityDiv {
@@ -130,7 +131,7 @@ body {
   height:90%;
   width:10%;
   padding-top:5px;
-  padding-left:10px;
+  padding-left:15px;
 
 }
 #ThirdCityDiv {
@@ -155,7 +156,7 @@ body {
   height:90%;
   width:10%;
   padding-top:5px;
-  padding-left:10px;
+  padding-left:15px;
 }
 #FourthCityDiv {
   position:relative;
@@ -179,7 +180,7 @@ body {
   height:90%;
   width:10%;
   padding-top:5px;
-  padding-left:10px;
+  padding-left:15px;
 }
 #FifthCityDiv {
   position:relative;
@@ -203,5 +204,5 @@ body {
   height:90%;
   width:10%;
   padding-top:5px;
-  padding-left:10px;
+  padding-left:15px;
 }

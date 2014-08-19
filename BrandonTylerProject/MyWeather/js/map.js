@@ -146,6 +146,16 @@ require([
       createArray(cities)
     }
 
+    function makeDateList(){
+      var dates = [document.getElementById("date1").value,
+                    document.getElementById("date2").value,
+                    document.getElementById("date3").value,
+                    document.getElementById("date4").value,
+                    document.getElementById("date5").value];
+      // testing console log
+      console.log(dates);
+      createsArray(dates)
+    }
     function createArray (cities) {
       // looping through the cities array
       for (var code = 0; code < cities.length; code++) {
@@ -153,7 +163,14 @@ require([
         }
       }
 
+
+
   });
 
 
 });
+
+function RunApp() {
+  makeCityList();
+  makeDateList();
+}
