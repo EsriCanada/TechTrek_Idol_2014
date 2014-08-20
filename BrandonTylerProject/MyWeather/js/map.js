@@ -63,7 +63,7 @@ require([
 
     //  Locate button's onclick event handler
 
-    on(dom.byId("btnLocate"), "click", makeCityList);
+    on(dom.byId("btnLocate"), "click", RunApp);
 
 
     //  Wire the task's completion event handler
@@ -72,7 +72,7 @@ require([
 
 
     function doAddressToLocations(singlePlace) {
-      console.log(singlePlace);
+      // console.log(singlePlace);
       //  Locator input parameters
       var objAddress = {
         "SingleLine" : singlePlace
@@ -128,9 +128,17 @@ require([
       // Center and zoom the map on the result
       if (geometryLocation !== undefined) {
         mapMain.centerAndZoom(geometryLocation, 10);
+        console.log(geometryLocation);
       }
     }
 
+    /* ****** SPECIAL ****** */
+    // Function that will run the main app functions
+    // in a specific order
+    function RunApp() {
+      makeCityList();
+      makeDateList();
+    }
     /*
      * make a list of the cities from the Textareas
      *  and place the list results into the testing pane
@@ -154,8 +162,8 @@ require([
                     document.getElementById("date5").value];
       // testing console log
       console.log(dates);
-      createsArray(dates)
     }
+
     function createArray (cities) {
       // looping through the cities array
       for (var code = 0; code < cities.length; code++) {
@@ -169,8 +177,3 @@ require([
 
 
 });
-
-function RunApp() {
-  makeCityList();
-  makeDateList();
-}
