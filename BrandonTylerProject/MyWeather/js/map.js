@@ -2,10 +2,12 @@
 
 
 var mapMain;
-
+var xValues = new Array
+var yValues = new Array
 // @formatter:off
 require([
   "esri/map",
+  "esri/SpatialReference",
   "esri/graphic",
   "esri/dijit/Geocoder",
   "esri/tasks/locator",
@@ -27,7 +29,7 @@ require([
   "dijit/layout/BorderContainer",
   "dijit/layout/ContentPane"],
   function(
-    Map, Graphic, Geocoder, Locator,
+    Map, SpatialReference, Graphic, Geocoder, Locator,
     SimpleMarkerSymbol, TextSymbol, Font,
     Color, array,
     dom, on, parser, ready,
@@ -40,7 +42,8 @@ require([
 });
   // Wait until DOM is ready *and* all outstanding require() calls have been resolved
   ready(function() {
-
+    // var xValues = new Array
+    // var yValues = new Array
     var taskLocator;
 
     // Parse DOM nodes decorated with the data-dojo-type attribute
@@ -125,10 +128,15 @@ require([
         }
       });
 
+
       // Center and zoom the map on the result
       if (geometryLocation !== undefined) {
         mapMain.centerAndZoom(geometryLocation, 10);
-        console.log(geometryLocation);
+        xValues.push(geometryLocation.x)
+        yValues.push(geometryLocation.y)
+        // console.log(xValues)
+        // console.log(yValues)
+
       }
     }
 
@@ -138,6 +146,8 @@ require([
     function RunApp() {
       makeCityList();
       makeDateList();
+      console.log(xValues)
+      console.log(yValues)
     }
     /*
      * make a list of the cities from the Textareas
@@ -152,6 +162,17 @@ require([
       // testing console log
       console.log(cities);
       createArray(cities)
+    }
+
+    function extentChange (){
+      var newExtent = new esri.geometry.Extent();
+      newExtent.xmin =
+      newExtent.ymin =
+      newExtent.xmax =
+      newExtent.ymax =
+      newExtent.spatialReference =
+
+      mapMain.setExtent(newExtent)
     }
 
     function makeDateList(){
