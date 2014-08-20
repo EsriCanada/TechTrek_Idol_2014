@@ -148,6 +148,8 @@ require([
       makeDateList();
       console.log(xValues)
       console.log(yValues)
+      var max_of_array = Math.max.apply(Math, xValues);
+      console.log(max_of_array)
     }
     /*
      * make a list of the cities from the Textareas
