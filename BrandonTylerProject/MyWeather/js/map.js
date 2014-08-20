@@ -1,7 +1,5 @@
-
-
-
 var mapMain;
+var RunApp;
 var xValues = new Array
 var yValues = new Array
 // @formatter:off
@@ -130,7 +128,7 @@ require([
 
 
       // Center and zoom the map on the result
-      if (geometryLocation !== undefined) {
+      if (geometryLocation != undefined) {
         mapMain.centerAndZoom(geometryLocation, 10);
         xValues.push(geometryLocation.x)
         yValues.push(geometryLocation.y)
@@ -143,8 +141,8 @@ require([
     /* ****** SPECIAL ****** */
     // Function that will run the main app functions
     // in a specific order
-    function RunApp() {
-      makeCityList();
+    RunApp = function () {
+      makeCityList();	  
       makeDateList();
       console.log(xValues)
       console.log(yValues)
@@ -163,7 +161,7 @@ require([
                     document.getElementById("taAddress5").value];
       // testing console log
       console.log(cities);
-      createArray(cities)
+      createArray(cities)	  
     }
 
     function extentChange (){
@@ -189,12 +187,12 @@ require([
 
     function createArray (cities) {
       // looping through the cities array
-      for (var code = 0; code < cities.length; code++) {
-         doAddressToLocations(cities[code]);
-        }
-      }
-
-
+		for (var code = 0; code < cities.length; code++) {
+			if (cities[code] != "") {
+				doAddressToLocations(cities[code]);
+			}
+		}
+    }
 
   });
 
