@@ -4,6 +4,10 @@
 var mapMain;
 var xValues = new Array
 var yValues = new Array
+var min_x
+var min_y
+var max_x
+var max_y
 // @formatter:off
 require([
   "esri/map",
@@ -52,8 +56,8 @@ require([
     // Create the map
     mapMain = new Map("cpCenter", {
       basemap : "topo",
-      center : [-79.38, 43.65],
-      zoom : 13
+      center : [-94.46, 49.35],
+      zoom : 4,
     });
 
 
@@ -131,7 +135,7 @@ require([
 
       // Center and zoom the map on the result
       if (geometryLocation !== undefined) {
-        mapMain.centerAndZoom(geometryLocation, 10);
+        //  mapMain.centerAndZoom(geometryLocation, 10);
         xValues.push(geometryLocation.x)
         yValues.push(geometryLocation.y)
         // console.log(xValues)
@@ -148,8 +152,9 @@ require([
       makeDateList();
       console.log(xValues)
       console.log(yValues)
-      var max_of_array = Math.max.apply(Math, xValues);
-      console.log(max_of_array)
+      extentChange();
+
+
     }
     /*
      * make a list of the cities from the Textareas
@@ -166,16 +171,7 @@ require([
       createArray(cities)
     }
 
-    function extentChange (){
-      var newExtent = new esri.geometry.Extent();
-      newExtent.xmin =
-      newExtent.ymin =
-      newExtent.xmax =
-      newExtent.ymax =
-      newExtent.spatialReference =
 
-      mapMain.setExtent(newExtent)
-    }
 
     function makeDateList(){
       var dates = [document.getElementById("date1").value,
@@ -195,6 +191,25 @@ require([
       }
 
 
+    function extentChange (){
+      var max_x = Math.max.apply(Math, xValues);
+      console.log(max_x)
+      var max_y = Math.max.apply(Math, yValues);
+      console.log(max_y)
+      var min_x = Math.min.apply(Math, xValues);
+      console.log(min_x)
+      var min_y = Math.min.apply(Math, yValues);
+      console.log(min_y)
+      var newExtent = new esri.geometry.Extent();
+      newExtent.xmin = min_x;
+      newExtent.ymin = min_y;
+      newExtent.xmax = max_x;
+      newExtent.ymax = max_y;
+      newExtent.spatialReference = new esri.SpatialReference({wkid:4326});
+
+      mapMain.setExtent(newExtent);
+      console.log("new Extent?")
+    }
 
   });
 
