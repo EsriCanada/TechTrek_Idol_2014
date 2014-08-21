@@ -1,7 +1,5 @@
-
-
-
 var mapMain;
+var RunApp;
 var xValues = new Array
 var yValues = new Array
 var min_x
@@ -134,8 +132,10 @@ require([
 
 
       // Center and zoom the map on the result
-      if (geometryLocation !== undefined) {
+
+      if (geometryLocation != undefined) {
         //  mapMain.centerAndZoom(geometryLocation, 10);
+
         xValues.push(geometryLocation.x)
         yValues.push(geometryLocation.y)
         // console.log(xValues)
@@ -147,7 +147,7 @@ require([
     /* ****** SPECIAL ****** */
     // Function that will run the main app functions
     // in a specific order
-    function RunApp() {
+    RunApp = function () {
       makeCityList();
       makeDateList();
       console.log(xValues)
@@ -186,9 +186,11 @@ require([
     function createArray (cities) {
       // looping through the cities array
       for (var code = 0; code < cities.length; code++) {
-         doAddressToLocations(cities[code]);
+        if (cities[code] != "") {
+          doAddressToLocations(cities[code]);
         }
       }
+    }
 
 
     function extentChange (){
@@ -209,6 +211,7 @@ require([
 
       mapMain.setExtent(newExtent);
       console.log("new Extent?")
+
     }
 
   });
