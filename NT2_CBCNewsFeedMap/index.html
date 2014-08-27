@@ -22,21 +22,35 @@
         #border:none;
     }
     #map {
+		height:100%;
+        width:100%;
         padding:0;
 		
     }
 	#HomeButton {
-      position: relative;
-      top: 95px;
-      left: 20px;
+      position: absolute;
+      top: 65px;
+
+      left: 26px;
       z-index: 50;
     }
 	#LocateButton {
-      position: relative;
-      top: 115px;
-      left: 20px;
+      position: absolute;
+      top: 65px;
+
+      left: 61px;
       z-index: 50;
     }
+	#title {
+	  position: absolute; 
+	  left: 590px; 
+	  top: 110px; 
+	  z-Index: 999;
+	}
+	#basemap {
+	width: 400px; 
+	height: 280px;
+	}
     .nav {
         padding: 5px 5px;
         background: #4479BA;
@@ -51,7 +65,7 @@
     }
     #header {
         text-align: center;
-        height:60px;
+        height:100px;
         border-bottom: solid 1px #ccc;
     }
 	h3 { margin: 0 0 5px 0; border-bottom: 1px solid #444; }
@@ -74,12 +88,13 @@
 
         z-index: 40;
       }
-      #note { font-size: 80%; font-weight: 700; padding: 0 0 10px 0; }
+      #note { font-size: 100%; font-weight: 700; padding: 0 0 10px 0; }
+	  #featureCount { font-size: 100%; font-weight: 700;}
       #show_next { 
         cursor: pointer; 
-        font-size: 80%;
+        font-size: 100%;
       }
-	  #show_next:hover { border-bottom: 1px solid #444; }
+	  #show_next:hover { border-bottom: 2px solid #444; }
 </style>
     
 <script src="http://js.arcgis.com/3.10/"></script>
@@ -93,16 +108,20 @@
         "dojo/dom-construct",
         "dojo/parser", 
         "dijit/layout/BorderContainer", 
-        "dijit/layout/ContentPane", 
+        "dijit/layout/ContentPane",
+		"dijit/TitlePane",
         "esri/map",
         "esri/arcgis/utils",
         "esri/domUtils",
         "esri/dijit/Popup",
+		"esri/dijit/PopupTemplate",
 		"esri/dijit/HomeButton",
-		"esri/dijit/Scalebar",
+		"esri/dijit/BasemapGallery",
 		"esri/dijit/LocateButton",
 		"dojo/fx",
-        "dojo/_base/fx"
+        "dojo/_base/fx",
+		"dojo/_base/window",
+		"dojo/domReady!"
     ], function(
         ready, 
         on, 
@@ -113,33 +132,42 @@
         parser, 
         BorderContainer, 
         ContentPane,
+		TitlePane,
         Map,
         arcgisUtils,
         domUtils,
         Popup,
+		PopupTemplate,
 		HomeButton,
-		Scalebar,
+		BasemapGallery,
+
 		LocateButton,
 		coreFx,
-        baseFx
+        baseFx,
+		win
+		
     ) {
         ready(function(){
 
             parser.parse();
 			
-			var currentMap, previousMap, resizeHandle, counter = -1, webmaps = [
+			var currentMap, previousMap, home, basemapGallery, geoLocate, resizeHandle, counter = -1, webmaps = [
             "e67b38315a4845219595e0442e42198d", // world news
             "27bfa107fb8c416995b902fde1ee4f3b", // top stories
             "48627105dd7a4f0e82b029195390ffe2", // canada news
             "2ea8cc95f4f04b1f8f92098ad1b72d5c" // sports news
           ];
+			
 
           on(dom.byId("show_next"), "click", nextMap);
           loadNext();
-			
+		  
+
             //setup event handlers for the next/previous buttons
             on(dom.byId("previous"), "click", selectPrevious);
             on(dom.byId("next"), "click", selectNext);
+			on(dom.byId("zoom"), "click", zoomTo);
+			
 
 			function loadNext(map) {
             //create the content pane for the map
@@ -149,34 +177,49 @@
               "region": "center"
             }, domConstruct.create("div"));
 			
+
             //add the newly constructed content pane to the page 
             registry.byId("map").addChild(mapPane);
+			
 
             var deferred;
             if( map && map.hasOwnProperty("extent") ){
               deferred = arcgisUtils.createMap((webmaps[counter % webmaps.length]),mapPane.domNode.id,{
-                mapOptions: {extent: map.extent,slider: true,nav:false,showAttribution:false,fadeOnZoom:true}
-              });
+                mapOptions: {extent: map.extent,slider: true,sliderOrientation: "horizontal",nav:false,showAttribution:false,fadeOnZoom:true,center: [0, 0],
+          zoom: 2}});
+			
+
+
             } else {
               deferred = arcgisUtils.createMap((webmaps[counter % webmaps.length]), mapPane.domNode.id,{
-                mapOptions: {slider: true,nav:false,showAttribution:false,fadeOnZoom:true}
-				});
+                mapOptions: {slider: true,sliderOrientation: "horizontal",nav:false,showAttribution:false,fadeOnZoom:true,center: [0, 0],
+          zoom: 2}});
+			
+
+
             }
+			
             deferred.then(function(response){
               dom.byId("current_map").innerHTML = response.itemInfo.item.title;
+			
               fadeMap(response.map);
+			  
             });
 			
 		}	
-	
+		
+
           function fadeMap(map){
             currentMap = map;
 
             //set the popup's popupWindow property to false. This prevents the popup from displaying
             map.infoWindow.set("popupWindow", false);
+			
             initializeSidebar(currentMap);
-				
+			
+
             if ( currentMap.loaded ) {
+			
               if ( previousMap ) {
                 // References:
                 // http://dojotoolkit.org/documentation/tutorials/1.6/effects/
@@ -187,19 +230,22 @@
                     duration: 1000
                   }),
                   baseFx.fadeOut({ 
-                    node: previousMap.container, 
+                    node: previousMap.container,
                     duration: 1000, 
                     onEnd: removePrevious 
                   })
                 ]);
                 combinedAnim.play();
+				
               } else {
                 baseFx.fadeIn({ node: currentMap.container }).play();
               }
+			  
             } else {
               // handle map onLoad from webmap
               map.on("load", function(){
                 fadeMap(map);
+				
               });
             }
           }
@@ -207,21 +253,29 @@
           function removePrevious() {
             previousMap.destroy();
             domConstruct.destroy(previousMap.container);
+			
           }
+		
 
           function nextMap(){
+			
             if( currentMap ){
               previousMap = currentMap;
+			  
               loadNext(currentMap);
-			  //dom.byId replaces dojo.byId
-              dom.byId("featureCount").innerHTML = "Click to select a CBC News Story";
-              //registry.byId replaces dijit.byId
-              registry.byId("leftPane").set("content", "");
-              domUtils.hide(dom.byId("pager"));
-            }
+			  
+                //dom.byId replaces dojo.byId
+                dom.byId("featureCount").innerHTML = "Click to select a CBC News Story";
+                //registry.byId replaces dijit.byId
+				registry.byId("leftPane").set("content", "");
+				domUtils.hide(dom.byId("pager"));
+				domUtils.hide(dom.byId("pager2"));
+				
+			}
+
           }
 
-
+			
             function initializeSidebar(map){
                 var popup = map.infoWindow;
 				
@@ -247,6 +301,7 @@
 
                     //enable navigation if more than one feature is selected 
                     popup.features.length > 1 ? domUtils.show(dom.byId("pager")) : domUtils.hide(dom.byId("pager"));
+					popup.features.length > 0 ? domUtils.show(dom.byId("pager2")) : domUtils.hide(dom.byId("pager2"));
                 });
 				
 				
@@ -266,24 +321,37 @@
             function selectNext(){
                 currentMap.infoWindow.selectNext();
             }
-						
-        });
+			function zoomTo(){
+			
+            var loc = currentMap.infoWindow.getSelectedFeature().geometry;
+			
+                currentMap.centerAndZoom(loc, 8)();
+            }
+			
+
+		});
+		
     });
 
 </script>
 </head>
 
 <body class="claro">
-<div id="mainWindow" data-dojo-type="dijit.layout.BorderContainer" 
+<div id="mainWindow" data-dojo-type="dijit/layout/BorderContainer" 
     data-dojo-props="design:'headline',gutters:true" 
     style="width:100%; height:100%;">
-    <div data-dojo-type="dijit.layout.BorderContainer" data-dojo-props="gutters:true" 
-        region="left" style="width: 35%;height:100%;">
-        <div id="leftPane" data-dojo-type="dijit.layout.ContentPane" 
+    <div data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="gutters:true" 
+        region="left" style="width: 30%;height:100%;">
+        <div id="leftPane" data-dojo-type="dijit/layout/ContentPane" 
             data-dojo-props="region:'center'"></div>
-        <div id="header" data-dojo-type="dijit.layout.ContentPane" 
+        <div id="header" data-dojo-type="dijit/layout/ContentPane" 
             data-dojo-props="region:'top'">
-            <div id="featureCount" style="margin-bottom:5px;">Click to select a CBC News Story</div>
+            <div id="featureCount" style="margin-bottom:12px;">Click to select a CBC News Story</div>
+			<div id="pager2" style="display:none;margin-bottom:15px;"> 
+			<a href='javascript:void(0);' id ="zoom" class='nav' style="text-decoration: none;">
+                    Zoom To
+                </a>
+			</div>
             <div id="pager" style="display:none;"> 
                 <a href='javascript:void(0);' id ="previous" class='nav' style="text-decoration: none;">
                     < Prev
@@ -292,13 +360,16 @@
                 <a href='javascript:void(0);' id="next" class='nav'  style="text-decoration: none;">
                     Next >
                 </a>
+				
             </div>
         </div>
     </div>
-    <div id="map" data-dojo-type="dijit.layout.BorderContainer" data-dojo-props="region:'center'">
+	
+     <div id="map" data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="region:'center'">
 		<div id="HomeButton"></div>
 		<div id="LocateButton"></div>
 	</div>
+	 
 	<div id="feedback" class="shadow">
 	<img src="http://mistergo.wikispaces.com/file/view/cbc_logo.png/197011876/cbc_logo.png" height="22" width="22" <h3> CBC News Feeds
 	</img>	
@@ -310,7 +381,9 @@
           <span id="show_next">Show Next Feed</span>
         </div>
       </div>
+	 
 	</div>
+
 
 </body>
 
