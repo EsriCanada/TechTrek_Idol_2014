@@ -1,0 +1,8 @@
+<div class="${baseClass}" style="padding:5px;">
+    <div class="${baseClass}IntroText" data-dojo-attach-point="introText">${i18n.introPanel.introText}</div>
+    <div data-dojo-attach-point="geocoderNode"></div>
+    <div data-dojo-attach-point="clusterDetails" style="margin-top:10px; display:none;">
+        <p data-dojo-attach-point="clusterTitle">${i18n.introPanel.noDataClusterTitle}</p>
+        <img data-dojo-attach-point="clusterGraphic" style="width:100%"; src="${noDataClusterGraphic}" />
+    </div>
+</div>

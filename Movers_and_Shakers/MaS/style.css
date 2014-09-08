@@ -1,0 +1,8 @@
+@media (min-width: 600px)
+{
+    #pageContent_MaS
+       {
+        width:520px;
+        margin-left: -530px;
+    }
+}
