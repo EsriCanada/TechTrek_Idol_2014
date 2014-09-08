@@ -17,6 +17,7 @@
 		"esri/dijit/HomeButton",
 		"esri/dijit/BasemapGallery",
 		"esri/dijit/LocateButton",
+		"esri/dijit/Geocoder",
 		"dojo/fx",
         "dojo/_base/fx",
 		"dojo/_base/window",
@@ -40,6 +41,7 @@
 		HomeButton,
 		BasemapGallery,
 		LocateButton,
+		Geocoder,
 		coreFx,
         baseFx,
 		win
@@ -48,7 +50,7 @@
 
             parser.parse();
 			
-			var currentMap, previousMap, home, basemapGallery2, geoLocate, resizeHandle, counter = -1, webmaps = [
+			var currentMap, previousMap, home, basemapGallery2, geoLocate, geocode, resizeHandle, counter = -1, webmaps = [
             "e67b38315a4845219595e0442e42198d", // world news
             "27bfa107fb8c416995b902fde1ee4f3b", // top stories
             "48627105dd7a4f0e82b029195390ffe2", // canada news
@@ -95,14 +97,14 @@
 			
             deferred.then(function(response){
               dom.byId("current_map").innerHTML = response.itemInfo.item.title;
-			
+			  
 			  setupMap(response.map);
               fadeMap(response.map);
 			  
             });
 			
 		}	
-		
+			
           function fadeMap(map){
             currentMap = map;
 			
@@ -154,10 +156,12 @@
 			home.destroyRecursive();
 			geoLocate.destroyRecursive();
 			basemapGallery2.destroyRecursive();
+			geocoder.destroyRecursive();
 			
 			var homeb = domConstruct.create("div", {id: "HomeButton1"}, "map");	
 			var LocateB = domConstruct.create("div", {id: "LocateButton1"}, "map");
 			var basemapG = domConstruct.create("div", {id: "basemapGallery1"}, "basemap");
+			var geocodeG = domConstruct.create("div", {id: "geocode1"}, "map");
 			
             if( currentMap ){
               previousMap = currentMap;
@@ -192,6 +196,13 @@
 			}, "basemapGallery1");
 			basemapGallery2.startup();
 			
+			geocoder = new Geocoder({ 
+			arcgisGeocoder: {placeholder: "Find a place"}, 
+            autoComplete: true,
+            map: map 
+			}, "geocode1");
+			geocoder.startup();
+
 			}
             function initializeSidebar(map){
                 var popup = map.infoWindow;

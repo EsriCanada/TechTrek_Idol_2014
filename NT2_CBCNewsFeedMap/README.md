@@ -4,7 +4,7 @@ Team Members : Steven Beothy, Andre Piasta
 
 Project: CBCNewsFeedMap
 
-A JSAPI map application which plots CBC News Feeds on a global web map and displays the stories in a way!
+A JSAPI map application which plots CBC News Feeds on a global web map and displays the news stories in a way!
 
 We took a number of CBC news feeds http://www.cbc.ca/rss/
 

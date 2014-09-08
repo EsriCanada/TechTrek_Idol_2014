@@ -28,6 +28,12 @@ html, body {
       left: 28px;
       z-index: 50;
 	}
+	#geocode1 {
+      position: absolute;
+      top: 30px;
+      left: 70px;
+      z-index: 50;
+	}
     .nav {
         padding: 5px 5px;
         background: #4479BA;
@@ -60,7 +66,7 @@ html, body {
 	#radio {
       position: absolute;
       top: 110px;
-      left: 130px;
+      left: 140px;
       z-index: 1;
 	  cursor: pointer;
     }
