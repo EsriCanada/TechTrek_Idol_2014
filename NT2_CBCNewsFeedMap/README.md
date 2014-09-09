@@ -15,9 +15,9 @@ The newly created GeoRSS feeds are then plotted on an ArcGIS Online web map
 Be sure to switch to the four different news feeds by clicking on the 
 "Show Next News Feed" button
 
-1st Feed - World News
-2nd Feed - Top Stories
-3rd Feed - Canada News
+1st Feed - World News,
+2nd Feed - Top Stories,
+3rd Feed - Canada News,
 4th Feed - Sports
 
 Biggest challenge with this app was in the JavaScript code. We needed to destroy each of the widgets and re-create them in the DOM as as user switches between each news feed.
