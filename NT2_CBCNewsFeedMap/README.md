@@ -20,6 +20,6 @@ Be sure to switch to the four different news feeds by clicking on the
 3rd Feed - Canada News,
 4th Feed - Sports
 
-Biggest challenge with this app was in the JavaScript code. We needed to destroy each of the widgets and re-create them in the DOM as as user switches between each news feed.
+Biggest challenge with this app was in the JavaScript code. We needed to destroy each of the widgets and re-create them in the DOM as a user switches between each news feed.
 
 Click on the link below to view it live http://trainingportal.esri.ca/cbc/
