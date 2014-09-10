@@ -140,8 +140,7 @@ _deuxchiffres : function (nombre)
 	{retour = nombre}
 
 	return retour
-},//virgule entre chaque fonction
-
+}
 
   });
 });
