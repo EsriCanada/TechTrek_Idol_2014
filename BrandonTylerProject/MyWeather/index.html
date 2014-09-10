@@ -34,6 +34,7 @@
     <script src="js/map.js"></script>
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+	<script src="js/WeatherApp.js"></script>
   </head>
 
   <body class="nihilo"> <!-- left over from the example document -->
@@ -48,7 +49,7 @@
           <div id="locatebtnDiv">
             <button id="btnLocate" data-dojo-type="dijit/form/Button" onClick="RunApp()" >Locate</button>
           </div>
-          <div id="FirstCityDiv">
+		    <div id="FirstCityDiv">
             <div id="FirstCityTextDiv">
 			      <textarea id="taAddress" class="taAddressClass" type="text" placeholder="First City" tabindex=0></textarea>
             </div>
@@ -91,11 +92,20 @@
             <!-- sample pane to place testing results in  -->
         </div>
         <div ID="Results">
-        <div ID="FirstdayDiv" class="DayDivs" align="center"> Day 1 </div>
-        <div ID="SeconddayDiv" class="DayDivs"align="center"> Day 2 </div>
-        <div ID="ThirddayDiv" class="DayDivs"align="center"> Day 3 </div>
-        <div ID="FourthdayDiv" class="DayDivs"align="center"> Day 4 </div>
-        <div ID="FifthdayDiv" class="DayDivs"align="center"> Day 5 </div>
+		<div ID="Day1" class="DayDivs" align="center"> Day 1
+			<div ID="Weath1" class="WeatherDivs" align="center"> 1 </div>
+		</div>
+        <div ID="Day2" class="DayDivs" align="center"> Day 2 
+			<div ID="Weath2" class="WeatherDivs" align="center"> 2 </div>
+		</div>
+        <div ID="Day3" class="DayDivs" align="center"> Day 3 
+			<div ID="Weath3" class="WeatherDivs" align="center"> 3 </div>
+		</div>
+        <div ID="Day4" class="DayDivs" align="center"> Day 4 
+			<div ID="Weath4" class="WeatherDivs" align="center"> 4 </div>
+		</div>
+        <div ID="Day5" class="DayDivs" align="center"> Day 5 
+			<div ID="Weath5" class="WeatherDivs" align="center"> 5 </div>
         </div>
       </div>
 

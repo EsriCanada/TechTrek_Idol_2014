@@ -62,9 +62,46 @@ require([
 
 
     //  Locate button's onclick event handler
-
+	
     on(dom.byId("btnLocate"), "click", makeCityList);
-
+	
+	// Get weather's on cclick even handler
+	
+	//on(dom.byId("btnWeather"), "click", logArrayElements);
+	// $(document).ready(function() {
+			
+				
+		// var city1 = [document.getElementById("taAddress").value]
+		// var city2 = [document.getElementById("taAddress2").value]
+		
+		// var url1 = 'http://api.openweathermap.org/data/2.5/forecast/daily?q=' + city1 +'&mode=json&units=metric&cnt=16';
+			
+			// $.getJSON(url1,function(Result1){
+				// l = Result1.list;						
+				// l.forEach(logArrayElements1);
+			// });	
+			
+		// var day1 = 0;
+				
+		// function logArrayElements1(element, index, array) {					
+			// if (index == day1) {document.getElementById("FirstdayDiv").innerHTML = "Day Temp = " + element.temp.day}
+		// }
+		
+		// var url2 = 'http://api.openweathermap.org/data/2.5/forecast/daily?q=' + city2 +'&mode=json&units=metric&cnt=16';
+			
+			// $.getJSON(url2,function(Result2){
+				// l = Result2.list;						
+				// l.forEach(logArrayElements2);
+			// });	
+			
+		// var day2 = 1;
+				
+		// function logArrayElements2(element, index, array) {					
+			// if (index == day2) {document.getElementById("SeconddayDiv").innerHTML = "Day Temp = " + element.temp.day}
+		// }
+			
+	// });
+		
 
     //  Wire the task's completion event handler
 
@@ -143,7 +180,7 @@ require([
                     document.getElementById("taAddress5").value];
       // testing console log
       console.log(cities);
-      createArray(cities)
+      createArray(cities);
     }
 
     function makeDateList(){
@@ -154,13 +191,45 @@ require([
                     document.getElementById("date5").value];
       // testing console log
       console.log(dates);
-      createsArray(dates)
+	  //Calculate the difference between dates in days
+		var a = new Date(dates[0]);
+		console.log(a);
+		var d = new Date();
+		console.log(d);
+		//var dates1 = document.getElementById("date1").innerHTML = a.toUTCString();
+		//console.log(datestring);
+		var n = a.getDate(); 
+		console.log(n);
+		var m = d.getDate();
+		var diff = Math.abs(a-d);
+		console.log(diff);
+		var days = (diff/86400000);
+		console.log(days);
+		
     }
+		
     function createArray (cities) {
       // looping through the cities array
+	  var count = 1;
+	  
+	  //console.log(daydisplay)
       for (var code = 0; code < cities.length; code++) {
          doAddressToLocations(cities[code]);
+		 var daydisplay = 'Day'+ count;
+		 //creating a count to see how many location have been entered
+		 console.log(count);
+		 console.log(daydisplay);
+		 document.getElementById(daydisplay).innerHTML = cities[code];
+		count+= 1;
         }
+		
+		var datesa = makeDateList();
+		
+		Weather(cities,dates);
+		
+		console.log(cities);
+		console.log(dates);
+		
       }
 
 
@@ -170,7 +239,48 @@ require([
 
 });
 
-function RunApp() {
-  makeCityList();
-  makeDateList();
-}
+
+
+// function RunApp() {
+  // makeCityList();
+  // makeDateList();
+  // console.log("hi");
+  // Weather();
+  
+//}
+
+	// function WeatherDate(){
+		// var d = new Date("July 18, 1983 01:15:00");
+		// var n = d.getDate()
+		// document.getElementById("Day2").innerHTML = n;
+	// }
+
+	function Weather (citiesarray,datesarray) {
+		console.log(citiesarray);
+		//console.log(datesarray);
+		var a = new Date("8/1/2014");
+		var d = new Date("9/2/2014");
+		var n = d.getDate(); 
+		console.log(n);
+		var diff = Math.abs(a-d);
+		var days = (diff / (1000*60*60*24));
+		
+		var url = 'http://api.openweathermap.org/data/2.5/forecast/daily?q=' + cities[0] +'&mode=json&units=metric&cnt=16';
+		console.log(url);	
+			$.getJSON(url1,function(Result1){
+				l = Result1.list;
+				console.log(l);
+				l.forEach(logArrayElements1);
+			});
+			
+		var day1 = 0; 		
+		function logArrayElements1(element, index, array) {					
+			if (index == day1) {document.getElementById("Weath1").innerHTML = "Day Temp = " + element.temp.day}
+		}
+	}
+	
+		
+		
+			
+		
+	

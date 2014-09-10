@@ -71,10 +71,28 @@ body {
 
 }
 
+.WeatherDivs {
+  position: relative;
+  bottom: -79%;
+  height:20%;
+  width:19%;
+  float:center;
+  margin:2px;
+}
+
 #locatebtnDiv {
   position:relative;
   left:0px;
   height:30px;
+  width:150px;
+  font-size:1.2em;
+  font-family: 'Play', sans-serif;
+}
+#weatherbtnDiv {
+  position:relative;
+  top:-8.7%;
+  left:163px;
+  height:0px;
   width:150px;
   font-size:1.2em;
   font-family: 'Play', sans-serif;
