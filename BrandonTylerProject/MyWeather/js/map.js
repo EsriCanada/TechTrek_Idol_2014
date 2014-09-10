@@ -133,8 +133,8 @@ require([
 
       // Center and zoom the map on the result
 
-      if (geometryLocation != undefined) {
-        //  mapMain.centerAndZoom(geometryLocation, 10);
+      if (geometryLocation !== undefined) {
+      mapMain.centerAndZoom(geometryLocation, 4);
 
         xValues.push(geometryLocation.x)
         yValues.push(geometryLocation.y)
