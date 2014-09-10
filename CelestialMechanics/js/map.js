@@ -13,7 +13,13 @@ require(
   "dijit/layout/BorderContainer", 
   "esri/layers/FeatureLayer", 
   "esri/lang", "esri/graphic", "esri/symbols/SimpleMarkerSymbol",
-  "dojo/html", "dojo/number"
+  "dojo/html", "dojo/number", 
+  "js/coordinatesTools", "dojox/charting/Chart",
+    "dojox/charting/plot2d/Pie",
+    "dojox/charting/action2d/Tooltip",
+    "dojox/charting/action2d/MoveSlice",
+    "dojox/charting/themes/Claro"
+
 
   	], 
 
@@ -21,7 +27,7 @@ require(
     Map, Point, SpatialReference,
     ready, parser, on, sunrisesunset,
     ContentPane, LayoutContainer, BorderContainer, 
-    FeatureLayer, esriLang, Graphic, SimpleMarkerSymbol, html, number
+    FeatureLayer, esriLang, Graphic, SimpleMarkerSymbol, html, number, coordinatesTools, Chart, Pie, Tooltip, MoveSlice, theme
     ) {
 // @formatter:on
 
@@ -55,10 +61,23 @@ require(
 		map.graphics.clear();
 	};
 	
+	//Define Pie Chart
+	var pieChart = new Chart('pieChartGraph');
+	pieChart.setTheme(theme);
 	
 	map.on("load", function(){
 		 map.graphics.enableMouseEvents(); //load mouse event on graphic layer.
 		 map.graphics.on("mouse-out", closeDialog);
+		  //Add Pie chart to maps.		  
+		  pieChart.addPlot("default", {
+       		type: Pie,
+        	markers: true,
+        	radius:60
+    		});
+    	 // Create the tooltip
+    	   var tip = new Tooltip(pieChart,"default");
+ 	    // Create the slice mover
+    	   var mag = new MoveSlice(pieChart,"default");
 
 		});
 	
@@ -72,7 +91,7 @@ require(
   		"type": "esriSMS",
   		"style": "esriSMSCircle",
   		"outline": {
-    	"color": [0,255,0,255],
+    	"color": [255,171,38,255],
     	"width": 2,
     	"type": "esriSLS",
     	"style": "esriSLSSolid"}
@@ -85,48 +104,42 @@ require(
           var latitude = esriLang.substitute(evt.graphic.attributes,"${CoordY}"); 
           var longitude = esriLang.substitute(evt.graphic.attributes,"${CoordX}");
           var fuseauHoraire  = esriLang.substitute(evt.graphic.attributes,"${ZONE_}");
+          var city = esriLang.substitute(evt.graphic.attributes,"${City}");
+          var country = esriLang.substitute(evt.graphic.attributes,"${Country}");
+          var population = esriLang.substitute(evt.graphic.attributes,"${Population:NumberFormat}");
+          var timeZone = esriLang.substitute(evt.graphic.attributes,"${ZONE_}");
           
-          var t = "Country: ${Country}<br>"
-          	+"City: ${City}<br>"
-          	+"Pop: ${Population:NumberFormat} habs.<br>"
-            +"Latitude: ${CoordY}<br>"
-            +"Longitude: ${CoordX}<br>"
-            +"Time zone: ${ZONE_}";
-  
-          var content = esriLang.substitute(evt.graphic.attributes,t);
           var highlightGraphic = new Graphic(evt.graphic.geometry,highlightSymbol);
           map.graphics.add(highlightGraphic);
   		  
   		  //Set ephemerides object infos
   		  ephemeridesObj.latitude = parseFloat(latitude);
-  		  ephemeridesObj.longitude = parseFloat(longitude); //Mettre le -1 dans l'objet ephemeride
+  		  ephemeridesObj.longitude = parseFloat(longitude); 
           ephemeridesObj.Decalage = parseInt(fuseauHoraire);
           
+    	  //Add formated latitude and longitude and others to content
+  		  var content = "Country: " +  country + "<br>City: " + city + "<br>Population: " + population +
+  		  " Habs.<br>Time Zone: " + timeZone + "<br>Latitude: "+ coordinatesTools.DDtoDMStoTXT(latitude) + "<br>Longitude: " + coordinatesTools.DDtoDMStoTXT(longitude); 
+          
+                   
   		  //Set infos of the city
   		  html.set(dojo.byId("infosVilles"), content);
   		  //Set infos of ephemerides
   		  html.set(dojo.byId("infosEphemerides"), "Sunrise: " + ephemeridesObj.Conversion_DecJour_Heure(ephemeridesObj.Lever()) + "<br>Sunset: " + ephemeridesObj.Conversion_DecJour_Heure(ephemeridesObj.Coucher()) +"<br>daytime: "+ ephemeridesObj.DureeJour() ); 
-
-          
-		  /*console.log("lat =" + ephemeridesObj.latitude);
-		  console.log("long =" + ephemeridesObj.longitude);
-		  console.log("fuseau =" + ephemeridesObj.Decalage);
-		  console.log(ephemeridesObj.Lever());
-		  console.log(ephemeridesObj.Coucher());
-			
-          //dialog.setContent(content);
-
-          //domStyle.set(dialog.domNode, "opacity", 0.85);
-          //dijitPopup.open({
-          //  popup: dialog, 
-          //  x: evt.pageX,
-          //  y: evt.pageY
-          //});
-        });
-	
-	
-	
-	map.on("click", function(evt){
+		  
+		  //var chartData = [80,20];
+		  var dureeday = 55;
+		  var dureenight = 45;
+    	  //pieChart.addSeries("Day and Night time",chartData);
+    	  pieChart.addSeries("Day and Night time",[{y: dureeday, text: "Day",   stroke: "white", tooltip: dureeday},
+    	  {y: dureenight, text: "NightTime",   stroke: "white", tooltip: dureenight}]);
+    		pieChart.render();
+    		//Set background transparent
+    		pieChart.surface.rawNode.childNodes[1].setAttribute('fill-opacity','0');
+			pieChart.surface.rawNode.childNodes[2].setAttribute('stroke-opacity','0');
+			pieChart.surface.rawNode.childNodes[3].setAttribute('fill-opacity','0');
+		  /*
+		map.on("click", function(evt){
 		//map.graphics.clear();
 		console.log("Lat:" + evt.mapPoint.getLatitude());
 		console.log("Long:" + evt.mapPoint.getLongitude());

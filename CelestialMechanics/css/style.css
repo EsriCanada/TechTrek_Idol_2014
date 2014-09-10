@@ -37,7 +37,7 @@ body {
 }
 
 #infosVilles{
-	font-family: 'CARTNIST', sans-serif;
+	font-family: 'Arial Narrow', sans-serif;
 	color: white;
 	font-size:14px;	
 	position: absolute;
@@ -53,8 +53,17 @@ body {
 	font-size:12px;	
 	position: absolute;
 	top: 0px;
-	left: 400px;
+	left: 200px;
 	z-index:5;
+}
+
+#pieChartGraph{
+	position: absolute;
+	top: 0px;
+	left: 400px;
+	z-index:6;
+	width: 145px; 
+	height:145px;
 }
 
 #title{
