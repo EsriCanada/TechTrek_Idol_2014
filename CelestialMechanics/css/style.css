@@ -49,7 +49,7 @@ body {
 
 #infosEphemerides{
 	font-family: 'CARTNIST', sans-serif;
-	color: orange;
+	color: #FFD700;
 	font-size:12px;	
 	position: absolute;
 	top: 0px;
@@ -60,7 +60,7 @@ body {
 #pieChartGraph{
 	position: absolute;
 	top: 0px;
-	left: 400px;
+	left: 325px;
 	z-index:6;
 	width: 145px; 
 	height:145px;

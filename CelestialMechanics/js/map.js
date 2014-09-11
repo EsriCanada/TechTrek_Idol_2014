@@ -18,7 +18,7 @@ require(
     "dojox/charting/plot2d/Pie",
     "dojox/charting/action2d/Tooltip",
     "dojox/charting/action2d/MoveSlice",
-    "dojox/charting/themes/Claro"
+    "js/ephemeridesTheme"								//**********************************************
 
 
   	], 
@@ -52,11 +52,16 @@ require(
      
     map.addLayer(coucheVilles);
     
+    //Get the date 
+    var newDate = new Date();
+    
+    
     //Initialize the object
-    var ephemeridesObj = new sunrisesunset( 48.8819970629341, -2.43299734457971, 1, 09, 09,2014);
+    var ephemeridesObj = new sunrisesunset( 48.8819970629341, -2.43299734457971, 1, newDate.getDate() , newDate.getMonth() + 1,newDate.getFullYear());
     //console.log("qc=" + ephemeridesObj.Lever())
     //console.log("qc=" + ephemeridesObj.Coucher())
 	
+	//Clear graphic when mouse out.
 	function closeDialog(){
 		map.graphics.clear();
 	};
@@ -121,18 +126,20 @@ require(
   		  var content = "Country: " +  country + "<br>City: " + city + "<br>Population: " + population +
   		  " Habs.<br>Time Zone: " + timeZone + "<br>Latitude: "+ coordinatesTools.DDtoDMStoTXT(latitude) + "<br>Longitude: " + coordinatesTools.DDtoDMStoTXT(longitude); 
           
+          //Get day time and night time
+          var dayTime = ephemeridesObj.DureeJour();
+		  var nightTime = 1-dayTime;
                    
   		  //Set infos of the city
   		  html.set(dojo.byId("infosVilles"), content);
   		  //Set infos of ephemerides
-  		  html.set(dojo.byId("infosEphemerides"), "Sunrise: " + ephemeridesObj.Conversion_DecJour_Heure(ephemeridesObj.Lever()) + "<br>Sunset: " + ephemeridesObj.Conversion_DecJour_Heure(ephemeridesObj.Coucher()) +"<br>daytime: "+ ephemeridesObj.DureeJour() ); 
+  		  html.set(dojo.byId("infosEphemerides"), "Sunrise: " + ephemeridesObj.Conversion_DecJour_Heure(ephemeridesObj.Lever()) + "<br>Sunset: " + ephemeridesObj.Conversion_DecJour_Heure(ephemeridesObj.Coucher()) +"<br>Daytime: " + ephemeridesObj.Conversion_DecJour_Heure(ephemeridesObj.DureeJour())+
+  		  "<br>Nigthtime: " + ephemeridesObj.Conversion_DecJour_Heure(ephemeridesObj.DureeNuit())); 
 		  
-		  //var chartData = [80,20];
-		  var dureeday = 55;
-		  var dureenight = 45;
-    	  //pieChart.addSeries("Day and Night time",chartData);
-    	  pieChart.addSeries("Day and Night time",[{y: dureeday, text: "Day",   stroke: "white", tooltip: dureeday},
-    	  {y: dureenight, text: "NightTime",   stroke: "white", tooltip: dureenight}]);
+	  
+    	  //pieChart add data
+    	  pieChart.addSeries("Day and Night time",[{y: dayTime, text: "Day",   stroke: "white", tooltip: Math.round(dayTime*100) + "% of the day"},
+    	  {y: nightTime, text: "Night",   stroke: "white", tooltip: Math.round(nightTime*100) + "% of the day"}]);
     		pieChart.render();
     		//Set background transparent
     		pieChart.surface.rawNode.childNodes[1].setAttribute('fill-opacity','0');

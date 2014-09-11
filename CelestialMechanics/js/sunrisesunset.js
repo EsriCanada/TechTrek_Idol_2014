@@ -122,8 +122,13 @@ Conversion_DecJour_Heure : function (HeureDEC) //(HeureDEC)
 DureeJour :	function () //(LAT, LONG, Decalage, LeJour, LeMois, LAn)
 	{
 	DJ_DEC = this.Coucher() - this.Lever()
-	return this.Conversion_DecJour_Heure(DJ_DEC)
+	return DJ_DEC
 	},//virgule entre chaque fonction
+
+DureeNuit : function ()
+	{
+	return 1-this.DureeJour(); 	
+	}, 
 
 
 Coucher : function() // (LAT, LONG, Decalage, LeJour, LeMois, LAn)
