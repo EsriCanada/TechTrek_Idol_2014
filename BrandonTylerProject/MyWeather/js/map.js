@@ -218,14 +218,14 @@ require([
 	  //console.log(daydisplay)
       for (var code = 0; code < cities.length; code++) {
          doAddressToLocations(cities[code]);
-		 var daydisplay = 'Day'+ count;
+		 /* var daydisplay = 'Day'+ count;
 		 //creating a count to see how many location have been entered
 		 console.log(count);
 		 console.log(daydisplay);
 		 var citydiv = document.getElementById(daydisplay);
 		 var cityname = citydiv.childNodes[0];
 		 cityname.nodeValue = cities[code];
-		count+= 1;
+		count+= 1; */
         }
 		
 		var dates = makeDateList();		
@@ -308,26 +308,37 @@ require([
 			if (citiesarray[c] != "") {
 				var url = 'http://api.openweathermap.org/data/2.5/forecast/daily?q=' + citiesarray[c] +'&mode=json&units=metric&cnt=16';
 				console.log(url);	
-					$.getJSON(url,function(Result1){
-						l = Result1.list;						
-					}
-			};
-		}
-	}
+				$.getJSON(url,function(Result1){
+					l = Result1.list;
+					console.log(l);
+					l.forEach(logArrayElements1);
+				});
+			}
+		}	
+	}	
+	
 			
 		
 
-		function logArrayElements1(element, index) {
-			console.log(element);						
-			if (index == 0) {
-				console.log("HHHERERERE");				
-				var weatherID = "Weather" + index;
-				document.getElementById(weatherID).innerHTML = "Temp = " + element.temp.day;
-			}
-		
-		
+	function logArrayElements1(element, index, array) {
+		//console.log(element);						
+		if (index == 0) {
+			var daytemp = element.temp.day;
+			var weatherIcon = element.weather[0].icon;			
+			var weatherUrl = "http://openweathermap.org/img/w/" + weatherIcon + ".png";
+			console.log(weatherUrl);			
+			var div = document.createElement("div");
+			div.className = "DayDivs";
+			var weatherText = document.createTextNode("Temp = " + daytemp);
+			var weatherPhoto = document.createElement("img");
+			weatherPhoto.setAttribute('src', weatherUrl);
+			div.appendChild(weatherText);
+			div.appendChild(weatherPhoto);
+			var parentDiv = document.getElementById("TheWeather");
+			parentDiv.appendChild(div);			
+			//document.getElementById(weatherID).innerHTML = "Temp = " + element.temp.day;
 		}
-	
+	}
 	
 	
 	

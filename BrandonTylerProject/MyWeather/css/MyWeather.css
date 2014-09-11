@@ -54,7 +54,7 @@ body {
   overflow-x: hidden;
 }
 /* div of list of cities for testing */
-#Results {
+#TheWeather {
   float:left;
   height:96.5%;
   width:82%;
