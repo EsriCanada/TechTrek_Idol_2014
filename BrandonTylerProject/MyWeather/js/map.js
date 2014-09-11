@@ -181,6 +181,7 @@ require([
       // testing console log
       console.log(cities);
       createArray(cities);
+	  //console.log("FINISH");
     }
 
     function makeDateList(){
@@ -191,8 +192,10 @@ require([
                     document.getElementById("date5").value];
       // testing console log
       console.log(dates);
+	  
+	  return dates;
 	  //Calculate the difference between dates in days
-		var a = new Date(dates[0]);
+		/* var a = new Date(dates[0]);
 		console.log(a);
 		var d = new Date();
 		console.log(d);
@@ -204,7 +207,7 @@ require([
 		var diff = Math.abs(a-d);
 		console.log(diff);
 		var days = (diff/86400000);
-		console.log(days);
+		console.log(days); */
 		
     }
 		
@@ -219,16 +222,14 @@ require([
 		 //creating a count to see how many location have been entered
 		 console.log(count);
 		 console.log(daydisplay);
-		 document.getElementById(daydisplay).innerHTML = cities[code];
+		 var citydiv = document.getElementById(daydisplay);
+		 var cityname = citydiv.childNodes[0];
+		 cityname.nodeValue = cities[code];
 		count+= 1;
         }
 		
-		var datesa = makeDateList();
-		
-		Weather(cities,dates);
-		
-		console.log(cities);
-		console.log(dates);
+		var dates = makeDateList();		
+		Weather(cities, dates);	
 		
       }
 
@@ -254,30 +255,81 @@ require([
 		// var n = d.getDate()
 		// document.getElementById("Day2").innerHTML = n;
 	// }
-
-	function Weather (citiesarray,datesarray) {
+		
+	/* function Weather (citiesarray, datesarray) {		
 		console.log(citiesarray);
-		//console.log(datesarray);
+		console.log(datesarray);
 		var a = new Date("8/1/2014");
 		var d = new Date("9/2/2014");
 		var n = d.getDate(); 
-		console.log(n);
+		//console.log(n);
 		var diff = Math.abs(a-d);
 		var days = (diff / (1000*60*60*24));
 		
-		var url = 'http://api.openweathermap.org/data/2.5/forecast/daily?q=' + cities[0] +'&mode=json&units=metric&cnt=16';
-		console.log(url);	
-			$.getJSON(url1,function(Result1){
-				l = Result1.list;
-				console.log(l);
-				l.forEach(logArrayElements1);
-			});
+		for (var c = 0; c < citiesarray.length; c++) {			
+			console.log(c);
+			if (citiesarray[c] != "") {
+				var url = 'http://api.openweathermap.org/data/2.5/forecast/daily?q=' + citiesarray[c] +'&mode=json&units=metric&cnt=16';
+				console.log(url);	
+					$.getJSON(url,function(Result1){
+						l = Result1.list;
+						l.forEach(logArrayElements1);			
+					});
+			}
 			
-		var day1 = 0; 		
-		function logArrayElements1(element, index, array) {					
-			if (index == day1) {document.getElementById("Weath1").innerHTML = "Day Temp = " + element.temp.day}
+		}
+
+		function logArrayElements1(element, index, array) {
+			//console.log(this);						
+			if (index == 0) {
+				console.log("HHHERERERE");				
+				var weatherID = "Weather" + c
+				document.getElementById(weatherID).innerHTML = "Temp = " + element.temp.day;
+			}
+		
+		
+		}
+	
+	
+	} */
+	
+	function Weather (citiesarray, datesarray) {		
+		console.log(citiesarray);
+		console.log(datesarray);
+		var a = new Date("8/1/2014");
+		var d = new Date("9/2/2014");
+		var n = d.getDate(); 
+		//console.log(n);
+		var diff = Math.abs(a-d);
+		var days = (diff / (1000*60*60*24));
+		
+		for (var c = 0; c < citiesarray.length; c++) {			
+			//console.log(c);
+			if (citiesarray[c] != "") {
+				var url = 'http://api.openweathermap.org/data/2.5/forecast/daily?q=' + citiesarray[c] +'&mode=json&units=metric&cnt=16';
+				console.log(url);	
+					$.getJSON(url,function(Result1){
+						l = Result1.list;						
+					}
+			};
 		}
 	}
+			
+		
+
+		function logArrayElements1(element, index) {
+			console.log(element);						
+			if (index == 0) {
+				console.log("HHHERERERE");				
+				var weatherID = "Weather" + index;
+				document.getElementById(weatherID).innerHTML = "Temp = " + element.temp.day;
+			}
+		
+		
+		}
+	
+	
+	
 	
 		
 		
