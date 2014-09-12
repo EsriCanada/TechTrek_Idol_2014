@@ -321,22 +321,72 @@ require([
 		
 
 	function logArrayElements1(element, index, array) {
-		//console.log(element);						
-		if (index == 0) {
+		//console.log(element);	
+		
+		var todayDateObj = new Date();
+		var todayDay = todayDateObj.getDate();
+		var todayMonth = todayDateObj.getMonth() + 1;
+		var todayYear = todayDateObj.getFullYear();
+		
+		//var todayDate = new Date(todayYear, todayMonth, todayDay);
+		var todayDate = todayMonth + "/" + todayDay + "/" + todayYear;
+		var todayDateFormat = new Date(todayDate)
+		console.log("TODAY" + todayDateFormat);		
+		
+		//var todayDate2 = todayMonth + "/" + "14" + "/" + todayYear;
+		var todayDate2 = document.getElementById("date1").value;
+		var todayDateFormat2 = new Date(todayDate2);	
+		console.log(todayDateFormat2);
+		
+		var diffDate = Math.abs(todayDateFormat2-todayDateFormat);		
+		var daysDate = (diffDate/86400000);
+		console.log(daysDate);
+		
+		if (index == daysDate) { //currently pulling today's date for all cities
 			var daytemp = element.temp.day;
 			var weatherIcon = element.weather[0].icon;			
-			var weatherUrl = "http://openweathermap.org/img/w/" + weatherIcon + ".png";
-			console.log(weatherUrl);			
+			var weatherUrl = "images/" + weatherIcon + ".png";
+			console.log(weatherUrl);
+			
 			var div = document.createElement("div");
 			div.className = "DayDivs";
+			var newd = new Date();
+			var weatherSquareID = "testid" + newd.getMilliseconds();
+			console.log(weatherSquareID);
+			div.setAttribute('id', weatherSquareID);
+			
+			var parentDiv = document.getElementById("TheWeather");
+			parentDiv.appendChild(div);	
+			
+			//interior weather data
+			var divDate = document.createElement("div");
+			divDate.className = "DayDivsDate";
+			
+			var divIcon = document.createElement("div");
+			divIcon.className = "DayDivsIcon";
+			
+			var divTemp = document.createElement("div");
+			divIcon.className = "DayDivsTemp";
+			
+			
+			//add to 
+			var innerParentDiv = document.getElementById(weatherSquareID);			
+			innerParentDiv.appendChild(divDate);
+			innerParentDiv.appendChild(divIcon);
+			innerParentDiv.appendChild(divTemp);
+			
+			
 			var weatherText = document.createTextNode("Temp = " + daytemp);
 			var weatherPhoto = document.createElement("img");
+			
 			weatherPhoto.setAttribute('src', weatherUrl);
-			div.appendChild(weatherText);
-			div.appendChild(weatherPhoto);
-			var parentDiv = document.getElementById("TheWeather");
-			parentDiv.appendChild(div);			
-			//document.getElementById(weatherID).innerHTML = "Temp = " + element.temp.day;
+			weatherPhoto.style.height = '80px';
+			weatherPhoto.style.width = '80px';
+			
+			divTemp.appendChild(weatherText);
+			divIcon.appendChild(weatherPhoto);
+					
+			
 		}
 	}
 	

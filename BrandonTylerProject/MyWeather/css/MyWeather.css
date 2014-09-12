@@ -63,26 +63,21 @@ body {
   background-color:#87a4e7;
   }
 .DayDivs {
-  height:86%;
-  width:19%;
-  float:left;
-  margin:2px;
-  border:1px solid;
-
-}
-
-.WeatherDivs {
-  position: relative;
-  bottom: -79%;
-  height:20%;
-  width:19%;
-  float:center;
-  margin:2px;
+	height:auto;
+	width: 100px;
+	float:left;	
+	padding:12px;
+	margin: 5px;
+	background-color:#f4f4f4;
+	border:1.5px solid #dedede;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	border-radius:3px
 }
 
 #locatebtnDiv {
   position:relative;
-  left:0px;
+  top:43px;
   height:30px;
   width:150px;
   font-size:1.2em;
