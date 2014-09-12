@@ -25,15 +25,17 @@
     </script>
 
     <!-- Reference libraries. The first CSS is a Dojo theme that gives dijits a consistent style. -->
+	
     <link rel="stylesheet" href="http://js.arcgis.com/3.8/js/dojo/dijit/themes/nihilo/nihilo.css">
     <link rel="stylesheet" href="http://js.arcgis.com/3.8/js/esri/css/esri.css">
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
     <link href='http://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/MyWeather.css"/>
+    <script src="http://js.arcgis.com/3.8/"></script>    
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-    <script src="http://js.arcgis.com/3.8/"></script>
-    <script src="js/map.js"></script>
+	<script src="js/map.js"></script>
+	<link rel="stylesheet" href="css/MyWeather.css"/>	
+
   </head>
 
   <body class="nihilo"> <!-- left over from the example document -->
@@ -47,30 +49,19 @@
       <div id="cpHeader" class="BottomContent" align="left"
           data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'bottom'">
           <!-- Divs to organize/stack the City textareas -->
-          <div id="InputDiv">
-          <div id="locatebtnDiv">
-            <button id="btnLocate" data-dojo-type="dijit/form/Button"
-              onClick="RunApp()" >Get Forecast</button>
-          </div>
-          <!-- Div to hold all of the first City stuff -->
-          <div id="FirstCityDiv">
-            <!-- Div to hold the first city text area -->
-            <div id="FirstCityTextDiv">
-			      <textarea id="taAddress" class="taAddressClass" type="text"
-                placeholder="First City" tabindex=0></textarea>
-            </div>
-            <!-- Div to hold the first city Datepicker -->
-            <div id="FirstCityDateDiv">
-            <input type="text" name="date1" id="date1" value="NULL"
-                data-dojo-type="dijit/form/DateTextBox" required="false" />
-            </div>
-		      </div>
 
-          <!-- For Div Description refer to the First City Section -->
+         <div id="InputDiv">          
+		    <div id="FirstCityDiv">
+				<div id="FirstCityTextDiv">
+					  <input id="taAddress" class="taAddressClass" type="text" placeholder="First City" tabindex="1"></input>
+				</div>
+				<div id="FirstCityDateDiv">
+					<input type="text" name="date1" id="date1" value="2014-08-01" data-dojo-type="dijit/form/DateTextBox" required="true" />
+				</div>
+		    </div>
 		      <div id="SecCityDiv">
             <div id="SecondCityTextDiv">
-			      <textarea id="taAddress2" class="taAddressClass" type="text"
-                placeholder="Second City" tabindex=1></textarea>
+			      <input id="taAddress2" class="taAddressClass" type="text" placeholder="Second City" tabindex="2"></input>
             </div>
             <div id="SecondCityDateDiv">
             <input type="text" name="date2" id="date2" value="NULL"
@@ -80,19 +71,16 @@
 
           <div id="ThirdCityDiv">
             <div id="ThirdCityTextDiv">
-            <textarea id="taAddress3" class="taAddressClass" type="text"
-                placeholder="Third City" tabindex=2></textarea>
+				<input id="taAddress3" class="taAddressClass" type="text" placeholder="Third City" tabindex="3"></input>
             </div>
             <div id="ThirdCityDateDiv">
-            <input type="text" name="date3" id="date3" value="NULL"
-                data-dojo-type="dijit/form/DateTextBox" required="false" />
+            <input type="text" name="date3" id="date3" value="NULL" data-dojo-type="dijit/form/DateTextBox" required="false" />
             </div>
           </div>
 
           <div id="FourthCityDiv">
             <div id="FourthCityTextDiv">
-            <textarea id="taAddress4" class="taAddressClass" type="text"
-                placeholder="Fourth City" tabindex=3></textarea>
+				<input id="taAddress4" class="taAddressClass" type="text" placeholder="Fourth City" tabindex="4"></input>
             </div>
             <div id="FourthCityDateDiv">
             <input type="text" name="date4" id="date4" value="NULL"
@@ -102,25 +90,18 @@
 
           <div id="FifthCityDiv">
             <div id="FifthCityTextDiv">
-            <textarea id="taAddress5" class="taAddressClass" type="text"
-                placeholder="Fifth City" tabindex=4></textarea>
+				<input id="taAddress5" class="taAddressClass" type="text" placeholder="Fifth City" tabindex="5"></input>
             </div>
             <div id="FifthCityDateDiv">
-            <input type="text" name="date5" id="date5" value="NULL"
-                data-dojo-type="dijit/form/DateTextBox" required="false" />
+				<input type="text" name="date5" id="date5" value="NULL" data-dojo-type="dijit/form/DateTextBox" required="false" />
             </div>
           </div>
-
-            <!-- sample pane to place results in  -->
+            <div id="locatebtnDiv">
+				<button id="btnLocate" data-dojo-type="dijit/form/Button">Locate</button>
+          </div>
         </div>
-        <div ID="Results">
-        <div ID="FirstdayDiv" class="DayDivs" align="center"> Day 1 </div>
-        <div ID="SeconddayDiv" class="DayDivs"align="center"> Day 2 </div>
-        <div ID="ThirddayDiv" class="DayDivs"align="center"> Day 3 </div>
-        <div ID="FourthdayDiv" class="DayDivs"align="center"> Day 4 </div>
-        <div ID="FifthdayDiv" class="DayDivs"align="center"> Day 5 </div>
-        </div>
-      </div>
+		<div id="TheWeather">
+		</div>
 
     </div>
   </body>
