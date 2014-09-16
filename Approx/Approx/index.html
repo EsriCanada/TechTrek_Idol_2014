@@ -33,7 +33,7 @@
                 map.addLayer(layer);
 
                 on(dom.byId('filter'), "change", function () {
-                    esriConfig.defaults.io.proxyUrl = "Proxy.aspx?match=0&filters=" + this.value;
+                    esriConfig.defaults.io.proxyUrl = "Proxy.ashx?match=0&filters=" + this.value;
                     esriConfig.defaults.io.alwaysUseProxy = true;
                     layer.refresh();
                 });

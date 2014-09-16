@@ -6,17 +6,14 @@ using System.Linq;
 using System.Net;
 using System.Text.RegularExpressions;
 using System.Web;
-using System.Web.UI;
 
 namespace Approx
 {
-    public partial class Proxy : Page
+    public class Proxy : IHttpHandler
     {
-        protected void Page_Load(object sender, EventArgs e)
+        public void ProcessRequest(HttpContext context)
         {
-            Response.Clear();
-
-            var url = Request.Url.Query.Substring(1);
+            var url = context.Request.Url.Query.Substring(1);
 
             Func<string, string> request = n =>
                 HttpUtility.UrlDecode(Regex.Match(url, @"(?<=((\?|&)" + n + @"\=)).*?(?=((\?|&|$)))").Value);
@@ -36,7 +33,7 @@ namespace Approx
 
             if (contentType.StartsWith("image/") && match == tag && filters != "")
             {
-                Response.ContentType = "image/jpeg";
+                context.Response.ContentType = "image/jpeg";
 
                 var bitmap = new Bitmap(new MemoryStream(data));
                 bitmap = bitmap.Clone(new Rectangle(0, 0, bitmap.Width, bitmap.Height), PixelFormat.Format24bppRgb);
@@ -58,13 +55,18 @@ namespace Approx
                     bitmap = (Bitmap)method.Invoke(null, parameters);
                 }
 
-                bitmap.Save(Response.OutputStream, ImageFormat.Jpeg);
+                bitmap.Save(context.Response.OutputStream, ImageFormat.Jpeg);
             }
             else
             {
-                Response.ContentType = contentType;
-                Response.BinaryWrite(data);
+                context.Response.ContentType = contentType;
+                context.Response.BinaryWrite(data);
             }
+        }
+
+        public bool IsReusable
+        {
+            get { return true; }
         }
     }
 }
