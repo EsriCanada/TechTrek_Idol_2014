@@ -21,10 +21,10 @@
             function (esriConfig, Map, Layer, ioQuery, dom, on) {
 
                 var url = document.URL;
-                var queryObject = ioQuery.queryToObject(url.substring(url.indexOf("?") + 1, url.length));
+                var o = ioQuery.queryToObject(url.substring(url.indexOf("?") + 1, url.length));
 
                 var map = new Map("map");
-                var layer = new Layer((queryObject.url == undefined ? "http://server.arcgisonline.com/arcgis/rest/services/ESRI_Imagery_World_2D/MapServer" : queryObject.url) + "?tag=0");
+                var layer = new Layer((o.url == undefined ? "http://server.arcgisonline.com/arcgis/rest/services/ESRI_Imagery_World_2D/MapServer" : o.url) + "?tag=0");
 
                 on(layer, "load", function () {
                     map.setExtent(layer.fullExtent);
@@ -32,7 +32,7 @@
 
                 map.addLayer(layer);
 
-                on(dom.byId('filter'), "change", function () {
+                on(dom.byId("filter"), "change", function () {
                     esriConfig.defaults.io.proxyUrl = "Proxy.ashx?match=0&filters=" + this.value;
                     esriConfig.defaults.io.alwaysUseProxy = true;
                     layer.refresh();
