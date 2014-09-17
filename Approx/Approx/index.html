@@ -17,14 +17,22 @@
     <script src="http://js.arcgis.com/3.10/"></script>
 
     <script>
-        require(["esri/config", "esri/map", "esri/layers/ArcGISTiledMapServiceLayer", "dojo/io-query", "dojo/dom", "dojo/on", "dojo/domReady!"],
-            function (esriConfig, Map, Layer, ioQuery, dom, on) {
+        require(["esri/config", "esri/map", "esri/layers/ArcGISDynamicMapServiceLayer", "esri/layers/ArcGISImageServiceLayer", "esri/layers/ArcGISTiledMapServiceLayer", "dojo/io-query", "dojo/dom", "dojo/on", "dojo/domReady!"],
+            function (esriConfig, Map, DLayer, ILayer, TLayer, ioQuery, dom, on) {
 
-                var url = document.URL;
-                var o = ioQuery.queryToObject(url.substring(url.indexOf("?") + 1, url.length));
+                var u = document.URL;
+                var o = ioQuery.queryToObject(u.substring(u.indexOf("?") + 1, u.length));
+
+                var url = (o.url || "http://server.arcgisonline.com/arcgis/rest/services/ESRI_Imagery_World_2D/MapServer") + "?tag=0";
+                var type = o.type || "t";
+
+                var layer;
+
+                if (type == "d") layer = new DLayer(url);
+                else if (type == "i") layer = new ILayer(url);
+                else layer = new TLayer(url);
 
                 var map = new Map("map");
-                var layer = new Layer((o.url == undefined ? "http://server.arcgisonline.com/arcgis/rest/services/ESRI_Imagery_World_2D/MapServer" : o.url) + "?tag=0");
 
                 on(layer, "load", function () {
                     map.setExtent(layer.fullExtent);
