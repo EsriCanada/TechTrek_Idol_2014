@@ -31,12 +31,11 @@ namespace Approx
                 contentType = c.ResponseHeaders["Content-Type"];
             }
 
-            if (contentType.StartsWith("image/") && match == tag && filters != "")
+            if (contentType.StartsWith("image/") && match == tag)
             {
                 context.Response.ContentType = "image/jpeg";
 
                 var bitmap = new Bitmap(new MemoryStream(data));
-                bitmap = bitmap.Clone(new Rectangle(0, 0, bitmap.Width, bitmap.Height), PixelFormat.Format24bppRgb);
 
                 foreach (var f in filters.Split(';'))
                 {

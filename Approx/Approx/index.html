@@ -23,7 +23,7 @@
                 var u = document.URL;
                 var o = ioQuery.queryToObject(u.substring(u.indexOf("?") + 1, u.length));
 
-                var url = (o.url || "http://server.arcgisonline.com/arcgis/rest/services/ESRI_Imagery_World_2D/MapServer") + "?tag=0";
+                var url = o.url || "http://server.arcgisonline.com/arcgis/rest/services/ESRI_Imagery_World_2D/MapServer";
                 var type = o.type || "t";
 
                 var layer;
@@ -41,7 +41,7 @@
                 map.addLayer(layer);
 
                 on(dom.byId("filter"), "change", function () {
-                    esriConfig.defaults.io.proxyUrl = "Proxy.ashx?match=0&filters=" + this.value;
+                    esriConfig.defaults.io.proxyUrl = "Proxy.ashx?filters=" + this.value;
                     esriConfig.defaults.io.alwaysUseProxy = true;
                     layer.refresh();
                 });
