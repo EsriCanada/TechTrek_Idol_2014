@@ -337,6 +337,11 @@ namespace Approx
             return new StuckiDithering().Apply(bitmap);
         }
 
+        public static Bitmap SusanCornersDetector(this Bitmap bitmap)
+        {
+            return new CornersMarker(new SusanCornersDetector(), Color.Red).Apply(bitmap);
+        }
+
         public static Bitmap CloudsTexture(this Bitmap bitmap, double filterLevel, double preserveLevel)
         {
             return new Texturer(new CloudsTexture(), filterLevel, preserveLevel).Apply(bitmap);
