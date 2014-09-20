@@ -30,12 +30,16 @@ define([
     "esri/renderers/UniqueValueRenderer", 
     "esri/graphic",
     
+    "esri/tasks/GeometryService",
+    "esri/tasks/BufferParameters",
+          
     "esri/IdentityManager",
     
     "./introPanel",
     "./destinationPanel",
     
-    "./popupTemplates"
+    "./popupTemplates",
+    "./clusterGroups"
     
 ], function (
     require,
@@ -69,12 +73,16 @@ define([
     UniqueValueRenderer,
     Graphic,
     
+    GeometryService,
+    BufferParameters,
+    
     IdentityManager,
     
     introPanel,
     destinationPanel,
     
-    popupTemplates
+    popupTemplates,
+    clusterGroups
 ) {
     
     
@@ -124,7 +132,7 @@ define([
             });
             this.renderer.addValue("HOME_DA",new SimpleFillSymbol().setColor(new Color([255,0,0,0.3])));
             this.renderer.addValue("SAME_CLUSTER",new SimpleFillSymbol().setColor(new Color([255,122,0,0.3])));
-            this.renderer.addValue("SAME_GROUP",new SimpleFillSymbol().setColor(new Color([255,122,0,0.3])));
+            this.renderer.addValue("SAME_GROUP",new SimpleFillSymbol().setColor(new Color([255,0,122,0.3])));
             
             this.daDisplayLayer = new GraphicsLayer({id:"daDisplayLayer"});
             this.daDisplayLayer.setRenderer(this.renderer);
@@ -158,11 +166,13 @@ define([
             
             this.intro.on('postal-code-found',lang.hitch(this,this.getDAInfo));
             this.intro.on('home-selected',lang.hitch(this,function(){
+                this.destination.setHomeCluster(this.homeClusterFeature);
                 this.dropPanelContent();
                 this.contentPanel.setContent(this.destination.domNode);
             }));
             
             this.destination.on('new-destination',lang.hitch(this,this.getDestinationDA));
+            this.destination.on('search-destinations',lang.hitch(this,this.searchDestinations));
             
             toolbar.activateTool(this.config.activeTool || toolConfig.name);
             deferred.resolve(true);
@@ -216,7 +226,8 @@ define([
             }
             else
             {
-                this.intro.setClusterInfo(this.daHomeFeature,results[this.daHomeOid].features[0]);
+                this.homeClusterFeature = results[this.daHomeOid].features[0];
+                this.intro.setClusterInfo(this.daHomeFeature,this.homeClusterFeature);
                 this.toolbar.map.setExtent(this.daHomeFeature.geometry.getExtent(),true);
             }
         },
@@ -254,7 +265,13 @@ define([
                 );
                 this.toolbar.map.graphics.add(this.daDestinationCoordinate)
                 this.toolbar.map.setExtent(this.daDestinationFeature.geometry.getExtent(),true);
+                this.destination.showSearchOptions();
             }
+        },
+        
+        searchDestinations: function(searchParams)
+        {
+            console.log(clusterGroups[this.homeClusterFeature.attributes["Social_Group"]]);
         },
         
         // This removes content from the content panel without destroying nodes (so they can be added again later).  The ContentPane.setContent() method destroys any existing content that it contains before adding new content.

@@ -15,12 +15,13 @@ define([
     
     "dijit/form/Button",
     "dijit/form/NumberSpinner",
+    "dijit/form/RadioButton",
     "dijit/layout/ContentPane",
     
     "esri/dijit/Geocoder",
     "esri/dijit/PopupTemplate",
     "esri/graphic"
-], function(require, declare, array, lang, on, _WidgetBase, _TemplatedMixin, _WidgetsInTemplateMixin, Evented, domStyle, domConstruct, template, i18n, Button, NumberSpinner, ContentPane, Geocoder, PopupTemplate, Graphic) {
+], function(require, declare, array, lang, on, _WidgetBase, _TemplatedMixin, _WidgetsInTemplateMixin, Evented, domStyle, domConstruct, template, i18n, Button, NumberSpinner, RadioButton, ContentPane, Geocoder, PopupTemplate, Graphic) {
     
     return declare([_WidgetBase, _TemplatedMixin,_WidgetsInTemplateMixin], {
         templateString: template,
@@ -41,7 +42,7 @@ define([
             this.moreButton = new Button({style:"display:none;margin-left:0.5em;",label:this.i18n.destinationPanel.moreButton},this.moreButton);
             this.moreButton.startup();
             this.moreButton.on('click',lang.hitch(this,function(){
-                this.emit('more-selected',{daFeature:this._currentDAFeature,clusterFeature:this._currentClusterFeature});
+                this.emit('more-selected');
             }));
             
             this.destinationDetails = new ContentPane({"region":"center"},this.destinationDetails);
@@ -50,6 +51,38 @@ define([
             this.searchRadius = new NumberSpinner({"class":"MaS-searchRadius",value:"10",smallDelta:1,constraints: {min:1,max:50,places:0}},this.searchRadius);
             this.searchRadius.startup();
             
+            this.radioLikeMyCluster = new RadioButton({
+                checked: true,
+                name: "MaS_clusterorgroup"
+            },this.radioLikeMyCluster);
+            this.radioLikeMyCluster.startup();
+            if (this._homeCluster!=false) this.setHomeCluster(this._homeCluster);
+            
+            this.radioLikeMyGroup = new RadioButton({
+                checked: false,
+                name: "MaS_clusterorgroup"
+            },this.radioLikeMyGroup);
+            this.radioLikeMyGroup.startup();
+            
+            this.searchButton = new Button({label:this.i18n.destinationPanel.searchButton},this.searchButton);
+            this.searchButton.startup();
+            this.searchButton.on('click',lang.hitch(this,function(){
+                this.emit('search-destinations',{radius:this.searchRadius.getValue(),byGroup:this.radioLikeMyGroup.checked});
+            }));
+            
+        },
+        
+        setHomeCluster: function(homeCluster)
+        {
+            this._homeCluster = homeCluster;
+            console.log('setHomeCluster',homeCluster);
+            if (this._homeCluster) this.labelForLikeMyCluster.innerHTML = i18n.destinationPanel.likeMyCluster + " (" + this._homeCluster.attributes["Cluster_Name"] + ")";
+            else this.labelForLikeMyCluster.innerHTML = i18n.destinationPanel.likeMyCluster;
+        },
+        
+        showSearchOptions: function()
+        {
+            domStyle.set(this.destinationDetails.domNode,"display","block");
         },
         
         geocoderFoundResult: function(e)
