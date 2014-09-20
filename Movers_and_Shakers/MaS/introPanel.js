@@ -6,39 +6,47 @@ define([
     "dojo/on",
     "dijit/_WidgetBase",
     "dijit/_TemplatedMixin",
+    "dijit/_WidgetsInTemplateMixin",
     "dojo/Evented",
     "dojo/dom-style",
+    "dojo/dom-construct",
     "dojo/text!./templates/introPanel.html",
     "dojo/i18n!./nls/resources",
     
-    "esri/dijit/Geocoder"
-], function(require, declare, array, lang, on, _WidgetBase, _TemplatedMixin, Evented, domStyle, template, i18n, Geocoder) {
+    "dijit/form/Button",
+    "dijit/layout/ContentPane",
     
+    "esri/dijit/Geocoder",
+    "esri/graphic",
+    
+    "./popupTemplates"
+], function(require, declare, array, lang, on, _WidgetBase, _TemplatedMixin, _WidgetsInTemplateMixin, Evented, domStyle, domConstruct, template, i18n, Button, ContentPane, Geocoder, Graphic, popupTemplates) {
+    console.log(popupTemplates)
     return declare([_WidgetBase, _TemplatedMixin], {
         templateString: template,
         i18n: i18n,
-        
-        noDataClusterGraphic: require.toUrl("./clustergraphics/ClusterDesc_67.png"),
-        
         startup: function()
         {
             this.inherited(arguments);
             this.geocoder = new Geocoder({map:this.map,arcgisGeocoder:{sourceCountry:"CAN"},autoNavigate:false,autoComplete:false},this.geocoderNode);
             this.geocoder.startup();
-            this.geocoder.on("find-results",lang.hitch(this,this.geocoderFoundResult));
+            this.geocoder.on("select",lang.hitch(this,this.geocoderFoundResult));
+            this.nextButton = new Button({style:"display:none;margin-left:0.5em;",label:this.i18n.introPanel.nextButton},this.nextButton);
+            this.nextButton.startup();
+            this.nextButton.on('click',lang.hitch(this,function(){
+                this.emit('home-selected',{daFeature:this._currentDAFeature,clusterFeature:this._currentClusterFeature});
+            }));
+            this.clusterDetails = new ContentPane({},this.clusterDetails);
+            this.clusterDetails.startup();
         },
         
         geocoderFoundResult: function(e)
         {
-            if (/^[A-Za-z]\d[A-Za-z][ -]?\d[A-Za-z]\d$/.test(e.results.value))
+            console.log(e);
+            if (e && e.target && e.target.value && /^[A-Za-z]\d[A-Za-z][ -]?\d[A-Za-z]\d$/.test(e.target.value))
             {
-                array.some(e.results.results,lang.hitch(this,function(result){
-                    if (result.feature.attributes.score==100 && /^[A-Za-z]\d[A-Za-z][ -]?\d[A-Za-z]\d$/.test(result.name))
-                    {
-                        this.emit('postal-code-found',{postalCode:result});
-                        return true;
-                    }
-                }));
+                this.emit('postal-code-found',{postalCode:e.result});
+                return true;
             }
             else
             {
@@ -49,19 +57,30 @@ define([
         setClusterInfo: function(daFeature,clusterFeature)
         {
             console.log('setClusterInfo',daFeature,clusterFeature);
-            if (clusterFeature && clusterFeature.attributes["Cluster"]!=67)
+            if (clusterFeature && clusterFeature.attributes["Cluster"]!=67 && !!clusterFeature.attributes["Cluster"])
             {
-                this.clusterGraphic.src = require.toUrl("./clustergraphics/ClusterDesc_"+this.pad(clusterFeature.attributes["Cluster"],2)+".png");
-                domStyle.set(this.clusterDetails,"display","block");
-                this.clusterTitle.innerHTML = i18n.introPanel.homeClusterTitle;
+                daFeature.setInfoTemplate(popupTemplates.homeDaTemplate);
+                this.setDemographicInfo(daFeature,clusterFeature);
+                domStyle.set(this.nextButton.domNode,"display","inline-block");
+                this._currentDAFeature = daFeature;
+                this._currentClusterFeature = clusterFeature;
             }
             else
             {
-                this.clusterGraphic.src = require.toUrl("./clustergraphics/ClusterDesc_67.png");
-                domStyle.set(this.clusterDetails,"display","block");
-                this.clusterTitle.innerHTML = i18n.introPanel.noDataClusterTitle;
+                this.setDemographicInfo(popupTemplates.noClusterHomeGraphic,null);
+                domStyle.set(this.nextButton.domNode,"display","none");
+                this._currentDAFeature = null;
+                this._currentClusterFeature = null;
             }
             
+        },
+        
+        setDemographicInfo: function(daFeature,clusterFeature)
+        {
+            console.log(daFeature);
+            var content = daFeature.getContent();
+            this.clusterDetails.set("content",content);
+            domStyle.set(this.clusterDetails.domNode,"display","block");
         },
         
         // Function for padding integers with zeros (credits to: https://gist.github.com/aemkei/1180489 ):

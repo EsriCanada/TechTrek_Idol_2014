@@ -6,3 +6,95 @@
         margin-left: -530px;
     }
 }
+
+#pageContent_MaS ul.summary
+{
+    display:none;
+}
+
+.dijitContentPane.MaS-contentPanel
+{
+    padding:5px;
+}
+
+.MaS-paneldetails
+{
+    padding:0;
+}
+
+.large #pageContent_MaS, .large .MaS-panel
+{
+    height:440px;
+    padding:0;
+}
+
+.large .MaS-paneldetails
+{
+    overflow:auto;
+    height:360px;
+}
+
+.medium #pageContent_MaS, .medium .MaS-panel
+{
+    height:340px;
+    padding:0;
+}
+
+.medium .MaS-paneldetails
+{
+    overflow:auto;
+    height:260px;
+}
+
+.small #pageContent_MaS, .small .MaS-panel
+{
+    height:285px;
+    padding:0;
+}
+
+.small .MaS-paneldetails
+{
+    overflow:auto;
+    height:205px;
+}
+
+#pageContent_MaS .simpleGeocoder
+{
+    float:left !important;
+}
+
+.esriPopup .sizer 
+{
+    width:500px !important;
+}
+
+.esriPopup .sizer.content .contentPane
+{
+    max-height:400px !important;
+}
+
+.MaS-searchRadius
+{
+    width:60px;
+}
+
+.MaS-panel .dijitSpinner .dijitDownArrowButton .dijitArrowButtonInner
+{
+    margin: -2px 0px 0px 0px;
+}
+
+.MaS-panel .dijitSpinner .dijitSpinnerButtonContainer .dijitArrowButton
+{
+    height:45%;
+}
+
+.MaS-panel .calcite .dijitTextBox .dijitButtonNode
+{
+    height:24px !important;
+}
+
+.claro .dijitContentPane.MaS-destinationdetails
+{
+    padding:0;
+    overflow:auto;
+}

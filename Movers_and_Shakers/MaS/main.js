@@ -17,18 +17,25 @@ define([
     "dojo/query",
     "dojo/i18n!./nls/resources",
     
+    "dijit/layout/ContentPane",
+    
     "esri/Color",
     "esri/symbols/SimpleFillSymbol",
+    "esri/symbols/SimpleLineSymbol",
+    "esri/symbols/SimpleMarkerSymbol",
     "esri/layers/GraphicsLayer",
     "esri/layers/FeatureLayer",
     "esri/tasks/query",
     "esri/tasks/RelationshipQuery",
     "esri/renderers/UniqueValueRenderer", 
+    "esri/graphic",
     
     "esri/IdentityManager",
     
     "./introPanel",
-    "./Chart"
+    "./destinationPanel",
+    
+    "./popupTemplates"
     
 ], function (
     require,
@@ -49,18 +56,25 @@ define([
     query,
     i18n,
     
+    ContentPane,
+    
     Color,
     SimpleFillSymbol,
+    SimpleLineSymbol,
+    SimpleMarkerSymbol,
     GraphicsLayer,
     FeatureLayer,
     Query,
     RelationshipQuery,
     UniqueValueRenderer,
+    Graphic,
     
     IdentityManager,
     
     introPanel,
-    Chart
+    destinationPanel,
+    
+    popupTemplates
 ) {
     
     
@@ -68,7 +82,7 @@ define([
         startup: function(app,toolConfig,toolbar)
         {
         
-            console.log(this);
+            window.map = toolbar.map;
     
             if (window && window.localStorage && window.localStorage.getItem("idManagerCredentials"))
             {
@@ -88,7 +102,7 @@ define([
             this.toolbar = toolbar;
             this.map = this.toolbar.map;
             
-            this.daLayer = new FeatureLayer(this.toolConfig.daFeatures);
+            this.daLayer = new FeatureLayer(this.toolConfig.daFeatures,{outFields:["*"]});
             this.daLayer.hide();
             
             this.daOidFieldName = "OBJECTID";
@@ -126,12 +140,30 @@ define([
             
             var tool = toolbar.createTool(toolConfig, "large");
             
-            this.intro = new introPanel({map:this.toolbar.map},tool);
+            this.contentPanel = new ContentPane({"class":"MaS-contentPanel","region":"center"});
+            this.contentPanel.startup();
+            
+            this.intro = new introPanel({map:this.toolbar.map});
             this.intro.startup();
             
-            this.intro.on('postal-code-found',lang.hitch(this,this.getDAInfo));
+            this.destination = new destinationPanel({map:this.toolbar.map});
+            this.destination.startup();
+            this.destination.on('back-selected',lang.hitch(this,function(){
+                this.dropPanelContent();
+                this.contentPanel.setContent(this.intro.domNode);
+            }));
             
-            //domClass.add(contentNode, toolConfig.name+"-content");
+            this.contentPanel.setContent(this.intro.domNode);
+            this.contentPanel.placeAt(tool);
+            
+            this.intro.on('postal-code-found',lang.hitch(this,this.getDAInfo));
+            this.intro.on('home-selected',lang.hitch(this,function(){
+                this.dropPanelContent();
+                this.contentPanel.setContent(this.destination.domNode);
+            }));
+            
+            this.destination.on('new-destination',lang.hitch(this,this.getDestinationDA));
+            
             toolbar.activateTool(this.config.activeTool || toolConfig.name);
             deferred.resolve(true);
             
@@ -142,10 +174,9 @@ define([
         {
             console.log('getDAInfo',e);
             var query = new Query();
-            query.outFields = [ "*" ];
+            query.outFields = ["*"];
             query.returnGeometry = true;
             query.geometry = e.postalCode.feature.geometry;
-            
             this.daLayer.queryFeatures(query).then(lang.hitch(this,this.foundDAInfo),function(e){console.log("Error:",e);});
             
         },
@@ -160,16 +191,16 @@ define([
             {
                 console.log('foundDAInfo',results);
                 
+                this.daOidFieldName = results.objectIdFieldName;
                 this.daHomeFeature = results.features[0];
                 this.daHomeOid = this.daHomeFeature.attributes[this.daOidFieldName]
                 
                 this.daDisplayLayer.clear();
                 this.daDisplayLayer.add(this.daHomeFeature);
                 
-                this.daOidFieldName = results.objectIdFieldName;
                 var clusterQuery = new RelationshipQuery();
                 clusterQuery.outFields = ["*"];
-                clusterQuery.objectIds = [this.daHomeFeature.attributes[this.daOidFieldName]];
+                clusterQuery.objectIds = [this.daHomeOid];
                 clusterQuery.relationshipId = 0;
                 this.daLayer.queryRelatedFeatures(clusterQuery).then(lang.hitch(this,this.foundClusterInfo),function(e){console.log("Error:",e);});
             }
@@ -187,6 +218,51 @@ define([
             {
                 this.intro.setClusterInfo(this.daHomeFeature,results[this.daHomeOid].features[0]);
                 this.toolbar.map.setExtent(this.daHomeFeature.geometry.getExtent(),true);
+            }
+        },
+        
+        getDestinationDA: function(e)
+        {
+            map.graphics.clear();
+            var query = new Query();
+            query.outFields = ["*"];
+            query.returnGeometry = true;
+            query.geometry = e.destination.feature.geometry;
+            this.daLayer.queryFeatures(query).then(lang.hitch(this,function(results){this.foundDestinationDAInfo(results,e.destination.feature);}),function(e){console.log("Error:",e);});
+        },
+        
+        
+        foundDestinationDAInfo: function(results,destinationCoord)
+        {
+            if (!results || !results.features || !results.features.length>0)
+            {
+                console.log("No DA Found");
+            }
+            else
+            {
+                console.log('foundDestinationDAInfo',results,destinationCoord);
+                
+                this.daDestinationFeature = results.features[0];
+                this.daDestinationOid = this.daDestinationFeature.attributes[this.daOidFieldName];
+                
+                this.daDestinationFeature.setInfoTemplate(popupTemplates.daTemplate);
+                this.daDestinationCoordinate = new Graphic(
+                    destinationCoord.geometry,
+                    new SimpleMarkerSymbol(SimpleMarkerSymbol.STYLE_CIRCLE, 10, new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, new Color([255,0,0]), 1), new Color([0,255,0,0.25])),
+                    this.daDestinationFeature.attributes,
+                    ((this.daDestinationFeature.attributes["DOM_PRIZMC2"]*1)==67?popupTemplates.noClusterGraphic:popupTemplates.daTemplate)
+                );
+                this.toolbar.map.graphics.add(this.daDestinationCoordinate)
+                this.toolbar.map.setExtent(this.daDestinationFeature.geometry.getExtent(),true);
+            }
+        },
+        
+        // This removes content from the content panel without destroying nodes (so they can be added again later).  The ContentPane.setContent() method destroys any existing content that it contains before adding new content.
+        dropPanelContent: function()
+        {
+            while (!!this.contentPanel.containerNode.children[0])
+            {
+                this.contentPanel.containerNode.removeChild(this.contentPanel.containerNode.children[0]);
             }
         },
         
