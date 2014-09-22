@@ -1,4 +1,4 @@
-AForge Filter Proxy
+AForge Processing Proxy
 ========
 
 Jiro Shirota
