@@ -1,10 +1,10 @@
 ﻿using System.Reflection;
 using System.Runtime.InteropServices;
-[assembly: AssemblyTitle("AForge Filter Proxy for ArcGIS Server")]
+[assembly: AssemblyTitle("AForge Processing Proxy for ArcGIS Server")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("AForge Filter Proxy for ArcGIS Server")]
+[assembly: AssemblyProduct("AForge Processing Proxy for ArcGIS Server")]
 [assembly: AssemblyCopyright("Copyright © Nobody 2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
