@@ -9,8 +9,13 @@
 *	JF Desjardins <jdesjardins@esri.ca>
 
 
+---- 
 
-##[See it live!](http://172.31.17.122:5050/lred/station.php)  
+##[See it live!](http://172.31.17.122:5050/lred/station.php)
+
+(available only inside esri canada network)
+
+---- 
 
 ## Esri Philosophy for an Environmental App
 
