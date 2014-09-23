@@ -26,7 +26,7 @@ If you are the designated person on your team, follow these steps to get ready:
 **Please do not submit any pull requests until we have all teams in place and repos created.** I have created a "MattEnglishSampleProject" which contains a WebApp Builder widget to demonstrate the end result of a merged pull request. 
 
 
-All repos need to be merged into this repo by 9am EDT Oct 1, 2014. Prizes will be awarded September 30, 2014.
+All repos need to be merged into this repo by **9am EDT Oct 1, 2014**. Prizes will be awarded October 30, 2014.
 
 
 Happy Hacking, Matt (call me if you're lost)
