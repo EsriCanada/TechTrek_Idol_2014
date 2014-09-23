@@ -1,6 +1,10 @@
 Tech Trek Idol 2014
 ==================
 
+**Apps:**
+* [LRED](https://github.com/EsriCanada/TechTrek_Idol_2014/tree/master/LRED)
+* [Charleston 241](https://github.com/EsriCanada/TechTrek_Idol_2014/tree/master/Charleston341)
+
 These are the instructions for sharing your work on GitHub. Even if you're not coding, you should create a repo here and minimally fill out a ReadMe.md [This link will show you how to create cool markdown](http://markdownlivepreview.com).  Designate someone on your team to create a repo for your project; the general flow will be to fork the "TechTrek_Idol_2014" repo to your own account, clone it in desktop, commit and sync often.  
 
 If you are the designated person on your team, follow these steps to get ready:
@@ -22,7 +26,7 @@ If you are the designated person on your team, follow these steps to get ready:
 **Please do not submit any pull requests until we have all teams in place and repos created.** I have created a "MattEnglishSampleProject" which contains a WebApp Builder widget to demonstrate the end result of a merged pull request. 
 
 
-All repos need to be merged into this repo by September 15, 2014. Prizes will be awarded September 30, 2014.
+All repos need to be merged into this repo by 9am EDT Oct 1, 2014. Prizes will be awarded September 30, 2014.
 
 
 Happy Hacking, Matt (call me if you're lost)
