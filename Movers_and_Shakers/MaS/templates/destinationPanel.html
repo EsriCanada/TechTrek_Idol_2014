@@ -8,5 +8,10 @@
             <input data-dojo-attach-point="radioLikeMyGroup" type="radio" id="MaS_likeMyGroup" /><label data-dojo-attach-point="labelForLikeMyGroup" for="MaS_likeMyGroup">${i18n.destinationPanel.likeMyGroup}</label><br />
             <div data-dojo-attach-point="searchButton"></div>
         </form>
+        <div class="MaS-destinationsummary" data-dojo-attach-point="summaryPane" style="display:none; margin-top:10px">
+            <div>${i18n.destinationPanel.totalDestinationDAsPrefix}<span data-dojo-attach-point="totalDestinationDAsCount">0</span>${i18n.destinationPanel.totalDestinationDAsSuffix}<br />
+            <div data-dojo-attach-point="rsButton"></div><br />
+            <div data-dojo-attach-point="summaryList"></div>
+        </div>
     </div>
 </div>

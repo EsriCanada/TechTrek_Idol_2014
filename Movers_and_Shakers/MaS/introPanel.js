@@ -31,6 +31,9 @@ define([
             this.geocoder = new Geocoder({map:this.map,arcgisGeocoder:{sourceCountry:"CAN"},autoNavigate:false,autoComplete:false},this.geocoderNode);
             this.geocoder.startup();
             this.geocoder.on("select",lang.hitch(this,this.geocoderFoundResult));
+            this.geocoder.on("clear",lang.hitch(this,function(){
+                this.emit('clear-home');
+            }));
             this.nextButton = new Button({style:"display:none;margin-left:0.5em;",label:this.i18n.introPanel.nextButton},this.nextButton);
             this.nextButton.startup();
             this.nextButton.on('click',lang.hitch(this,function(){
@@ -38,6 +41,8 @@ define([
             }));
             this.clusterDetails = new ContentPane({},this.clusterDetails);
             this.clusterDetails.startup();
+            
+            this.on('clear-home',lang.hitch(this,this.clearPanel));
         },
         
         geocoderFoundResult: function(e)
@@ -51,6 +56,7 @@ define([
             else
             {
                 console.log("Invalid Postal Code");
+                this.emit('clear-home');
             }
         },
         
@@ -81,6 +87,15 @@ define([
             var content = daFeature.getContent();
             this.clusterDetails.set("content",content);
             domStyle.set(this.clusterDetails.domNode,"display","block");
+        },
+        
+        clearPanel: function()
+        {
+            while (!!this.clusterDetails.domNode.children[0])
+            {
+                this.clusterDetails.domNode.removeChild(this.clusterDetails.domNode.children[0]);
+            }
+            domStyle.set(this.clusterDetails.domNode,"display","none");
         },
         
         // Function for padding integers with zeros (credits to: https://gist.github.com/aemkei/1180489 ):

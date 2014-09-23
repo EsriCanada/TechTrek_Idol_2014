@@ -1,0 +1,15 @@
+<div class="${baseClass} MaS-panel claro">
+    <div class="${baseClass}IntroText" data-dojo-attach-point="introText">${i18n.rsPanel.rsText}</div>
+    <div data-dojo-attach-point="searchOptions" class="MaS-options" style="margin-top:10px; overflow:auto;">
+        <form id="MaS_rsSearchForm">
+            ${i18n.rsPanel.searchOptions} | <div data-dojo-attach-point="backButton"></div><br />
+            <input data-dojo-attach-point="radioInsideMyDAs" type="radio" id="MaS_insideMyDAs" checked /><label data-dojo-attach-point="labelForInsideMyDAs" for="MaS_insideMyDAs">${i18n.rsPanel.insideMyDAs}</label><br />
+            <input data-dojo-attach-point="radioOutsideMyDAs" type="radio" id="MaS_outsideMyDAs" /><label data-dojo-attach-point="labelForOutsideMyDAs" for="MaS_outsideMyDAs">${i18n.rsPanel.outsideMyDAs}</label><br />
+            <div data-dojo-attach-point="searchButton"></div>
+        </form>
+        <div class="MaS-rssummary" data-dojo-attach-point="summaryPane" style="display:none; margin-top:10px">
+            <div>${i18n.rsPanel.totalListingsPrefix}<span data-dojo-attach-point="currentListingsLabel">1</span> ${i18n.rsPanel.pagerLabelSeparator} <span data-dojo-attach-point="totalListingsCount">0</span>${i18n.rsPanel.totalListingsSuffix}<br />
+            <div data-dojo-attach-point="summaryList"></div>
+        </div>
+    </div>
+</div>

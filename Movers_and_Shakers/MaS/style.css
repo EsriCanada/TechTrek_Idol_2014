@@ -98,3 +98,9 @@
     padding:0;
     overflow:auto;
 }
+
+.MaS-daItem:hover, .MaS-rsListing:hover
+{
+    background-color:#CEF;
+    color:#00F;
+}

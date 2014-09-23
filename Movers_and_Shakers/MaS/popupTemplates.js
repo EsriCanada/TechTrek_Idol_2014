@@ -4,7 +4,6 @@ define([
     "esri/dijit/PopupTemplate",
     "esri/graphic"
 ], function(require, i18n, PopupTemplate, Graphic) {
-    console.log('i18n',i18n);
     var templates = {
         noClusterHomeGraphic: new Graphic(null,null,{"DOM_PRIZMC2":67},new PopupTemplate({
             description: '<p>'+i18n.popupTemplates.noDataHomeClusterTitle+'</p><img src="'+require.toUrl("./clustergraphics/ClusterDesc_67.png")+'" style="width:100%" >'
@@ -58,6 +57,18 @@ define([
                     },
                     theme: "ThreeD"
                 }
+            ]
+        }),
+        rsListing: new PopupTemplate({
+            title:'<a target="_blank" href="{link}">{address}</a>',
+            description: '<p>'+i18n.popupTemplates.rsListingTitle+'</p><a target="_blank" href="{link}"><img src="{image}" style="width:100%" ></a><br /><hr />'+
+                "<p>Type: {housing_type}</p><p>Bedrooms: {bedrooms}</p><p>Bathrooms: {bathrooms}</p><p>Price: ${price}</p><p>Listed By: {listed_by}</p>",
+            fieldInfos: [
+                { fieldName: "housing_type", label: "Type", isEditable: false, visible: true },
+                { fieldName: "bedrooms", label: "Bedrooms", isEditable: false, visible: true },
+                { fieldName: "bathrooms", label: "Bathrooms", isEditable: false, visible: true },
+                { fieldName: "price", label: "Bathrooms", isEditable: false, visible: true, format: { places: 2, digitSeparator: true } },
+                { fieldName: "listed_by", label: "Listed By", isEditable: false, visible: true }
             ]
         })
     };
