@@ -44,7 +44,7 @@
             noDataHomeClusterTitle: "There is insufficient information about this location.",
             daClusterTitle: "These are the characteristics of the population here:",
             rsListingTitle: "Real-estate listing details:",
-            fieldInfos: [
+            daFieldInfos: [
                 { fieldName: "ECYPOP15P", label: "Total population age 15+ (2013)", isEditable: false, visible: false },
                 { fieldName: "ECYMSLMAR", label: "Married (not separated)", isEditable: false, visible: false },
                 { fieldName: "ECYMSCOML", label: "Common law", isEditable: false, visible: false },
@@ -162,6 +162,13 @@
                 { fieldName: "ECYOCPRIMY", label: "Primary Industry", isEditable: false, visible: false },
                 { fieldName: "ECYOCSCNDY", label: "Processing/Manufacturing/Utilities", isEditable: false, visible: false }
                 
+            ],
+            rsFieldInfos: [
+                { fieldName: "housing_type", label: "Type", isEditable: false, visible: true },
+                { fieldName: "bedrooms", label: "Bedrooms", isEditable: false, visible: true },
+                { fieldName: "bathrooms", label: "Bathrooms", isEditable: false, visible: true },
+                { fieldName: "price", label: "Bathrooms", isEditable: false, visible: true, format: { places: 2, digitSeparator: true } },
+                { fieldName: "listed_by", label: "Listed By", isEditable: false, visible: true }
             ]
         }
     }),
