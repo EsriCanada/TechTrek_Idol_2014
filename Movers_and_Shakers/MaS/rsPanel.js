@@ -142,30 +142,32 @@ define([
         
         clickedListing: function(e)
         {
-            console.log('clicked',e.toElement._listingFeature.attributes);
-            if (e.toElement._listingFeature)
+            var target = e.target||e.toElement;
+            console.log('clicked',target._listingFeature.attributes);
+            if (target._listingFeature)
             {
-                this.map.infoWindow.setFeatures([e.toElement._listingFeature]);
-                this.map.infoWindow.show(this.map.toScreen(e.toElement._listingFeature.geometry));
-                this.map.centerAt(e.toElement._listingFeature.geometry);
+                this.map.infoWindow.setFeatures([target._listingFeature]);
+                this.map.infoWindow.show(this.map.toScreen(target._listingFeature.geometry));
+                this.map.centerAt(target._listingFeature.geometry);
             }
         },
         
         hoverListing: function(e)
         {
-            if (e.toElement._listingFeature)
+            var target = e.target||e.toElement;
+            if (target._listingFeature)
             {
-                console.log('highlight',e.toElement._listingFeature);
+                console.log('highlight',target._listingFeature);
                 if (!this._highlightGraphic)
                 {
                     this._highlightGraphic = new Graphic(
-                        e.toElement._listingFeature.geometry,
+                        target._listingFeature.geometry,
                         new SimpleMarkerSymbol(SimpleMarkerSymbol.STYLE_CIRCLE, 10, new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, new Color([0,255,255]), 2), new Color([0,0,0,0]))
                     );
                 }
                 else
                 {
-                    this._highlightGraphic.setGeometry(e.toElement._listingFeature.geometry);
+                    this._highlightGraphic.setGeometry(target._listingFeature.geometry);
                 }
                 if (!this._highlightGraphic.getLayer())
                 {

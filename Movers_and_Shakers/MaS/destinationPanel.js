@@ -186,28 +186,30 @@ define([
         
         clickedDA: function(e)
         {
+            var target = e.target||e.toElement;
             console.log('clicked',e);
-            if (e.toElement._daFeature)
+            if (target._daFeature)
             {
-                this.map.setExtent(e.toElement._daFeature.geometry.getExtent().expand(2),true);
+                this.map.setExtent(target._daFeature.geometry.getExtent().expand(2),true);
             }
         },
         
         hoverDA: function(e)
         {
-            if (e.toElement._daFeature)
+            var target = e.target||e.toElement;
+            if (target._daFeature)
             {
-                console.log('highlight',e.toElement._daFeature);
+                console.log('highlight',target._daFeature);
                 if (!this._highlightGraphic)
                 {
                     this._highlightGraphic = new Graphic(
-                        e.toElement._daFeature.geometry,
+                        target._daFeature.geometry,
                         new SimpleFillSymbol(SimpleFillSymbol.STYLE_SOLID, new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID,new Color([0,255,255]), 5),new Color([0,0,0,0]))
                     );
                 }
                 else
                 {
-                    this._highlightGraphic.setGeometry(e.toElement._daFeature.geometry);
+                    this._highlightGraphic.setGeometry(target._daFeature.geometry);
                 }
                 if (!this._highlightGraphic.getLayer())
                 {
