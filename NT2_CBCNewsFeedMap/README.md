@@ -1,18 +1,17 @@
 
 # Team Name: NT2
-##Team Members: Steven Beothy, Andre Piasta
+###Team Members: Steven Beothy, Andre Piasta
 
 
-----
-## Project: CBCNewsFeedMap
+### Project: CBCNewsFeedMap
 
-###A JSAPI map application which plots CBC News Feeds on a global web map and displays the news stories in a way!
+####A JSAPI map application which plots CBC News Feeds on a global web map and displays the news stories in a way!
 
-###We took a number of [CBC news feeds](http://www.cbc.ca/rss/)
+####We took a number of [CBC news feeds](http://www.cbc.ca/rss/)
 
-###We then used a site called [Geonames](http://www.geonames.org/) that georeferences them by finding the first referenced name to a location. 
+####We then used a site called [Geonames](http://www.geonames.org/) that georeferences them by finding the first referenced name to a location. 
 
-###The newly created GeoRSS feeds are then plotted on an ArcGIS Online web map.
+####The newly created GeoRSS feeds are then plotted on an ArcGIS Online web map.
 
 #[View the App Live!](http://trainingportal.esri.ca/cbc/)
 **Be sure to switch to the four different news feeds by clicking on the
@@ -28,7 +27,7 @@
 
 
 ##Why our app is Cool:
-####This simple application demonstrates the power of the ArcGIS Platform and how GIS is for everyone. Plotting world events onto a map can give a better perspective into our world and how it functions. If you ever read a news story and ever wondered exactly where the story occurred or where the story originated in relation to a surrounding area that may be important to you, this app was built for you!
+####This simple application demonstrates the power of the ArcGIS Platform and how GIS is for everyone. Plotting world events onto a map can give a better perspective into our world and how it functions. If you ever read a news story and wondered exactly where the story occurred or where the story originated in relation to a surrounding area that may be important to you, then this app was built especially for you!
 
 ----
 ## Changelog
