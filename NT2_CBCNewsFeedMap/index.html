@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
+<title>CBC News Map</title>
+<link rel="stylesheet" href="http://js.arcgis.com/3.10/js/dojo/dijit/themes/claro/claro.css" />
+<link rel="stylesheet" href="http://js.arcgis.com/3.10/js/esri/css/esri.css" />
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open Sans">
+<link rel="shortcut icon" type="image/ico" href="http://www.cbc.ca/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="css/cbc.css">
+    
+<script src="http://js.arcgis.com/3.10/"></script>
+<script src="js/cbc.js"></script>
+<script>
+      var dojoConfig = {
+        async : true
+      };
+</script>
+</head>
+
+<body class="claro">
+<div id="mainWindow" data-dojo-type="dijit/layout/BorderContainer" 
+    data-dojo-props="design:'headline',gutters:true" 
+    style="width:100%; height:100%;">
+    <div data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="gutters:true" 
+        region="left" style="width: 30%;height:100%;">
+        <div id="leftPane" data-dojo-type="dijit/layout/ContentPane" 
+            data-dojo-props="region:'center'"></div>
+			
+        <div id="header" data-dojo-type="dijit/layout/ContentPane" 
+            data-dojo-props="region:'top'">
+			
+            <div id="featureCount" style="margin-bottom:12px;">Click to select a CBC News Story</div>
+			<div id="pager2" style="display:none;margin-bottom:15px;"> 
+			<a href='javascript:void(0);' id ="zoom" class='nav' style="text-decoration: none;">
+                    Zoom To
+                </a>
+			</div>
+            <div id="pager" style="display:none;"> 
+                <a href='javascript:void(0);' id ="previous" class='nav' style="text-decoration: none;">
+                    < Prev
+                </a>
+                  
+                <a href='javascript:void(0);' id="next" class='nav'  style="text-decoration: none;">
+                    Next >
+                </a>
+				
+            </div>
+			
+        </div>
+		<div id="header2" data-dojo-type="dijit/layout/ContentPane" 
+            data-dojo-props="region:'bottom'">
+			<img id="radio" src="./images/cbcradio.png" height="80" width="247"></img>
+			<iframe id="cbc" height="0" width="0" SCROLLING="no" FRAMEBORDER="0"></iframe>
+			
+		</div>
+    </div>
+     <div id="map" data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="region:'center'">
+		<div id="HomeButton1"></div>
+		<div id="LocateButton1"></div>
+		<div id="geocode1"></div>
+	   <div style="position:absolute; left:5px; top:170px; z-index:999;">
+		<div data-dojo-type="dijit/TitlePane"
+             data-dojo-props="title:'Switch Basemap',region:'floating', closable:false, open:false" >
+          <div id="basemap" data-dojo-type="dijit/layout/ContentPane" style="width:400px; height:280px; overflow:auto">
+            <div id="basemapGallery1"></div>
+          </div>
+      </div>
+	 </div>
+	</div>
+	<div id="feedback" class="shadow">
+	<img src="http://mistergo.wikispaces.com/file/view/cbc_logo.png/197011876/cbc_logo.png" height="22" width="22" <h3> CBC News Feeds
+	</img>	
+        <div id="info">
+          <div id="note">
+            <span id="current_map"></span>
+          </div>
+		  
+          <span id="show_next">Show Next News Feed</span>
+        </div>
+      </div>
+	</div>
+</body>
+
+</html> 
