@@ -38,10 +38,10 @@ SPORE has a go-to-market capability within the real-estate sector as well.  Indi
 - ArcGIS Online level one (five seats)					$3,400
 - Licensing of PrizmC2© from Environics Analytics		$17,500
 - Licensing of demographics from Environics Analytics	$7,500
-- Professional Services for development and Integration	$12,000
-- **TOTAL ESTIMATED COST OF APP DEVELOPMENT				$40,400**
+- **TOTAL ESTIMATED COST OF APP DEVELOPMENT				$28,400^*
 
-*Additional credits can be purchased in buckets of 1,000 for an additional $160
+^Additional credits can be purchased in buckets of 1,000 for an additional $160
+*Additional costing for Professional Service if required
 
 ----------
 
