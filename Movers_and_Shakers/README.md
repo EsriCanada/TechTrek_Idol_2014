@@ -69,7 +69,7 @@ Additional costing for Professional Service if required.
 
 ----------
 
-#IMPLEMENTAION NOTES: #
+#IMPLEMENTATION NOTES: #
 
 The SPORE source code will not function out-of-the-box due to its dependency on proprietary data and services.  For this reason, anyone adapting this source code will need to take note of the following:
 
