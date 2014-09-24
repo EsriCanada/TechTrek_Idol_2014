@@ -30,7 +30,7 @@ define([
             this.inherited(arguments);
             this.geocoder = new Geocoder({map:this.map,arcgisGeocoder:{sourceCountry:"CAN"},autoNavigate:false,autoComplete:false},this.geocoderNode);
             this.geocoder.startup();
-            this.geocoder.on("select",lang.hitch(this,this.geocoderFoundResult));
+            this.geocoder.on("find-results",lang.hitch(this,this.geocoderFoundResult));
             this.geocoder.on("clear",lang.hitch(this,function(){
                 this.emit('clear-home');
             }));
@@ -48,10 +48,15 @@ define([
         geocoderFoundResult: function(e)
         {
             console.log(e);
-            if (e && e.target && e.target.value && /^[A-Za-z]\d[A-Za-z][ -]?\d[A-Za-z]\d$/.test(e.target.value))
+            if (e && e.results && e.results.results && e.results.results.length>0)
             {
-                this.emit('postal-code-found',{postalCode:e.result});
-                return true;
+                return array.some(e.results.results,lang.hitch(this,function(result){
+                    if (result.feature && result.feature.attributes.score==100 && /^[A-Za-z]\d[A-Za-z][ -]?\d[A-Za-z]\d$/.test(result.name))
+                    {
+                        console.log('postal-code-found',result);
+                        this.emit('postal-code-found',{postalCode:result});
+                    }
+                }));
             }
             else
             {

@@ -1,6 +1,6 @@
 ﻿define({
     root: ({
-        toolName: "Movers and Shakers",
+        toolName: "SPORE (Social Profiling for Optimization in Real-Estate)",
         alerts:
         {
             noDestinationDAsFound: "No candidate locations could be found.\n\nTry a different location, or expanding your search parameters."
