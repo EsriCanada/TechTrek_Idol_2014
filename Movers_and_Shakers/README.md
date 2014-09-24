@@ -13,6 +13,12 @@ People frequently need to purchase a home in an unfamiliar city. They do their h
 
 ----------
 
+# DEMO: #
+
+1.	Try the application live:  ***[ONLY AVAILBLE TO ESRI CANADA USERS](http://gfx-dev/Movers_and_Shakers)***
+
+----------
+
 # APPLICATION WORKFLOW: #
 1.	Users enter a postal code from a neighbourhood they are familiar with or that is of the type they are looking for in the unfamiliar city. 
 2.	Based on the dissemination area of the selected postal code, the application returns a social profile or social cluster (the  demographic and behavioral characteristics of an area) for that neighbourhood. 
