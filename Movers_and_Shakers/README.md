@@ -45,7 +45,7 @@ SPORE has a go-to-market capability within the real-estate sector as well.  Indi
 
 ----------
 
-# WHY OUR APPLICATION: #
+#WHY OUR APPLICATION: #
 1.	From a development stand-point, our solution is built on our core ArcGIS Online platform.  We are also integrating content through one of Esri Canada’s premier partners, showing diversity and collaboration with third-party data in execution of the solution.  
 2.	The development of the application, while complex behind the covers, offer simplicity in its operation and execution, bringing to users with limited knowledge and understanding of GIS technologies an easy-to-use application that delivers.
 3.	What does SPORE deliver? An immediate solution to the anxiety that most plagues home-buyers: Is this a good place to live?  It lightens their investment of time and money and gets them to their new home more securely and quickly. 
