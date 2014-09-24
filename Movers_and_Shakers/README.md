@@ -9,7 +9,7 @@ Movers and Shakers
 ----------
 
 # PURPOSE OF APPLICATION: #
-People frequently need to purchase a home in an unfamiliar city. They do their house-hunting from a distance (on-line) and have little or no opportunity to get a feel for the city’s different neighbourhoods. Yet, in this situation, the neighbourhood is the home-buyers’ first concern; they are usually looking for something similar to the place where they currently live. Online real estate listings provide some neighbourhood information, but to get that information, house-hunters have to mine the listings house by house. The SPORE (Social Profiling for Optimization in Real Estate) application saves house-hunters time and money by narrowing down real estate listings to those in comparable neighbourhoods. SPORE combines Environics Analytics demographic and social profiling data and current real estate listings to show distance house-hunters what they are *really* looking for—a place to call home.
+People frequently need to purchase a home in an unfamiliar city. They do their house-hunting from a distance (on-line) and have little or no opportunity to get a feel for the city’s different neighbourhoods. Yet, in this situation, the neighbourhood is the home-buyers’ first concern; they are usually looking for something similar to the place where they currently live. Online real estate listings provide some neighbourhood information, but to get that information, house-hunters have to mine the listings house by house. The SPORE (Social Profiling for Optimization in Real Estate) application saves house-hunters time and money by narrowing down real estate listings to those in comparable neighbourhoods. SPORE combines Environics Analytics demographic and social profiling data with current real estate listings to show distance house-hunters what they are *really* looking for—a place to call home.
 
 ----------
 
@@ -18,7 +18,7 @@ People frequently need to purchase a home in an unfamiliar city. They do their h
 2.	Based on the dissemination area of the selected postal code, the application returns a social profile or social cluster (the  demographic and behavioral characteristics of an area) for that neighbourhood. 
 3.	Users select the destination city of their choice, specifying the area (a distance limit from that city) in which to search.
 4.	The application returns a number of neighbourhoods that match either the specific social profile or the social cluster of the initial neighbourhood users selected.
-5.	Users have the option to display either set of real estate listings: those that fall within the areas of matching social profile or matching social cluster.
+5.	Users have the option to display real estate listings that fall within or near the areas that match their chosen social cluster, or areas characterized by a broader group of similar social clusters.
 6.	Users can then browse through the returned listings to select a home that is suitable.
 
 ----------
@@ -52,3 +52,7 @@ SPORE has a go-to-market capability within the real-estate sector as well.  Indi
 
 
 ----------
+
+#WHAT'S COOL FOR DEVELOPERS: #
+1.	The SPORE project has taken a minimalist approach to create a module that is easily plugged into the default Esri [Basic Viewer Template](https://github.com/Esri/Viewer) that users of ArcGIS Online will be familiar with.  A [fork of this template](https://github.com/mgleahy/Viewer) on GitHub adds the ability to plug-in custom widgets using the same toolbar/panel layout.  This enhanced viewer template is used as the framework to present the SPORE module.
+2.	More to come...
