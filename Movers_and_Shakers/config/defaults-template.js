@@ -19,7 +19,7 @@ define({
     //Default configuration settings for the application. This is where you'll define things like a bing maps key,
     //default web map, default app color theme and more. These values can be overwritten by template configuration settings and url parameters.
     "appid": "",
-    "webmap": "f5b13dbed07c46cdb783cf361833aa6b",
+    "webmap": "58a4d70308c943a7b7dcce5dffa1837e",
     "oauthappid": null, //"AFTKRmv16wj14N3z",
     //Group templates must support a group url parameter. This will contain the id of the group.
     //group: "",
@@ -60,7 +60,17 @@ define({
         {"name": "print", "enabled": true, "legend": true, "layouts":false, "format":"pdf"}, 
         {"name": "details", "enabled": true},
         {"name": "share", "enabled": true},
-        {"name": "MaS", "enabled": true, "daFeatures": "http://path/to/FeatureServer/0" }
+        {
+            "name": "MaS", 
+            "enabled": true,
+            "daFeatures": "http://path/to/dafeatures/0", 
+            "clusterData": "http://path/to/dafeatures/1",
+            proxyRule:
+            {
+                proxyUrl:"proxy/proxy.ashx",
+                urlPrefix:"http://path/to/dafeatures"
+            }
+        }
     ], 
     //Set the active tool on the toolbar. Note home and locate can't be the active tool. 
     "activeTool": "MaS",

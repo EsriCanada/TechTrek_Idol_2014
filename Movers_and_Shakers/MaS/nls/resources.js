@@ -12,7 +12,8 @@
         },
         destinationPanel:
         {
-            destinationText: "Where are you going to?<br /><br />Search for a place name or new work or home address:",
+            destinationTextPart1: "Where are you going to?",
+            destinationTextPart2: "Search for a place name or new work or home address:",
             backButton:"<< Back",
             moreButton:"More >>",
             searchRadius:"Search for places within: ",
