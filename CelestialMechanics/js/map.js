@@ -18,7 +18,7 @@ require(
     "dojox/charting/plot2d/Pie",
     "dojox/charting/action2d/Tooltip",
     "dojox/charting/action2d/MoveSlice",
-    "js/ephemeridesTheme"								//**********************************************
+    "js/ephemeridesTheme"							
 
 
   	], 
@@ -44,23 +44,22 @@ require(
       center : [2, 48],
       zoom : 4,
     });
-    
+    //Define the layer of cities
     var coucheVilles = new FeatureLayer("http://services.arcgis.com/pGoeHmYZOCXOU5IQ/arcgis/rest/services/CitiesOfTheWorld/FeatureServer/0", 
     {mode: FeatureLayer.MODE_SNAPSHOT,
 	 outFields: ["Country", "Population", "City", "CoordX", "CoordY", "ZONE_"]
      });
-     
+    
+    //Add cities layer 
     map.addLayer(coucheVilles);
     
-    //Get the date 
+    //Get the date for the ephemeridesObj
     var newDate = new Date();
     
     
     //Initialize the object
     var ephemeridesObj = new sunrisesunset( 48.8819970629341, -2.43299734457971, 1, newDate.getDate() , newDate.getMonth() + 1,newDate.getFullYear());
-    //console.log("qc=" + ephemeridesObj.Lever())
-    //console.log("qc=" + ephemeridesObj.Coucher())
-	
+
 	//Clear graphic when mouse out.
 	function closeDialog(){
 		map.graphics.clear();
@@ -77,7 +76,8 @@ require(
 		  pieChart.addPlot("default", {
        		type: Pie,
         	markers: true,
-        	radius:60
+        	radius:60,
+        	fontColor:"white"
     		});
     	 // Create the tooltip
     	   var tip = new Tooltip(pieChart,"default");
@@ -132,19 +132,36 @@ require(
                    
   		  //Set infos of the city
   		  html.set(dojo.byId("infosVilles"), content);
+  		  
+  		  
   		  //Set infos of ephemerides
-  		  html.set(dojo.byId("infosEphemerides"), "Sunrise: " + ephemeridesObj.Conversion_DecJour_Heure(ephemeridesObj.Lever()) + "<br>Sunset: " + ephemeridesObj.Conversion_DecJour_Heure(ephemeridesObj.Coucher()) +"<br>Daytime: " + ephemeridesObj.Conversion_DecJour_Heure(ephemeridesObj.DureeJour())+
-  		  "<br>Nigthtime: " + ephemeridesObj.Conversion_DecJour_Heure(ephemeridesObj.DureeNuit())); 
-		  
-	  
+  		  var txtSunrise = ephemeridesObj.Conversion_DecJour_Heure(ephemeridesObj.Lever());
+  		  var txtSunset = ephemeridesObj.Conversion_DecJour_Heure(ephemeridesObj.Coucher());
+  		  var txtDayTime = ephemeridesObj.Conversion_DecJour_Heure(ephemeridesObj.DureeJour());
+  		  var txtNightTime = ephemeridesObj.Conversion_DecJour_Heure(ephemeridesObj.DureeNuit());
+  		  
+  		  
+  		  //Set it in HTML format
+  		  html.set(dojo.byId("infosEphemerides"), "Sunrise: " + txtSunrise + "<br>Sunset: " + txtSunset +"<br>Daytime: " + txtDayTime +  "<br>Nigthtime: " +  txtNightTime);  
+		 
+		
+		  //Set City info and time info in HTML format
+		  html.set(dojo.byId("cityNameAndTimeNow"), city + "<br>" +  ephemeridesObj.convertTimeFormat("h", ephemeridesObj.getTimebyTimeZone(fuseauHoraire))); 
+	  	
     	  //pieChart add data
-    	  pieChart.addSeries("Day and Night time",[{y: dayTime, text: "Day",   stroke: "white", tooltip: Math.round(dayTime*100) + "% of the day"},
-    	  {y: nightTime, text: "Night",   stroke: "white", tooltip: Math.round(nightTime*100) + "% of the day"}]);
+    	  pieChart.addSeries("Day and Night time",[{y: dayTime, text: "Day (" + Math.round(dayTime*100) + "%)" ,   stroke: "white", tooltip:  txtDayTime},
+    	  {y: nightTime, text: "Night (" + Math.round(nightTime*100) + "%)",   stroke: "white", tooltip: txtNightTime}]);
     		pieChart.render();
-    		//Set background transparent
+    		//Set pie chart background transparent
     		pieChart.surface.rawNode.childNodes[1].setAttribute('fill-opacity','0');
 			pieChart.surface.rawNode.childNodes[2].setAttribute('stroke-opacity','0');
 			pieChart.surface.rawNode.childNodes[3].setAttribute('fill-opacity','0');
+		
+		
+		var decimalTime = ephemeridesObj.decHour(ephemeridesObj.getTimebyTimeZone(fuseauHoraire));
+		var dayOrNight = ephemeridesObj.dayOrNight(parseFloat(decimalTime),parseFloat(ephemeridesObj.Lever()), parseFloat(ephemeridesObj.Coucher()) )
+		console.log(decimalTime + "," + ephemeridesObj.Lever()+ "," + ephemeridesObj.Coucher())
+		console.log(ephemeridesObj.dayOrNight(parseFloat(decimalTime),parseFloat(ephemeridesObj.Lever()), parseFloat(ephemeridesObj.Coucher()) ))
 		  /*
 		map.on("click", function(evt){
 		//map.graphics.clear();

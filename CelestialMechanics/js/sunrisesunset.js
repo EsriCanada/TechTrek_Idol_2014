@@ -136,7 +136,7 @@ Coucher : function() // (LAT, LONG, Decalage, LeJour, LeMois, LAn)
 	return (Math.floor(12+this._AngleHoraireHeure()+this._EquationTempsMinuteDEC()/60+(this.longitude*-1)*4/60+this.Decalage)+Math.round(((12+this._AngleHoraireHeure()+this._EquationTempsMinuteDEC()/60+(this.longitude*-1)*4/60+this.Decalage)-Math.floor(12+this._AngleHoraireHeure()+this._EquationTempsMinuteDEC()/60+(this.longitude*-1)*4/60+this.Decalage))*60,0)/60)/24;
 	},//virgule entre chaque fonction
 
-	// Donne les minutes en bas de zero sur 2 chiffres
+	//Donne les minutes en bas de zero sur 2 chiffres
 _deuxchiffres : function (nombre)
 	{
 	if (nombre < 10)
@@ -144,8 +144,40 @@ _deuxchiffres : function (nombre)
 	else
 	{retour = nombre}
 
-	return retour
-}
+	return retour;
+}, 
+
+// calcule l'heure en fonction du fuseau horaire - retourne un objet Date
+getTimebyTimeZone : function (offset)
+	{
+	var newDate = new Date();
+	newDate.setTime(newDate.getTime() + (newDate.getTimezoneOffset() + offset*60) * 60 * 1000);
+	
+	return newDate;
+	},
+
+//Convert time to 00h00
+convertTimeFormat : function(separator, hourDec)
+	{
+	return hourDec.getHours() + separator + this._deuxchiffres(hourDec.getMinutes());
+	},
+//convert time in dec. 
+decHour : function (theDate){
+  var heure = theDate.getHours();
+  var minute = theDate.getMinutes();
+  var decHour = (((heure*60) + minute)/1440);
+  return decHour;
+ },
+//get if is daytime or nighttime
+dayOrNight : function (decTime, decTimeRise, decTimeSet)
+	{
+		var dayOrNight = 0
+		
+		if ((decTime > decTimeRise)&&(decTime<decTimeSet))
+			{dayOrNight = 1}
+			
+		return dayOrNight
+	} 
 
   });
 });

@@ -59,7 +59,7 @@ define([
         //light => dark
         //defaultFill object holds all of our gradation settings
         seriesThemes: [
-            { fill: gradient(defaultFill, "#FFFF00", "#FFD700") },
+            { fill: gradient(defaultFill, "#FFD700" , "#FF8C00") }, 	
             { fill: gradient(defaultFill, "#0000CD", "#191970") }
         ],
  
