@@ -5,7 +5,7 @@
 
 **Try it at : [The Great map of Sunrise and Sunset in the World](http://membre.oricom.ca/publiccouture/sunrisesunset)**
 
-### Brief description ###
+### Overview ###
 
 You only need to put your mouse over a city (grey circles on the map) to have his information. The selected city will be circled by an orange circle. The information will appear at the bottom. 
 
