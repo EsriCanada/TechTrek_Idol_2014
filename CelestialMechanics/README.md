@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ##The Great map of Sunrise and Sunset in the World ##
 
 **Author:** Martin Couture, **Date:** September 2014, **For:** Tech Trek Idol 2014
@@ -39,3 +40,7 @@ Fonts, color schemes, layouts and stylesheets are all 100% customizable so you c
 MarkdownPad supports multiple Markdown processing engines, including standard Markdown, Markdown Extra (with Table support) and GitHub Flavored Markdown.
 
 With a tabbed document interface, PDF export, a built-in image uploader, session management, spell check, auto-save, syntax highlighting and a built-in CSS management interface, there's no limit to what you can do with MarkdownPad.
+=======
+_**Sunrise and sunset of the world**_
+
+>>>>>>> origin/master
