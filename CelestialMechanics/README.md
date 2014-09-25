@@ -15,16 +15,16 @@ You only need to put your mouse over a city (grey circles on the map) to have hi
 
 ###More explanation:###
 
-**1-** 
-- 
-- 
-- 
-- 
-- (`Ctrl+B`) and *Italic* (`Ctrl+I`)
-- Quotes (`Ctrl+Q`)
-- Code blocks (`Ctrl+K`)
-- Headings 1, 2, 3 (`Ctrl+1`, `Ctrl+2`, `Ctrl+3`)
-- Lists (`Ctrl+U` and `Ctrl+Shift+O`)
+1. Title of the map 
+2. The Map
+3. Zoom in and Zoom out tool (You can also use the mouse's roller or the shift key with the mouse)
+4. Name of the city selected and his time now.
+5. More details about the place selected: Country, city name, population, time zone, latitude and longitude (in degres)
+6. Time of Sunrise, Sunset, the during time of the day and the night for the selected city.
+7. A pie chart that let you see graphially the duration of the day and night with %.
+8. The arrow show you how the selected city will appear when you will put your mouse over it. 
+
+
 
 ### See your changes instantly with LivePreview ###
 
