@@ -14,9 +14,9 @@ Team Members:
 
 Welcome to Plug My Ride.
 
-Enjoy freedom with your electric vehicle. There are more charging stations available every day.  Let Plug My Ride help you discover how your lifestyle will ride in an electric vehicle!<br><br>
+Enjoy freedom with your electric vehicle. There are more charging stations available every day.  Let Plug My Ride help you discover how your lifestyle will ride in an electric vehicle!
 
-It’s easy. Just choose your vehicle, starting point and destination. Plug My Ride will show you the best route with stops for charging, as well a visual representation of a single charge driving range for the vehicle.<br><br>
+It’s easy. Just choose your vehicle, starting point and destination. Plug My Ride will show you the best route with stops for charging, as well a visual representation of a single charge driving range for the vehicle.
 
 Let’s go exploring.
 
