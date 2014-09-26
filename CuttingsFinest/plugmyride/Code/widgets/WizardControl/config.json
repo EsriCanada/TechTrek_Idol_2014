@@ -1,0 +1,26 @@
+{
+	"directions":
+	{
+	  "routeTaskUrl":"",
+	  "locatorUrl":"",
+	  "farts":"yup",
+	  "geocoderOptions": {
+	  	"autoComplete":true,
+	  	"maxLocations":6,
+	  	"minCharacters":3,
+	  	"searchDelay":350,
+	  	"arcgisGeocoder": {
+	      "placeholder": "Search address or place"
+	    }
+	  },
+	  "routeOptions":{
+	  	"directionsLanguage":"en_US",
+	  	"directionsLengthUnits":"esriKilometers",
+	  	"directionsOutputType":"standard",
+	  	"impedanceAttribute":""
+	  }
+	},
+	"drivetime":
+	{
+	}
+}

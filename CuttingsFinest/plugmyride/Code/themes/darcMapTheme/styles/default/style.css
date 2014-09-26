@@ -1,0 +1,9 @@
+.jimu-border-panel{
+  border: 1px solid red;
+}
+.spatialagent-widget-panel
+{
+	bottom: 0px;
+    right: 0px;
+    top: 0px;
+}

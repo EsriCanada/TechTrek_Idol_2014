@@ -1,0 +1,220 @@
+{
+  "theme": {
+    "name": "FoldableTheme",
+    "styles": [
+      "default",
+      "black",
+      "green",
+      "cyan"
+    ]
+  },
+  "portalUrl": "http://esrica-psvt.maps.arcgis.com/",
+  "appId": "3dfweCFxH8odFRFb",
+  "title": "Plug My Ride",
+  "subtitle": "with Web AppBuilder for ArcGIS",
+  "logo": "images/app-logo.png",
+  "geometryService": "https://utility.arcgisonline.com/arcgis/rest/services/Geometry/GeometryServer",
+  "links": [],
+  "widgetOnScreen": {
+    "panel": {
+      "uri": "themes/FoldableTheme/panels/TitlePanel/Panel",
+      "positionRelativeTo": "map"
+    },
+    "widgets": [
+      {
+        "label": "Header Controller",
+        "uri": "themes/FoldableTheme/widgets/HeaderController/Widget",
+        "positionRelativeTo": "browser",
+        "position": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "height": 40
+        },
+        "id": "themes/FoldableTheme/widgets/HeaderController/Widget_1",
+        "name": "HeaderController",
+        "isThemeWidget": true
+      },
+      {
+        "label": "Scalebar",
+        "uri": "widgets/Scalebar/Widget",
+        "position": {
+          "left": 25,
+          "bottom": 25
+        },
+        "id": "widgets/Scalebar/Widget_2",
+        "positionRelativeTo": "map",
+        "name": "Scalebar"
+      },
+      {
+        "uri": "widgets/Geocoder/Widget",
+        "position": {
+          "left": 45,
+          "top": 5
+        },
+        "id": "widgets/Geocoder/Widget_3",
+        "positionRelativeTo": "map",
+        "name": "Geocoder",
+        "label": "Geocoder"
+      },
+      {
+        "label": "Coordinate",
+        "uri": "widgets/Coordinate/Widget",
+        "position": {
+          "left": 200,
+          "bottom": 20
+        },
+        "id": "widgets/Coordinate/Widget_4",
+        "positionRelativeTo": "map",
+        "name": "Coordinate"
+      },
+      {
+        "position": {
+          "left": 55,
+          "top": 45,
+          "width": 400,
+          "height": 410
+        },
+        "placeholderIndex": 1,
+        "id": "_5",
+        "positionRelativeTo": "map"
+      },
+      {
+        "position": {
+          "left": 105,
+          "top": 45,
+          "width": 380,
+          "height": 410
+        },
+        "placeholderIndex": 2,
+        "id": "_6",
+        "positionRelativeTo": "map"
+      },
+      {
+        "position": {
+          "left": 155,
+          "top": 45,
+          "width": 380,
+          "height": 410
+        },
+        "placeholderIndex": 3,
+        "id": "_7",
+        "positionRelativeTo": "map"
+      },
+      {
+        "label": "OverviewMap",
+        "uri": "widgets/OverviewMap/Widget",
+        "position": {
+          "top": 0,
+          "right": 0
+        },
+        "id": "widgets/OverviewMap/Widget_8",
+        "positionRelativeTo": "map",
+        "name": "OverviewMap"
+      },
+      {
+        "uri": "widgets/HomeButton/Widget",
+        "position": {
+          "left": 7,
+          "top": 75
+        },
+        "id": "widgets/HomeButton/Widget_9",
+        "positionRelativeTo": "map",
+        "name": "HomeButton",
+        "label": "Home Button"
+      },
+      {
+        "uri": "widgets/MyLocation/Widget",
+        "position": {
+          "left": 7,
+          "top": 110
+        },
+        "id": "widgets/MyLocation/Widget_10",
+        "positionRelativeTo": "map",
+        "name": "MyLocation",
+        "label": "My Location"
+      },
+      {
+        "uri": "widgets/AttributeTable/Widget",
+        "positionRelativeTo": "browser",
+        "id": "widgets/AttributeTable/Widget_11",
+        "position": {
+          "left": 0,
+          "top": 0
+        },
+        "name": "AttributeTable",
+        "label": "Attribute Table"
+      }
+    ]
+  },
+  "map": {
+    "3D": false,
+    "2D": true,
+    "position": {
+      "left": 0,
+      "top": 40,
+      "right": 0,
+      "bottom": 0
+    },
+    "itemId": "26d66ae4184f4076a125d86997c06ad7",
+    "mapOptions": {
+      "extent": {
+        "xmin": -18379062.219987083,
+        "ymin": 3398696.976632556,
+        "xmax": -3507473.996827144,
+        "ymax": 10325726.227946527,
+        "spatialReference": {
+          "wkid": 102100
+        }
+      }
+    },
+    "id": "map",
+    "portalUrl": "http://esrica-psvt.maps.arcgis.com"
+  },
+  "widgetPool": {
+    "panel": {
+      "uri": "themes/FoldableTheme/panels/FoldablePanel/Panel",
+      "positionRelativeTo": "map",
+      "position": {
+        "top": 5,
+        "right": 5,
+        "bottom": 5
+      }
+    },
+    "widgets": [
+      {
+        "label": "Legend",
+        "uri": "widgets/Legend/Widget",
+        "id": "widgets/Legend/Widget_12",
+        "name": "Legend",
+        "index": 0
+      },
+      {
+        "label": "LayerList",
+        "uri": "widgets/LayerList/Widget",
+        "id": "widgets/LayerList/Widget_13",
+        "name": "LayerList",
+        "index": 1
+      },
+      {
+        "label": "EV Router",
+        "uri": "widgets/EvRouter/Widget",
+        "id": "widgets/LayerList/Widget_14",
+        "name": "EvRouter",
+        "index": 2
+      },
+      {
+        "label": "EV Drive Time",
+        "uri": "widgets/EvDriveTime/Widget",
+        "id": "widgets/EvDriveTime/Widget_15",
+        "name": "EvDriveTime",
+        "index": 3
+      }
+    ]
+  },
+  "widgetManifestsMerged": true,
+  "httpProxy": {
+    "useProxy": false,
+    "url": "http://localhost/proxy/dotnet/proxy.ashx"
+  }
+}

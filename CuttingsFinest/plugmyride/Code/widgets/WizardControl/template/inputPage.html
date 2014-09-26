@@ -1,0 +1,48 @@
+<div class="page_container">
+	<div class="info_container">
+		<label  tabindex="0" class="lblInstruction">Select your vehicle:</label>
+		<div class="vehicleController" data-dojo-attach-point="vehicleController">	
+		</div>
+		<label class="lblInstruction">Enter your starting address: </label>
+		<br><br>
+		<div style="width:100%">
+			<div data-dojo-attach-point="startingController"></div>
+			<div data-dojo-attach-point="startingLocateButton"></div>	
+		</div>
+		<br>
+		<label class="lblInstruction">Enter your destination address: </label>
+		<br><br>
+		<div style="width:100%">
+			<div data-dojo-attach-point="stopingController"></div>
+			<div data-dojo-attach-point="stopingLocateButton"></div>
+		</div>
+		<br><br>
+		<div class="options_renderer collapsed" data-dojo-attach-point="optionsBox">
+			<div style="display:inline-block; vertical-align:middle; padding-bottom:5px;">
+				<div id="btnInfoBox"  title=" Expand/Collapse " class="groupIcon groupImg" data-dojo-attach-point="btnGroup"></div>
+				<label data-dojo-attach-point="lblGroup" class="optionsHeader">Additional Options</label>
+			</div><br><br>
+			<label class="lblInstruction" >Select the type of information you would like to generate:</label>
+			<span class="span_nowrap">
+				<input tabindex="-1"  type="checkbox" data-dojo-type="dijit/form/CheckBox" data-dojo-props="disabled:false,checked:true" data-dojo-attach-point="chkRoute"
+					class="widgetCheckbox" title="Route option"/><label class="checkLabel" >Find me a route between the two addresses</label>
+			</span>
+			<span class="span_nowrap">
+				<input tabindex="-1" type="checkbox" data-dojo-type="dijit/form/CheckBox" data-dojo-props="disabled:false,checked:true" data-dojo-attach-point="chkDistanceStart"
+					class="widgetCheckbox" title="Drive Distance Option"/><label class="checkLabel" >Show me the driving range (per charge) around starting address</label>
+			</span>
+			<span class="span_nowrap">
+				<input tabindex="-1"  type="checkbox" data-dojo-type="dijit/form/CheckBox" data-dojo-props="disabled:false,checked:false" data-dojo-attach-point="chkDistanceEnd"
+					class="widgetCheckbox" title="Drive Distance Option"/><label class="checkLabel" >Show me the driving range (per charge) around destination address</label>
+			</span>
+		</div>
+	</div>
+	<div class="button_container">
+		<div style="float:left;">
+			<div class="widgetBtn jimu-main-bgcolor" data-dojo-attach-point="btnBack" data-dojo-attach-event="onClick:onBtnBackClick">Back</div>
+		</div>
+		<div style="float:right;">
+			<div class="jimu-main-bgcolor widgetBtn" data-dojo-attach-point="btnContinue" data-dojo-attach-event="onClick:onBtnContinueClick">Continue</div>
+		</div>
+	</div>
+</div>

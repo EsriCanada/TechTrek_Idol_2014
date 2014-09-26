@@ -1,0 +1,57 @@
+{
+  "preloadWidgets": {
+    "panel": {
+      "uri": "themes/darcMapTheme/panels/TitlePanel/Panel"
+    },
+    "widgets": [{
+      "label": "Scalebar",
+      "uri": "widgets/Scalebar/Widget",
+      "position": {
+        "left": 25,
+        "bottom": 25
+      }
+    },{
+      "uri": "themes/darcMapTheme/widgets/SlideoutController/Widget",
+      "positionRelativeTo": "browser",
+      "position": {
+        "left": 0,
+        "top": 44,
+        "bottom": 24
+      }
+     },{
+      "label": "Coordinate",
+      "uri": "widgets/Coordinate/Widget",
+      "inPanel": false,
+      "position": {
+        "left": 200,
+        "bottom": 10
+      }
+    }, {
+      "label": "Select a basemap",
+      "uri": "widgets/BasemapGallery/Widget",
+      "inPanel": true,
+      "position": {
+        "left": 45,
+        "top": 5,
+        "width": 430,
+        "height": 410
+      }
+    }, {
+      "position": {
+        "left": 95,
+        "top": 5,
+        "width": 400,
+        "height": 410
+      }
+    }]
+  },
+
+  "map": {
+    "position": {
+      "left": 0,
+      "top": 0,
+      "right": 0,
+      "bottom": 0
+    }
+  }
+}

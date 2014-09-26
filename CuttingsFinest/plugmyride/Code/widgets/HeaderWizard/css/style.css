@@ -1,0 +1,100 @@
+.widget_wizard_Header{
+  box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.4);
+}
+
+.widget_wizard_Header .header-section{
+  height: 100%;
+  float: left;
+  overflow: hidden;
+}
+
+
+.widget_wizard_Header .logo{
+  float: left;
+  margin-left: 14px;
+  cursor: pointer;
+}
+.widget_wizard_Header .titles{
+  margin-left: 14px;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+}
+
+.widget_wizard_Header .title{
+  float: left;
+  color:#fff;
+  text-align: center;
+  height: 100%;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.widget_wizard_Header .subtitle{
+  float: left;
+  margin-left: 20px;
+  color:#6d7685;
+  font-size: 12px;
+  text-align: center;
+  height: 100%;
+  font-weight: bold;
+}
+
+.widget_wizard_Header .container-section{
+  height: 100%;
+  float: right;
+  position:relative;
+}
+
+.widget_wizard_Header .navigationbuttons{
+  padding-top:2px;
+  padding-right:2px;
+  cursor: pointer;
+  margin:0px;
+  opacity:.6;
+}
+
+.widget_wizard_Header .navigationbuttons.selected{
+  opacity:.8;
+}
+
+.widget_wizard_Header .navigationbuttons.button1{
+	position: relative;
+    z-index: 2;
+    
+}
+.widget_wizard_Header .navigationbuttons.button2{
+	position: relative;
+    z-index: 1;
+    left: -21px;
+}
+.widget_wizard_Header .navigationbuttons.button3{
+	position: relative;
+    z-index: 2;
+    left: -41px;
+}
+
+.widget_wizard_Header .text
+{
+    z-index:3;
+    position:absolute;    
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    padding-top:8px;
+    top:0px;
+    cursor: pointer;
+}
+
+.widget_wizard_Header .text.text1
+{
+	left:20px;
+}
+.widget_wizard_Header .text.text2
+{
+	left:100px;
+}
+.widget_wizard_Header .text.text3
+{
+	left:172px;
+}
