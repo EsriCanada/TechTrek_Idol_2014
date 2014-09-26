@@ -1,0 +1,234 @@
+.widget_wizard_control
+{
+	font-family: 'Open Sans', Verdana, Geneva, sans-serif;
+    font-size: 12px;
+    width:100%;
+    height:100%;
+    min-width:230px;
+    min-height:136px;
+    overflow: hidden;
+}
+
+
+
+.widget_wizard_control .welcome_page
+{
+	width:100%;
+    height:100%;
+    text-align: "center";
+}
+
+.widget_wizard_control .input_page .vehicleController
+{
+	padding-bottom:20px;
+}
+
+.widget_wizard_control .input_page .lblInstruction
+{
+	font-weight:bold;
+}
+
+.widget_wizard_control .welcome_page .message_container{
+	
+	border: 1px solid #d9dde0;
+	border-radius: 5px;
+	background-color:#F0F8FF;
+
+}
+.widget_wizard_control .page_container
+{
+	overflow:hidden;
+	width:100%;
+	height:100%;
+	position:relative;
+	
+}
+
+.widget_wizard_control .info_container{
+	
+	margin-bottom:5px;
+	padding:5px;
+	height:86%;
+	width:100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+
+}
+
+.widget_wizard_control .button_container{
+	
+	height:35px;
+	width:100%;
+	position:absolute;
+	bottom:0;
+	padding-top: 5px;
+	margin-bottom: 5px;
+	margin-right: 5px;
+
+}
+.widget_wizard_control .welcome_page .btnContinue{
+	 margin: 0 auto;
+}
+
+.simpleDirections .esriStopsOptionsEnabled .esriStopsOptionsButton
+{
+	display:none;
+	
+}
+
+.widgetBtn
+{
+  
+  cursor: pointer;
+  min-width: 80px;
+  height: 30px;
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.40);
+  text-align: center;
+  font-size: 12px;
+  line-height: 30px;
+  font-weight: bold;
+  border-radius: 4px;
+  color: #FFFFFF;
+  
+
+/*
+ background: #CEE1EC; 
+  background: -moz-linear-gradient(top, #CEE1EC 0%,#BCDCEF  100%); 
+  background: -webkit-linear-gradient(top, #CEE1EC 0%,#BCDCEF 100%); 
+  background: -ms-linear-gradient(top, #CEE1EC 0%,#BCDCEF 100%); 
+  background: linear-gradient(to bottom, #CEE1EC 0%,#BCDCEF 100%); */
+}
+
+.widgetBtn:hover
+{
+  background: #697a8c; /* Old browsers */
+  /*background: -moz-linear-gradient(top, #9CCEEB 0%, #8AC7EA 100%); /* FF3.6+ */
+ /* background: -webkit-linear-gradient(top, #9CCEEB 0%,#8AC7EA 100%); /* Chrome10+,Safari5.1+ */
+ /* background: -ms-linear-gradient(top, #9CCEEB 0%,#8AC7EA 100%); /* IE10+ */
+  /*background: linear-gradient(to bottom, #9CCEEB 0%,#8AC7EA 100%); /* W3C */
+ */
+}
+
+.widget_wizard_control .simpleGeocoder
+{
+	display: inline-block;
+	width:87%;
+}
+.widget_wizard_control .simpleGeocoder .esriGeocoderContainer .esriGeocoder .esriGeocoderSearch
+{
+	 display: none;
+}
+.widget_wizard_control .simpleGeocoder .esriGeocoder .esriGeocoderReset {
+    display: none;
+}
+.widget_wizard_control .simpleGeocoder .esriGeocoderContainer
+{
+	width:100%;
+}
+.widget_wizard_control .simpleGeocoder .esriGeocoder input
+{
+	width:100%;
+}
+.widget_wizard_control .invalid
+{
+	border: 1px solid #FF0000;	
+	border-radius: 4px;
+}
+.widget_wizard_control .LocateButton 
+{
+
+	display:inline-block !important;
+	vertical-align:top;
+	margin:0;
+	padding:0;
+}
+.widget_wizard_control .input_page .widgetCheckbox
+{
+  display:inline-block; 
+  vertical-align:middle;
+  margin: 1px 2px 2px 2px;
+  
+}
+.widget_wizard_control .input_page .span_nowrap
+{
+	padding-top:10px;
+	display:block;
+}
+
+.widget_wizard_control .input_page .checkLabel
+{
+  font-family: 'Open Sans', Verdana, Geneva, sans-serif;
+  font-size: 12px;
+  vertical-align:middle;
+}
+
+.widget_wizard_control .esriStopsButtons, .widget_wizard_control .esriStopsGetDirectionsContainer,
+.widget_wizard_control .esriResultsButtonsContainer,.widget_wizard_control .esriStopIconRemove
+{
+	display: none !important;
+}
+.widget_wizard_control .esriStopGeocoderColumn div
+{
+	display: none !important;
+}
+
+.widget_wizard_control .input_page .optionsHeader{
+  font-size: 14px;
+  font-weight:700;
+  padding-bottom:5px;
+  color: #666666;
+}
+
+.widget_wizard_control .input_page .optionsHeader:hover{
+  cursor: pointer;
+ }
+ 
+.widget_wizard_control .input_page .options_renderer{
+	display:inline-block;
+	vertical-align:top;
+	margin-bottom:5px; 
+	margin-right:15px;
+	border: 0px solid #d9dde0;
+	border-radius: 5px;
+	padding:5px;
+	overflow:hidden;
+	width:100%;
+	background-color:#FFFFFF;
+}
+
+.widget_wizard_control .input_page .options_renderer.collapsed
+{
+	 height: 23px;
+}
+
+.widget_wizard_control .input_page .groupIcon{
+  width: 20px;
+  height: 10px;
+  background-repeat: no-repeat;
+  text-align: "center";
+  margin: 0;
+  padding:0;
+  display:inline-block; 
+  vertical-align:middle;
+}
+
+.widget_wizard_control .input_page .groupIcon:hover{
+  cursor: pointer;
+}
+
+.widget_wizard_control .input_page .groupIconTurn{
+  -moz-transform: scale(1) rotate(90deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+  -webkit-transform: scale(1) rotate(90deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+  -o-transform: scale(1) rotate(90deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+  -ms-transform: scale(1) rotate(90deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+  transform: scale(1) rotate(90deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+}
+	
+.widget_wizard_control .input_page .groupImg{
+  background-image: url("../images/groupmarker.png");
+  background-position:center;
+}
+.widget_wizard_control .hidden
+{
+	display:none;
+}

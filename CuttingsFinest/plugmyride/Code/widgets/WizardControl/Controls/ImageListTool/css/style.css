@@ -1,0 +1,62 @@
+.widget_ImageList_ui{
+
+}
+
+.widget_ImageList_ui .carIcon{
+  width: 100px;
+  height:76px;
+  background-repeat: no-repeat;
+  text-align: "center";
+  margin: 0px;
+  padding:0px;
+  display:inline-block; 
+  vertical-align:middle;
+}
+
+.widget_ImageList_ui .carIcon:hover{
+  cursor: pointer;
+}
+
+.widget_ImageList_ui .selectionContainer{
+	margin: 0px;
+    padding:0px;
+}
+
+.widget_ImageList_ui .nissanLeafImg{
+  background-size: 100px;
+   background-position: center; 
+  background-image: url("../images/nissan_leaf.png");
+   vertical-align:middle;
+  margin: 0px;
+}
+
+.widget_ImageList_ui .fordFocusImg{
+  background-size: 100px;
+   background-position: center; 
+  background-image: url("../images/ford_focus_ev.png");
+   vertical-align:middle;
+  margin: 0px;
+}
+
+.widget_ImageList_ui .carList{
+	display:inline-block; 
+    /*vertical-align:middle;*/
+    background-color:#FFFFFF;
+    height:22px;
+    
+}
+
+.widget_ImageList_ui .lblRate
+{
+	display:block; 
+	padding-top:5px;
+}
+.widget_ImageList_ui .dijitSelect .dijitButtonText {
+    text-align: left;
+}
+
+.widget_ImageList_ui .dijitSelectLabel {
+    width: 160px;
+    overflow: hidden;
+}
+

@@ -1,0 +1,168 @@
+{
+  "theme": {
+    "name": "FoldableTheme",
+    "styles": [
+      "default",
+      "black",
+      "green",
+      "cyan"
+    ]
+  },
+  "portalUrl": "http://esrica-psvt.maps.arcgis.com/",
+  "appId": "3dfweCFxH8odFRFb",
+  "title": "Plug My Ride",
+  "subtitle": "",
+  "logo": "images/plug_white.png",
+  "geometryService": "https://utility.arcgisonline.com/arcgis/rest/services/Geometry/GeometryServer",
+  "links": [],
+  "widgetOnScreen": {
+    "panel": {
+      "uri": "themes/FoldableTheme/panels/TitlePanel/Panel",
+      "positionRelativeTo": "map"
+    },
+    "groups": [{
+      "label": "Plug My Ride",
+      "id": "widgets/WizardControl/Widget_18",
+      "widgets": [{
+        "label": "WizardControl",
+        "uri": "widgets/WizardControl/Widget",
+        "index":3,
+        "id": "widgets/WizardControl/Widget_17",
+        "name": "WizardControl"
+      }],
+      "panel": {
+      "uri": "themes/FoldableTheme/panels/FoldablePanel/Panel",
+      "positionRelativeTo": "map",
+      "position": {
+        "top": 5,
+        "right": 5,
+        "bottom": 5
+      }
+    }
+      }],
+    "widgets": [
+      {
+        "label": "Header Controller",
+        "uri": "widgets/HeaderWizard/Widget",
+        "positionRelativeTo": "browser",
+        "position": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "height": 40
+        },
+        "id": "widgets/HeaderWizard/widget/Widget_1",
+        "name": "HeaderController",
+        "isThemeWidget": false
+      },
+      {
+        "label": "Scalebar",
+        "uri": "widgets/Scalebar/Widget",
+        "position": {
+          "left": 25,
+          "bottom": 25
+        },
+        "id": "widgets/Scalebar/Widget_2",
+        "positionRelativeTo": "map",
+        "name": "Scalebar"
+      },
+      {
+        "label": "OverviewMap",
+        "uri": "widgets/OverviewMap/Widget",
+        "position": {
+          "top": 0,
+          "right": 0
+        },
+        "id": "widgets/OverviewMap/Widget_8",
+        "positionRelativeTo": "map",
+        "name": "OverviewMap"
+      },
+      {
+        "uri": "widgets/MyLocation/Widget",
+        "position": {
+          "left": 7,
+          "top": 110
+        },
+        "id": "widgets/MyLocation/Widget_10",
+        "positionRelativeTo": "map",
+        "name": "MyLocation",
+        "label": "My Location"
+      },
+      {
+        "uri": "widgets/AttributeTable/Widget",
+        "positionRelativeTo": "browser",
+        "id": "widgets/AttributeTable/Widget_11",
+        "position": {
+          "left": 0,
+          "top": 0
+        },
+        "name": "AttributeTable",
+        "label": "Attribute Table"
+      }
+    ]
+  },
+  "map": {
+    "3D": false,
+    "2D": true,
+    "position": {
+      "left": 0,
+      "top": 40,
+      "right": 0,
+      "bottom": 0
+    },
+    "itemId": "5894995200b642dba8058aeb06a96365",
+    "mapOptions": {
+      "extent": {
+        "xmin": -9230585.4557557,
+        "ymin": 5168349.684880998,
+        "xmax": -8447870.286115535,
+        "ymax": 5735206.686643837,
+        "spatialReference": {
+          "wkid": 102100
+        }
+      }
+    },
+    "id": "map",
+    "portalUrl": "http://esrica-psvt.maps.arcgis.com"
+  },
+  "widgetPool": {
+    "panel": {
+      "uri": "themes/FoldableTheme/panels/FoldablePanel/Panel",
+      "positionRelativeTo": "map",
+      "position": {
+        "top": 5,
+        "right": 5,
+        "bottom": 5
+      }
+    },
+    "widgets": [
+      {
+        "label": "Legend",
+        "uri": "widgets/Legend/Widget",
+        "id": "widgets/Legend/Widget_12",
+        "name": "Legend",
+        "index": 0
+      },
+      {
+        "label": "LayerList",
+        "uri": "widgets/LayerList/Widget",
+        "id": "widgets/LayerList/Widget_13",
+        "name": "LayerList",
+        "index": 1
+      },
+      {
+        "label": "EV Router",
+        "uri": "widgets/EvRouter/Widget",
+        "id": "widgets/LayerList/Widget_14",
+        "name": "EvRouter",
+        "index": 2,
+        "openAtStart":true
+      }
+    ]
+  },
+  "widgetManifestsMerged": true,
+  "httpProxy": {
+    "useProxy": true,
+    "url": "/proxy.js"
+  }
+}

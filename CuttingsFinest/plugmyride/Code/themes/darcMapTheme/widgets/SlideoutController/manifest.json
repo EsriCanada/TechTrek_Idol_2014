@@ -1,0 +1,19 @@
+{
+  "name": "SlideoutController",
+  "label": "Sideout Controller",
+  "2D": true,
+  "3D": true,
+  "inPanel": false,
+  "platform": "HTML",
+  "version": "0.0.1",
+  "author": "",
+  "description": "",
+  "copyright": "",
+  "license": "http://www.apache.org/licenses/LICENSE-2.0",
+  "properties": {
+    "inPanel": false,
+    "hasLocale": false,
+    "isController": true,
+    "hasConfig": false
+  }
+}

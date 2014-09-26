@@ -1,0 +1,26 @@
+﻿define({
+    outputUnit: "بيت_Output Unit_لاحقة",
+    wkid: "بيت_Output WKID_لاحقة",
+    label: "بيت_Output Label_لاحقة",
+    transformationWkid: 'بيت_Transformation WKID_لاحقة',
+    transformationLabel: 'بيت_Transformation Label_لاحقة',
+    transformForward: 'بيت_Transform Forward_لاحقة',
+    actions: "بيت_Actions_لاحقة",
+    warning: "بيت_please input valid spatial reference WKID!_لاحقة",
+    tfWarning: "بيت_please input valid datum transformation WKID!_لاحقة",
+    spinnerLabel: "بيت_Round coordinate to:_لاحقة ",
+    decimalPlace: "بيت_decimal places_لاحقة",
+    separator: "بيت_Show thousand separators_لاحقة",
+
+    add: "بيت_Add Output Coordinate System_لاحقة",
+    edit: "بيت_Edit Coordinate System_لاحقة",
+    output: "بيت_Output Coordinate System_لاحقة",
+    cName: "بيت_Coordinate system name_لاحقة",
+    units: "بيت_Display Units:_لاحقة ",
+    datum: "بيت_Datum Transformation_لاحقة",
+    tName: "بيت_Transformation name_لاحقة",
+    forward: "بيت_Use transformation forward_لاحقة",
+    ok: "بيت_OK_لاحقة",
+    cancel: 'بيت_Cancel_لاحقة',
+    REPEATING_ERROR: "بيت_The fllowing fields are repeated:_لاحقة "
+});

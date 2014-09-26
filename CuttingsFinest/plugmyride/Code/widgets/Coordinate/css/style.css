@@ -1,0 +1,22 @@
+.jimu-widget-coordinate .coordinate-background{
+	background-color: rgba(255,255,255,0.4);
+	padding: 2px 5px 2px 5px;
+  line-height: 20px;
+  overflow: hidden;
+}
+.jimu-widget-coordinate .coordinate-background:hover{
+  background-color: rgba(255,255,255,0.6);
+}
+.jimu-widget-coordinate .coordinate-info{
+  float: left;
+  padding-right: 15px;
+}
+.jimu-widget-coordinate .coordinate-foldable{
+  background: url(images/unfold01.png) center no-repeat;
+  width: 7px;
+  height: 20px;
+  float: right;
+}
+.jimu-widget-coordinate:hover .coordinate-foldable{
+  background-image: url(images/unfold02.png);
+};

@@ -1,0 +1,23 @@
+.widget_progress_ui{
+
+}
+
+.widget_progress_ui .task{
+	
+	padding-top:5px;
+}
+
+/*.widget_progress_ui .task_img{
+	background-image: url("plugmyride/jimu.js/images/loading.gif");
+	width:20px;
+	padding-right:5px;
+}*/
+
+.widget_progress_ui img{
+	width:20px;
+	padding-right:5px;
+	vertical-align:middle;
+}
+.widget_progress_ui label{
+	vertical-align:middle;
+}

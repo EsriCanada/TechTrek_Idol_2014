@@ -1,0 +1,26 @@
+﻿define({
+    outputUnit: "Š_Output Unit_ä",
+    wkid: "Š_Output WKID_ä",
+    label: "Š_Output Label_ä",
+    transformationWkid: 'Š_Transformation WKID_ä',
+    transformationLabel: 'Š_Transformation Label_ä',
+    transformForward: 'Š_Transform Forward_ä',
+    actions: "Š_Actions_ä",
+    warning: "Š_please input valid spatial reference WKID!_ä",
+    tfWarning: "Š_please input valid datum transformation WKID!_ä",
+    spinnerLabel: "Š_Round coordinate to:_ä ",
+    decimalPlace: "Š_decimal places_ä",
+    separator: "Š_Show thousand separators_ä",
+
+    add: "Š_Add Output Coordinate System_ä",
+    edit: "Š_Edit Coordinate System_ä",
+    output: "Š_Output Coordinate System_ä",
+    cName: "Š_Coordinate system name_ä",
+    units: "Š_Display Units:_ä ",
+    datum: "Š_Datum Transformation_ä",
+    tName: "Š_Transformation name_ä",
+    forward: "Š_Use transformation forward_ä",
+    ok: "Š_OK_ä",
+    cancel: 'Š_Cancel_ä',
+    REPEATING_ERROR: "Š_The fllowing fields are repeated:_ä "
+});
