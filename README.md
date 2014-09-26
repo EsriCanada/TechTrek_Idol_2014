@@ -5,6 +5,7 @@ Tech Trek Idol 2014
 * [LRED](https://github.com/EsriCanada/TechTrek_Idol_2014/tree/master/LRED)
 * [Charleston 341](https://github.com/EsriCanada/TechTrek_Idol_2014/tree/master/Charleston341)
 * [NT2 CBCNewsFeedMap](https://github.com/EsriCanada/TechTrek_Idol_2014/tree/master/NT2_CBCNewsFeedMap)
+* [Movers and Shakers](https://github.com/EsriCanada/TechTrek_Idol_2014/tree/master/Movers_and_Shakers)
 
 ## Instructions:
 These are the instructions for sharing your work on GitHub. Even if you're not coding, you should create a repo here and minimally fill out a ReadMe.md [This link will show you how to create cool markdown](http://markdownlivepreview.com).  Designate someone on your team to create a repo for your project; the general flow will be to fork the "TechTrek_Idol_2014" repo to your own account, clone it in desktop, commit and sync often.  
