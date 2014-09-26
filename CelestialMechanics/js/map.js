@@ -41,8 +41,8 @@ require(
     // Create the map
     map = new Map("LaCarte", {
       basemap : "satellite",
-      center : [2, 48],
-      zoom : 4,
+      center : [0, 48],
+      zoom : 3,
     });
     //Define the layer of cities
     var coucheVilles = new FeatureLayer("http://services.arcgis.com/pGoeHmYZOCXOU5IQ/arcgis/rest/services/CitiesOfTheWorld/FeatureServer/0", 
