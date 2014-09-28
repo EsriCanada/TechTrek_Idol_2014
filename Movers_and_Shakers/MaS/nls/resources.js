@@ -3,7 +3,8 @@
         toolName: "SPORE (Social Profiling for Optimization in Real-Estate)",
         alerts:
         {
-            noDestinationDAsFound: "No candidate locations could be found.\n\nTry a different location, or expanding your search parameters."
+            noDestinationDAsFound: "No candidate locations could be found.\n\nTry a different location, or expanding your search parameters.",
+            noRealestateListingsFound: "No real estate listings could be found in the area you have chosen."
         },
         introPanel:
         {
@@ -16,7 +17,7 @@
             destinationTextPart2: "Search for a place name or new work or home address:",
             backButton:"<< Back",
             moreButton:"More >>",
-            searchRadius:"Search for places within: ",
+            searchRadius:"Search for places within",
             likeMyCluster: "That are the same social cluster",
             likeMyGroup: "That are in a similar social group as my home",
             searchButton:"Search",

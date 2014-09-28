@@ -78,29 +78,54 @@
     width:60px;
 }
 
-.MaS-panel .dijitSpinner .dijitDownArrowButton .dijitArrowButtonInner
+#pageContent_MaS .dijitTextBox .dijitButtonNode
+{
+    height:22px !important;
+}
+
+#pageContent_MaS .dijitContentPane.MaS-destinationdetails
+{
+    padding:0;
+    overflow:auto;
+}
+
+#pageContent_MaS .nihilo .dijitUpArrowButton .dijitArrowButtonInner
+{
+    background-position:-19px 1px;
+    background-image:url("http://js.arcgis.com/3.10/js/dojo/dijit/themes/nihilo/images/spriteArrows.png");
+    width:22px;
+}
+
+#pageContent_MaS .nihilo .dijitDownArrowButton .dijitArrowButtonInner
+{
+    background-position:3px 1px;
+    background-image:url("http://js.arcgis.com/3.10/js/dojo/dijit/themes/nihilo/images/spriteArrows.png");
+    width:22px;
+    margin:0;
+}
+
+#pageContent_MaS .claro .dijitSpinner .dijitDownArrowButton .dijitArrowButtonInner
 {
     margin: -2px 0px 0px 0px;
 }
 
-.MaS-panel .dijitSpinner .dijitSpinnerButtonContainer .dijitArrowButton
+#pageContent_MaS .claro .dijitSpinner .dijitSpinnerButtonContainer .dijitArrowButton
 {
     height:45%;
 }
 
-.MaS-panel .calcite .dijitTextBox .dijitButtonNode
+#pageContent_MaS.claro .calcite .dijitTextBox .dijitButtonNode
 {
     height:24px !important;
-}
-
-.claro .dijitContentPane.MaS-destinationdetails
-{
-    padding:0;
-    overflow:auto;
 }
 
 .MaS-daItem:hover, .MaS-rsListing:hover
 {
     background-color:#CEF;
     color:#00F;
+}
+
+#pageContent_MaS .simpleGeocoder .esriGeocoderResults
+{
+    background-color: #ccc;
 }

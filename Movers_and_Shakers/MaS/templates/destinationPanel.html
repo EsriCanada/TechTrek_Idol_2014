@@ -1,13 +1,15 @@
-<div class="${baseClass} MaS-panel claro">
+<div class="${baseClass} MaS-panel nihilo">
     <div class="${baseClass}IntroText" data-dojo-attach-point="introText">${i18n.destinationPanel.destinationTextPart1}<br /><br />${i18n.destinationPanel.destinationTextPart2}</div>
-    <div data-dojo-attach-point="geocoderNode"></div><div data-dojo-attach-point="backButton"></div><div data-dojo-attach-point="moreButton"></div>
-    <div data-dojo-attach-point="destinationDetails" class="MaS-destinationdetails" style="margin-top:10px; display:none; overflow:auto;">
+    <div data-dojo-attach-point="geocoderNode"></div><div style="position:absolute;display:block;right:15px;top:5px;"><div data-dojo-attach-point="backButton"></div></div>
+    <br />
+    <div data-dojo-attach-point="destinationDetails" class="MaS-destinationdetails" style="margin-top:20px; display:none; overflow:auto;">
         <form id="MaS_searchForm">
             ${i18n.destinationPanel.searchRadius}: <input data-dojo-attach-point="searchRadius" />km<br />
             <input data-dojo-attach-point="radioLikeMyCluster" type="radio" id="MaS_likeMyCluster" checked /><label data-dojo-attach-point="labelForLikeMyCluster" for="MaS_likeMyCluster">${i18n.destinationPanel.likeMyCluster}</label><br />
             <input data-dojo-attach-point="radioLikeMyGroup" type="radio" id="MaS_likeMyGroup" /><label data-dojo-attach-point="labelForLikeMyGroup" for="MaS_likeMyGroup">${i18n.destinationPanel.likeMyGroup}</label><br />
             <div data-dojo-attach-point="searchButton"></div>
         </form>
+        <div class="MaS-progressIndicator" data-dojo-attach-point="progressIndicator" style="display:none; margin-top:10px; text-align:center;"><img data-dojo-attach-point="progressSpinner" src="${spinnerImageUrl}" style="margin-top:75px;"></div>
         <div class="MaS-destinationsummary" data-dojo-attach-point="summaryPane" style="display:none; margin-top:10px">
             <div>${i18n.destinationPanel.totalDestinationDAsPrefix}<span data-dojo-attach-point="totalDestinationDAsCount">0</span>${i18n.destinationPanel.totalDestinationDAsSuffix}<br />
             <div data-dojo-attach-point="rsButton"></div><br />

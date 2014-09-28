@@ -226,9 +226,10 @@ define([
             this.intro.on('postal-code-found',lang.hitch(this,this.getDAInfo));
             this.intro.on('home-selected',lang.hitch(this,function(){
                 this.destination.setHomeCluster(this.homeClusterFeature);
+                this.destination.clearPanel();
+                this.daDisplayLayer.clear();
                 this.dropPanelContent();
                 this.contentPanel.setContent(this.destination.domNode);
-                this.showDestinationDAs();
             }));
             this.intro.on('clear-home',lang.hitch(this,function(){
                 this.map.graphics.clear();
@@ -238,6 +239,7 @@ define([
             
             this.destination.on('new-destination',lang.hitch(this,this.getDestinationDA));
             this.destination.on('search-destinations',lang.hitch(this,this.searchDestinations));
+            this.destination.on('panel-cleared',lang.hitch(this,this.clearDestinationLocation));
             
             toolbar.activateTool(this.config.activeTool || toolConfig.name);
             deferred.resolve(true);
@@ -282,6 +284,8 @@ define([
             if (!results || !results.features || !results.features.length>0)
             {
                 console.log("No DA Found");
+                alert(i18n.alerts.noDestinationDAsFound);
+                this.destination.hideProgress();
             }
             else
             {
@@ -333,6 +337,7 @@ define([
             {
                 console.log("No DA Found");
                 alert(i18n.alerts.noDestinationDAsFound);
+                this.destniation.hideProgress();
             }
             else
             {
@@ -361,6 +366,16 @@ define([
                 this.map.setExtent(this.daDestinationFeature.geometry.getExtent(),true);
                 this.destination.showSearchOptions();
             }
+        },
+        
+        clearDestinationLocation: function()
+        {
+            if (this.daDestinationCoordinate && this.daDestinationCoordinate.getLayer()==this.map.graphics)
+            {
+                this.map.graphics.remove(this.daDestinationCoordinate);
+            }
+            
+            this.clearDestinationDAs();
         },
         
         searchDestinations: function(searchParams)
@@ -406,7 +421,9 @@ define([
             if (!results || !results.features || !results.features.length>0)
             {
                 console.log("No DA Found");
+                alert(i18n.alerts.noDestinationDAsFound);
                 this.destination.clearPanel();
+                this.destination.hideProgress();
             }
             else
             {
@@ -466,6 +483,11 @@ define([
                 }));
                 
                 this.realestate.setRealestateListings(this._rsListings,e.totalpossible);
+            }
+            else
+            {
+                alert(i18n.alerts.noRealestateListingsFound);
+                this.realestate.hideProgress();
             }
         },
         

@@ -6,7 +6,6 @@ define([
     "dojo/on",
     "dijit/_WidgetBase",
     "dijit/_TemplatedMixin",
-    "dijit/_WidgetsInTemplateMixin",
     "dojo/Evented",
     "dojo/dom-style",
     "dojo/dom-construct",
@@ -20,17 +19,43 @@ define([
     "esri/graphic",
     
     "./popupTemplates"
-], function(require, declare, array, lang, on, _WidgetBase, _TemplatedMixin, _WidgetsInTemplateMixin, Evented, domStyle, domConstruct, template, i18n, Button, ContentPane, Geocoder, Graphic, popupTemplates) {
+], function(
+    require,
+    declare,
+    array,
+    lang,
+    on,
+    _WidgetBase,
+    _TemplatedMixin,
+    Evented,
+    domStyle,
+    domConstruct,
+    template,
+    i18n,
+    
+    Button,
+    ContentPane,
+    
+    Geocoder,
+    Graphic,
+    
+    popupTemplates
+) {
     console.log(popupTemplates)
     return declare([_WidgetBase, _TemplatedMixin], {
         templateString: template,
         i18n: i18n,
+        spinnerImageUrl: require.toUrl("./templates/spinner.gif"),
         startup: function()
         {
             this.inherited(arguments);
             this.geocoder = new Geocoder({map:this.map,arcgisGeocoder:{sourceCountry:"CAN"},autoNavigate:false,autoComplete:false},this.geocoderNode);
             this.geocoder.startup();
             this.geocoder.on("find-results",lang.hitch(this,this.geocoderFoundResult));
+            this.geocoder.on("select",lang.hitch(this,function(){
+                this.clearPanel();
+                this.showProgress();
+            }));
             this.geocoder.on("clear",lang.hitch(this,function(){
                 this.emit('clear-home');
             }));
@@ -42,12 +67,14 @@ define([
             this.clusterDetails = new ContentPane({},this.clusterDetails);
             this.clusterDetails.startup();
             
+            window.introPanel = this;
             this.on('clear-home',lang.hitch(this,this.clearPanel));
         },
         
         geocoderFoundResult: function(e)
         {
-            console.log(e);
+            this.clearPanel();
+            this.showProgress();
             if (e && e.results && e.results.results && e.results.results.length>0)
             {
                 return array.some(e.results.results,lang.hitch(this,function(result){
@@ -67,7 +94,7 @@ define([
         
         setClusterInfo: function(daFeature,clusterFeature)
         {
-            console.log('setClusterInfo',daFeature,clusterFeature);
+            this.hideProgress();
             if (clusterFeature && clusterFeature.attributes["Cluster"]!=67 && !!clusterFeature.attributes["Cluster"])
             {
                 daFeature.setInfoTemplate(popupTemplates.homeDaTemplate);
@@ -101,6 +128,16 @@ define([
                 this.clusterDetails.domNode.removeChild(this.clusterDetails.domNode.children[0]);
             }
             domStyle.set(this.clusterDetails.domNode,"display","none");
+        },
+        
+        showProgress: function()
+        {
+            domStyle.set(this.progressIndicator,"display","block");
+        },
+        
+        hideProgress: function()
+        {
+            domStyle.set(this.progressIndicator,"display","none");
         },
         
         // Function for padding integers with zeros (credits to: https://gist.github.com/aemkei/1180489 ):
