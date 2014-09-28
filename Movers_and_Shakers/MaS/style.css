@@ -7,6 +7,20 @@
     }
 }
 
+@media (max-height: 600px)
+{
+    #pageContent_MaS
+        {
+        max-height:420px;
+    }
+}
+
+#pageContent_MaS .pageTitle
+{
+    height:60px;
+}
+
+
 #pageContent_MaS ul.summary
 {
     display:none;
