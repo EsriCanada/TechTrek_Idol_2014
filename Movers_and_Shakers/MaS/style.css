@@ -5,6 +5,16 @@
         width:520px;
         margin-left: -530px;
     }
+    
+    .esriPopup .sizer 
+        {
+        width:500px !important;
+    }
+
+    .esriPopup .sizer.content .contentPane
+        {
+        max-height:400px !important;
+    }
 }
 
 @media (max-height: 600px)
@@ -75,16 +85,6 @@
 #pageContent_MaS .simpleGeocoder
 {
     float:left !important;
-}
-
-.esriPopup .sizer 
-{
-    width:500px !important;
-}
-
-.esriPopup .sizer.content .contentPane
-{
-    max-height:400px !important;
 }
 
 .MaS-searchRadius
