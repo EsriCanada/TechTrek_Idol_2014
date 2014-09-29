@@ -1,0 +1,323 @@
+﻿
+@media screen and (min-width: 1080px) and (max-width: 1280px) {
+
+	.esriOuterContainer {
+		width: 100%;
+		margin: 0px auto;
+		height: 100%;
+	}
+
+	.esriMapBookContainer {
+		width: 87%;
+		margin: 0px auto;
+		float: left;
+	}
+
+	.esriNext {
+		float: left;
+		height: 100%;
+		width: 6%;
+	}
+
+	.esriPrevious {
+		float: left;
+		height: 100%;
+		width: 6%;
+	}
+
+	.esriNextImage, .esriNextDisabled, .esriPrevDisabled, .esriPreviousImage {
+		top: 41%;
+	}
+
+	.dijitTextBox {
+		width: 70%;
+	}
+
+	.esriSettingLabel {
+		width: 29%;
+	}
+
+	.esriTemplateContainer {
+		width: 33.3%;
+	}
+
+	.esriMapBookHeader {
+		width: 50% !important;
+	}
+
+	.esriMapInfoLabel {
+		width: 65% !important;
+	}
+	.esriMapInfo {
+		width: 70% !important;
+	}
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1080px) {
+
+	.esriOuterContainer {
+		width: 100%;
+		margin: 0px auto;
+		height: 100%;
+	}
+
+	.esriMapBookContainer {
+		width: 87%;
+		margin: 0px auto;
+		float: left;
+	}
+
+	.esriNext {
+		float: left;
+		height: 100%;
+		width: 6%;
+	}
+
+	.esriPrevious {
+		float: left;
+		height: 100%;
+		width: 6%;
+	}
+
+	.esriTitleListDiv {
+		width: 80% !important;
+	}
+
+	.esriNextImage, .esriNextDisabled, .esriPrevDisabled, .esriPreviousImage {
+		top: 41%;
+		width: 40px !important;
+	}
+
+	.dijitTextBox {
+		width: 70%;
+	}
+
+	.esriSettingLabel {
+		width: 29%;
+	}
+
+	.esriTemplateContainer {
+		width: 50%;
+	}
+
+	.esriMapBookHeader {
+		width: 36% !important;
+	}
+
+	.esriMapBookTitle {
+		width: 70% !important;
+	}
+
+	.esriMapInfoLabel {
+		width: 55% !important;
+	}
+
+	.esriMapInfo {
+		width: 70% !important;
+	}
+
+	.esriSearchWebmapTextBox .dijitInputContainer {
+		width: 71% !important;
+	}
+
+	.esriSelectWebmapContainer .dijitComboBox, .esriSearchWebmapTextBox {
+		margin: 6px !important;
+		width: 45% !important;
+	}
+
+}
+@media screen and (max-width:850px) {
+	.esriBookContainer {
+		width: 25%;
+	}
+	.esriSearchWebmapTextBox .dijitInputContainer {
+		width: 68% !important;
+	}
+}
+@media screen and (min-width: 641px) and (max-width:767px) {
+
+	.esriOuterContainer {
+		width: 100%;
+		margin: 0px auto;
+		height: 100%;
+	}
+
+	.esriMapBookContainer {
+		width: 87%;
+		margin: 0px auto;
+		float: left;
+	}
+
+	.esriNext {
+		float: left;
+		height: 100%;
+		width: 6%;
+	}
+
+	.esriPrevious {
+		float: left;
+		height: 100%;
+		width: 6%;
+	}
+
+	.esriTitleListDiv {
+		width: 80% !important;
+	}
+
+	.esriNextImage, .esriNextDisabled, .esriPrevDisabled, .esriPreviousImage {
+		width: 40px;
+		top: 41%;
+	}
+	.dijitTextBox {
+		width: 65%;
+	}
+	.esriSettingLabel {
+		width: 34%;
+	}
+	.esriTemplateContainer {
+		width: 50%;
+	}
+	.esriMapBookTitle {
+		display: none !important;
+	}
+	.esriMapBookHeader {
+		width: 30% !important;
+	}
+	.esriMapInfoLabel {
+		width: 41% !important;
+	}
+	.esriMapInfo {
+		width: 65% !important;
+	}
+
+	.esriSelectWebmapContainer .dijitComboBox, .esriSearchWebmapTextBox {
+		width: 40% !important;
+	}
+	.esriSearchWebmapTextBox .dijitInputContainer {
+		width: 50% !important;
+	}
+
+}
+
+@media screen and (max-width:640px) {
+
+	.esriOuterContainer {
+		width: 100%;
+		margin: 0px auto;
+		height: 100%;
+	}
+
+	.esriMapBookContainer {
+		width: 87%;
+		margin: 0px auto;
+		float: left;
+		background: #e5f1f9;
+	}
+
+	.esriNext {
+		float: left;
+		height: 100%;
+		width: 6%;
+	}
+
+	.esriPrevious {
+		float: left;
+		height: 100%;
+		width: 6%;
+	}
+
+	.esriNextImage, .esriNextDisabled, .esriPrevDisabled, .esriPreviousImage {
+		width: 40px;
+		top: 41%;
+	}
+
+	.esriMapBookListContainer {
+		width: 100%;
+	}
+	.esriBookContainer {
+		width: 33% !important;
+	}
+	.esriTitleListDiv {
+		width: 70% !important;
+	}
+	.dijitTextBox {
+		width: 60%;
+	}
+	.esriSettingLabel {
+		width: 39%;
+	}
+	.esriTemplateContainer {
+		width: 100%;
+	}
+
+	.esriMapBookHeader {
+		width: 40% !important;
+	}
+	.esriMapBookTitle {
+		display: none !important;
+	}
+
+	.esriSelectWebmapContainer .dijitComboBox, .esriSearchWebmapTextBox {
+		width: 94% !important;
+	}
+	.esriSearchWebmapOptions {
+		height: 80px !important;
+	}
+}
+
+@media screen and (max-width:1280px) {
+
+	.esriBookContainer {
+		width: 20%;
+	}
+}
+
+
+
+@media screen and (max-width:480px) {
+
+	.esriBookContainer {
+		width: 50% !important;
+	}
+	.esriMapBookTitle {
+		width: 14% !important;
+	}
+}
+@media screen and (max-width:320px) {
+
+	.esriBookContainer {
+		width: 100% !important;
+	}
+	.esriMapBookTitle {
+		width: 10% !important;
+	}
+	.esriMapBookHeader {
+		width: 10% !important;
+	}
+}
+
+@media screen and (min-device-width: 768px) and (max-device-width: 1080px) {
+
+	.esriMapBookTitle {
+		width: 80% !important;
+	}
+	.esriMapBookHeader {
+		width: 50% !important;
+	}
+
+}
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+
+	.esriLockPortraitOrientation {
+		display: table !important;
+	}
+
+	.esriMapBookTitle {
+		width: 70% !important;
+	}
+
+	.esriMapBookHeader {
+		width: 50% !important;
+	}
+}
