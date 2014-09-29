@@ -62,7 +62,7 @@ require([
 
 
     //  Locate button's onclick event handler
-    on(dom.byId("btnLocate"), "click", makeCityList);	
+    on(dom.byId("btnLocate"), "click", makeCityList);
 
     //  Wire the task's completion event handler
     taskLocator.on("address-to-locations-complete", showResults)
@@ -103,10 +103,10 @@ require([
             score : candidate.score,
             locatorName : candidate.attributes.Loc_name
           };
-            
+
 			// Retrieve the result's geometry
           geometryLocation = candidate.location;
-		  
+
           //  Display the geocoded location on the map
           var graphicResult = new Graphic(geometryLocation, symbolMarker, attributesCandidate);
           mapMain.graphics.add(graphicResult);
@@ -123,11 +123,11 @@ require([
       mapMain.centerAndZoom(geometryLocation, 4);
 
         xValues.push(geometryLocation.x)
-        yValues.push(geometryLocation.y)        
+        yValues.push(geometryLocation.y)
 
       }
     }
-    
+
     /*
      * make a list of the cities from the Textareas
      *  and place the list results into the testing pane
@@ -154,15 +154,15 @@ require([
                     document.getElementById("date5").value];
       // testing console log
       console.log(dates);
-	  
-	  return dates;	 
-		
-    }		
+
+	  return dates;
+
+    }
 
     function createArray (cities) {
       // looping through the cities array
 	  var count = 1;
-	  
+
 	  //console.log(daydisplay)
 		for (var code = 0; code < cities.length; code++) {
 			if (cities[code] != "") {
@@ -170,7 +170,7 @@ require([
 				doAddressToLocations(cities[code]);
 			}
 		}
-		var dates = makeDateList();		
+		var dates = makeDateList();
 		Weather(cities, dates);
     }
 
@@ -196,88 +196,92 @@ require([
 
     }
   });
-});	
-	
-function Weather (citiesarray, datesarray) {		
+});
+
+function Weather (citiesarray, datesarray) {
 	console.log(citiesarray);
 	console.log(datesarray);
 	var a = new Date("8/1/2014");
 	var d = new Date("9/2/2014");
-	var n = d.getDate(); 
+	var n = d.getDate();
 	//console.log(n);
 	var diff = Math.abs(a-d);
 	var days = (diff / (1000*60*60*24));
-	
-	for (var c = 0; c < citiesarray.length; c++) {			
+
+	for (var c = 0; c < citiesarray.length; c++) {
 		console.log(citiesarray[c]);
 		if (citiesarray[c] != "") {
-			var url = 'http://api.openweathermap.org/data/2.5/forecast/daily?q=' + citiesarray[c] +'&mode=json&units=metric&cnt=16';				
+			var url = 'http://api.openweathermap.org/data/2.5/forecast/daily?q=' + citiesarray[c] +'&mode=json&units=metric&cnt=16';
 			$.getJSON(url,function(Result1){
-				l = Result1.list;				
+				l = Result1.list;
 				l.forEach(logArrayElements1);
 			});
 		}
-	}	
-}		
+	}
+}
 
-function logArrayElements1(element, index, array) {	
+function logArrayElements1(element, index, array) {
 	var todayDateObj = new Date();
 	var todayDay = todayDateObj.getDate();
 	var todayMonth = todayDateObj.getMonth() + 1;
-	var todayYear = todayDateObj.getFullYear();	
-	
+	var todayYear = todayDateObj.getFullYear();
+
+  // the current date is todayDate in mm/dd/yyyy format
 	var todayDate = todayMonth + "/" + todayDay + "/" + todayYear;
-	var todayDateFormat = new Date(todayDate)	
-	
+	var todayDateFormat = new Date(todayDate)
+
 	var todayDate2 = document.getElementById("date1").value;
-	var todayDateFormat2 = new Date(todayDate2);	
-		
-	var diffDate = Math.abs(todayDateFormat2-todayDateFormat);		
-	var daysDate = (diffDate/86400000);	
-	
+	var todayDateFormat2 = new Date(todayDate2);
+
+	var diffDate = Math.abs(todayDateFormat2-todayDateFormat);
+  // the number of days after the current date (index 0) is daysDate
+	var daysDate = (diffDate/86400000);
+  console.log(diffDate + " " +"diff date")
+
+
 	if (index == 0) { //currently pulling today's date for all cities
 		var daytemp = element.temp.day;
-		var weatherIcon = element.weather[0].icon;			
+		var weatherIcon = element.weather[0].icon;
 		var weatherUrl = "images/" + weatherIcon + ".png";
-		
-		
+
+
 		var div = document.createElement("div");
 		div.className = "DayDivs";
 		var newd = new Date();
 		var weatherSquareID = "testid" + newd.getMilliseconds();
-		
+
 		div.setAttribute('id', weatherSquareID);
-		
+
 		var parentDiv = document.getElementById("TheWeather");
-		parentDiv.appendChild(div);	
-		
+		parentDiv.appendChild(div);
+
 		//interior weather data
 		var divDate = document.createElement("div");
 		divDate.className = "DayDivsDate";
-		
+
 		var divIcon = document.createElement("div");
 		divIcon.className = "DayDivsIcon";
-		
+
 		var divTemp = document.createElement("div");
 		divIcon.className = "DayDivsTemp";
-		
-		
-		//add to 
-		var innerParentDiv = document.getElementById(weatherSquareID);			
+
+
+		//add to
+		var innerParentDiv = document.getElementById(weatherSquareID);
 		innerParentDiv.appendChild(divDate);
 		innerParentDiv.appendChild(divIcon);
 		innerParentDiv.appendChild(divTemp);
-		
-		
+
+
 		var weatherText = document.createTextNode("Temp = " + daytemp);
 		var weatherPhoto = document.createElement("img");
-		
+
 		weatherPhoto.setAttribute('src', weatherUrl);
 		weatherPhoto.style.height = '80px';
 		weatherPhoto.style.width = '80px';
-		
+
 		divTemp.appendChild(weatherText);
-		divIcon.appendChild(weatherPhoto);				
-		
+		divIcon.appendChild(weatherPhoto);
+
 	}
 }
