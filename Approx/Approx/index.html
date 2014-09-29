@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>AForge Processing Proxy</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="http://js.arcgis.com/3.10/js/dojo/dijit/themes/claro/claro.css">
+    <link rel="stylesheet" href="http://js.arcgis.com/3.10/js/esri/css/esri.css">
+    <style>
+        html, body, #map {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+        }
+    </style>
+
+    <script src="http://js.arcgis.com/3.10/"></script>
+
+    <script>
+        require(["esri/config", "esri/map", "esri/layers/ArcGISDynamicMapServiceLayer", "esri/layers/ArcGISImageServiceLayer", "esri/layers/ArcGISTiledMapServiceLayer", "dojo/io-query", "dojo/dom", "dojo/on", "dojo/domReady!"],
+            function (esriConfig, Map, DLayer, ILayer, TLayer, ioQuery, dom, on) {
+
+                var u = document.URL;
+                var o = ioQuery.queryToObject(u.substring(u.indexOf("?") + 1, u.length));
+
+                var url = o.url || "http://server.arcgisonline.com/arcgis/rest/services/ESRI_Imagery_World_2D/MapServer";
+                var type = o.type || "t";
+
+                var layer;
+
+                if (type == "d") layer = new DLayer(url);
+                else if (type == "i") layer = new ILayer(url);
+                else layer = new TLayer(url);
+
+                var map = new Map("map");
+
+                on(layer, "load", function () {
+                    map.setExtent(layer.fullExtent);
+                });
+
+                map.addLayer(layer);
+
+                on(dom.byId("filter"), "change", function () {
+                    esriConfig.defaults.io.proxyUrl = "Proxy.ashx?filters=" + this.value;
+                    esriConfig.defaults.io.alwaysUseProxy = true;
+                    layer.refresh();
+                });
+            });
+    </script>
+
+</head>
+<body class="claro">
+    <div id="map"></div>
+    <select id="filter" data-dojo-type="dijit/form/Select" style="position:absolute; right:20px; top:10px; z-Index:999;">
+        <option value="">- Not Filtered -</option>
+        <option value="Blur();">Blur</option>
+        <option value="BrightnessCorrection(50);">BrightnessCorrection</option>
+        <option value="Convolution();">Convolution</option>
+        <option value="Grayscale();Convolution();">Convolution (Grayscale)</option>
+        <option value="Grayscale();Erosion3x3();">Erosion3x3</option>
+        <option value="Grayscale();ErrorDiffusionToAdjacentNeighbors();">ErrorDiffusionToAdjacentNeighbors</option>
+        <option value="EuclideanColorFiltering(0,50,0,100);">EuclideanColorFiltering</option>
+        <option value="ExtractChannel(1);">ExtractChannel</option>
+        <option value="ExtractNormalizedRGBChannel(1);">ExtractNormalizedRGBChannel</option>
+        <option value="Grayscale();FloydSteinbergDithering();">FloydSteinbergDithering</option>
+        <option value="GammaCorrection(2.5);">GammaCorrection</option>
+        <option value="Grayscale();">Grayscale</option>
+        <option value="HistogramEqualization();">HistogramEqualization</option>
+        <option value="Grayscale();Threshold(128);HomogenityEdgeDetector();">HomogenityEdgeDetector</option>
+        <option value="Grayscale();Threshold(128);HorizontalRunLengthSmoothing(8);">HorizontalRunLengthSmoothing</option>
+        <option value="HueModifier(180);">HueModifier (180)</option>
+        <option value="HueModifier(40);">HueModifier (40)</option>
+        <option value="Invert();">Invert</option>
+        <option value="Grayscale();JarvisJudiceNinkeDithering();">JarvisJudiceNinkeDithering</option>
+        <option value="Jitter(4);">Jitter</option>
+        <option value="LevelsLinear(30,230,50,240,10,210);">LevelsLinear</option>
+        <option value="Mean();">Mean</option>
+        <option value="OilPainting();">OilPainting</option>
+        <option value="Grayscale();OtsuThreshold();">OtsuThreshold</option>
+        <option value="Pixellate();">Pixellate</option>
+        <option value="RotateChannels();">RotateChannels</option>
+        <option value="SaturationCorrection(-0.5);">SaturationCorrection</option>
+        <option value="Sepia();">Sepia</option>
+        <option value="Sharpen();">Sharpen</option>
+        <option value="SimplePosterization();">SimplePosterization</option>
+        <option value="RotateChannels();SimplePosterization();">SimplePosterization (RotateChannels)</option>
+        <option value="Grayscale();Threshold(128);SimpleSkeletonization();">SimpleSkeletonization</option>
+        <option value="Grayscale();SISThreshold();">SISThreshold</option>
+        <option value="Grayscale();SISThreshold();SobelEdgeDetector();">SobelEdgeDetector</option>
+        <option value="StereoAnaglyph();">StereoAnaglyph</option>
+        <option value="SusanCornersDetector();">SusanCornersDetector</option>
+        <option value="TextileTexture(0.8,0.2);">TextileTexture</option>
+        <option value="Grayscale();Threshold(128);">Threshold</option>
+        <option value="Grayscale();ThresholdWithCarry(128);">ThresholdWithCarry</option>
+        <option value="Grayscale();Threshold(128);VerticalRunLengthSmoothing(8);">VerticalRunLengthSmoothing</option>
+        <option value="WaterWave(10,3,5,2);">WaterWave</option>
+    </select>
+</body>
+</html>
