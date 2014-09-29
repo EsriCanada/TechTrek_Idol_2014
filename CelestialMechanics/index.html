@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Sunrise and Sunset in the world</title>
+
+    <!-- Configure dojo for asynchronous module loading -->
+    <script>
+      var dojoConfig = {
+        async : true,
+        paths: { js: location.pathname.replace(/\/[^/]+$/, "") + "/js" }
+              };
+    </script>
+
+    <!-- Reference libraries. The first CSS is a Dojo theme that gives dijits a consistent style. -->
+    <link rel="stylesheet" href="http://js.arcgis.com/3.9/js/dojo/dijit/themes/nihilo/nihilo.css">
+    <link rel="stylesheet" href="http://js.arcgis.com/3.9/js/esri/css/esri.css">
+    <link rel="stylesheet" href="css/style.css"/>
+    <script src="http://js.arcgis.com/3.9/"></script>
+    <script src="js/map.js"></script>
+
+
+  </head>
+
+  <body class="nihilo">
+  	
+  <div data-dojo-type="dijit/layout/LayoutContainer" data-dojo-props="design:'sidebar'" id="layoutContainer">
+    
+  	<div id="panneauHaut" data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region:'top'">
+  		<div id="title"> &nbsp;Sunrise and Sunset in the world</div>
+  		
+  	</div>
+<div id="panneauBas" data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region:'bottom'">
+	<div id="infosVilles">Put you mouse over a city to have informations</div>
+	<div id="infosEphemerides"></div>
+	<div id="pieChartGraph"></div>
+	<div id="cityNameAndTimeNow"></div>
+</div>
+
+    <div id="LaCarte" data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region:'center'"></div>
+</div>
+
+
+
+  </body>
+</html>
