@@ -1,6 +1,8 @@
-Introducing: The Wicked Witch of the West Tracker
+**Introducing: The Wicked Witch of the West Tracker**
+====================================================
 
-Citizens of Oz - the Wizard needs your help! 
+*Citizens of Oz - the Wizard needs your help!* 
+-----------------------------------------------------
 
 Under the Wizard's decree, the army's team of GIS experts have created this web mapping application to help track and capture the Wicked Witch of the West. If you spot the Wicked Witch of the West, you, as a citizen of Oz, are expected to upload your location and any additional comments to this map. 
 
@@ -12,7 +14,8 @@ Additionally, the Wizard has requested that his army closely monitor all social 
 
 The Wizard and his army are committed to the returning the Land of Oz to a state of peace and safety; capture of the Wicked Witch of the West is integral to his success. 
 
-Additional Notes - 
+*Additional Notes -*
+---------------------------------
 
 This basemap data was collected and created by the Wizard's personal GIS team. The basemap includes the following layers: 
 
