@@ -5,6 +5,7 @@ var min_x
 var min_y
 var max_x
 var max_y
+var date_counter = 0;
 // @formatter:off
 require([
   "esri/map",
@@ -111,6 +112,24 @@ require([
           var graphicResult = new Graphic(geometryLocation, symbolMarker, attributesCandidate);
           mapMain.graphics.add(graphicResult);
 
+          //add a text symbol to the map listing the location of the matched address.
+              var displayText = candidate.address;
+              var font = new Font(
+                "16pt",
+                Font.STYLE_NORMAL,
+                Font.VARIANT_NORMAL,
+                Font.WEIGHT_BOLD,
+                "Helvetica"
+              );
+
+              var textSymbol = new TextSymbol(
+                displayText,
+                font,
+                new Color("#666633")
+              );
+              textSymbol.setOffset(0,8);
+              mapMain.graphics.add(new Graphic(geometryLocation, textSymbol));
+
           // exit the loop after displaying the first good match
           return false;
         }
@@ -199,14 +218,16 @@ require([
 });
 
 function Weather (citiesarray, datesarray) {
+
+   //Resets temp squares when locate button is clicked
+  var myNode = document.getElementById("TheWeather");
+  while (myNode.firstChild) {
+   myNode.removeChild(myNode.firstChild);
+  }
+   date_counter = 0;
 	console.log(citiesarray);
 	console.log(datesarray);
-	var a = new Date("8/1/2014");
-	var d = new Date("9/2/2014");
-	var n = d.getDate();
-	//console.log(n);
-	var diff = Math.abs(a-d);
-	var days = (diff / (1000*60*60*24));
+  mapMain.graphics.clear();
 
 	for (var c = 0; c < citiesarray.length; c++) {
 		console.log(citiesarray[c]);
@@ -214,23 +235,26 @@ function Weather (citiesarray, datesarray) {
 			var url = 'http://api.openweathermap.org/data/2.5/forecast/daily?q=' + citiesarray[c] +'&mode=json&units=metric&cnt=16';
 			$.getJSON(url,function(Result1){
 				l = Result1.list;
+        date_counter +=1;
 				l.forEach(logArrayElements1);
 			});
+      // console.log(counter);
 		}
 	}
 }
 
-function logArrayElements1(element, index, array) {
-	var todayDateObj = new Date();
+function logArrayElements1(element, index, array, counter) {
+	console.log(counter + " " + "count")
+  var todayDateObj = new Date();
 	var todayDay = todayDateObj.getDate();
 	var todayMonth = todayDateObj.getMonth() + 1;
 	var todayYear = todayDateObj.getFullYear();
 
   // the current date is todayDate in mm/dd/yyyy format
 	var todayDate = todayMonth + "/" + todayDay + "/" + todayYear;
-	var todayDateFormat = new Date(todayDate)
-
-	var todayDate2 = document.getElementById("date1").value;
+	var todayDateFormat = new Date(todayDate);
+  var date_div_id = "date" + date_counter;
+	var todayDate2 = document.getElementById(date_div_id).value;
 	var todayDateFormat2 = new Date(todayDate2);
 
 	var diffDate = Math.abs(todayDateFormat2-todayDateFormat);
@@ -238,8 +262,11 @@ function logArrayElements1(element, index, array) {
 	var daysDate = (diffDate/86400000);
   console.log(diffDate + " " +"diff date")
 
+  if (daysDate >= 15) {
+   daysDate = 14;
+  }
 
-	if (index == 0) { //currently pulling today's date for all cities
+	if (index == daysDate) { //currently pulling today's date for all cities
 		var daytemp = element.temp.day;
 		var weatherIcon = element.weather[0].icon;
 		var weatherUrl = "images/" + weatherIcon + ".png";
@@ -282,6 +309,7 @@ function logArrayElements1(element, index, array) {
 
 		divTemp.appendChild(weatherText);
 		divIcon.appendChild(weatherPhoto);
+    divDate.innerHTML=todayDate2;
 
 	}
 }
