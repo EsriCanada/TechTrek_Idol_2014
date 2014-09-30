@@ -19,33 +19,11 @@ https://www.arcgis.com/opsdashboard/OperationsDashboard.application?open=4080f0d
 
 The name of the Operations View is “Solar Roadways Operations Dashboard” and must be opened in the desktop Operations Dashboard application (custom widgets are not yet supported in the browser). The widget is hosted on the same AGOL account and is named “Solar Energy Calculator Operations Dashboard Widget” and can be added to any Operations View. The full solution for the widget has been provided.<br><br>                                                                                                                                                                                                                 The inspiration for this application is from a real project, Solar Roadways, which is currently being developed and tested in Idaho. It aims at replacing impermeable surfaces such as roads with interlocking solar panels to create more reusable energy and lower dependency on fossil fuels. Learn more here: http://www.solarroadways.com/intro.shtml
 
- ##How was this awesome app made?
+##How was this awesome app made?
  
-The customized widget was created using the ArcGIS Runtime SDK for WPF for Operations Dashboard. The sample widgets provided with the ArcGIS Runtime SDK for WPF were reviewed to achieve and understanding of developing custom add-ins for Operations Dashboard. In our sample application, we used a GTA road dataset retrieved from GeoBase.<br><br>
+ The customized widget was created using the ArcGIS Runtime SDK for WPF for Operations Dashboard. The sample widgets provided with the ArcGIS Runtime SDK for WPF were reviewed to achieve and understanding of developing custom add-ins for Operations Dashboard. In our sample application, we used a GTA road dataset retrieved from GeoBase.<br><br>
 The app can be configured to use with any numeric field in a Feature Service, but is purposed to be used with a length field of a Simple Line Feature Service.In order to be used with more datasets we assumed a 2 lane width for all roads in our dataset as we wanted users without access to Lane data to be able to use the widget.
 
 
 
-#Benefits
-      Renewable energy
 
-With 18.5% efficiency solar panels and an average of 4 peak daylight hours per day	
-With a 230 Watt solar panel = ~ 21 billion kilowatt hours per year (in the USA)
-
-Why waste so much space?
-So much of the developed world is covered with asphalt and concrete (over 112,000 km2 in the United States alone - nearly 90,000 km2 after rooftops are accounted for)  for no purpose other than roads, sidewalks, parking, and roofs
-
--          ###Environmental impact:
-Paved surfaces absorb energy and heat cities…for no reason. Let’s use this energy!
-Less dependency on fossil fuels
-
--          Lowered costs for municipalities:
-Roads free of snow/ice – not only convenient, but also a huge money-saver for municipalities that invest significant amounts in snow plough equipment and personnel
-Sub-surface infrastructure: great home for power/data lines
-Ability to treat/store/transport stormwater without the need for large ditches
-
--          LED lightening benefits are multifaceted:
-Adaptable road lines according to traffic conditions
-Safer nighttime driving
-Improved traffic and road condition monitoring
-Warnings for drivers about accidents/dangers/traffic
