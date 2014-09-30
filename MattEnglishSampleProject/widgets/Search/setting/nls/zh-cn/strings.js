@@ -1,0 +1,22 @@
+﻿define({
+	settings: "设置",
+	addSearch: "添加搜索",
+	searchTitle: "搜索标题",
+	actions: "操作",
+	zoomScale: "缩放比例尺",
+	back: "返回",
+	searchUrl: "搜索URL",
+	browse: "浏览",
+	title: "标题",
+	expression: "表达式",
+	searchLabel: "搜索标签",
+	searchHint: "搜索提示",
+	availableFields: "可获取字段",
+	name: "名称",
+	alias: "别名",
+	includedFields:"已包含的字段",
+	cancel:"取消",
+	addSearch2:"添加",
+	updateSearch:"更新",
+	operationalLayerTip:"将结果保存为可操作图层"
+});
