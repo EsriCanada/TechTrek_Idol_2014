@@ -6,6 +6,7 @@ var min_y
 var max_x
 var max_y
 var date_counter = 0;
+var CityName;
 // @formatter:off
 require([
   "esri/map",
@@ -235,6 +236,7 @@ function Weather (citiesarray, datesarray) {
 			var url = 'http://api.openweathermap.org/data/2.5/forecast/daily?q=' + citiesarray[c] +'&mode=json&units=metric&cnt=16';
 			$.getJSON(url,function(Result1){
 				l = Result1.list;
+        CityName = Result1.city.name;
         date_counter +=1;
 				l.forEach(logArrayElements1);
 			});
@@ -271,7 +273,7 @@ function logArrayElements1(element, index, array, counter) {
 		var weatherIcon = element.weather[0].icon;
 		var weatherUrl = "images/" + weatherIcon + ".png";
     var weatherCondition = element.weather[0].description;
-    console.log(weatherCondition);
+
 
 
 		var div = document.createElement("div");
@@ -285,6 +287,10 @@ function logArrayElements1(element, index, array, counter) {
 		parentDiv.appendChild(div);
 
 		//interior weather data
+
+    var divCityName = document.createElement("div");
+    divCityName.className = "DayDivsCityName";
+
 		var divDate = document.createElement("div");
 		divDate.className = "DayDivsDate";
 
@@ -300,7 +306,8 @@ function logArrayElements1(element, index, array, counter) {
 
 		//add to
 		var innerParentDiv = document.getElementById(weatherSquareID);
-		innerParentDiv.appendChild(divDate);
+		innerParentDiv.appendChild(divCityName);
+    innerParentDiv.appendChild(divDate);
 		innerParentDiv.appendChild(divIcon);
     innerParentDiv.appendChild(divDesc);
 		innerParentDiv.appendChild(divTemp);
@@ -318,6 +325,7 @@ function logArrayElements1(element, index, array, counter) {
 		divIcon.appendChild(weatherPhoto);
     divDate.innerHTML=todayDate2;
     divDesc.innerHTML=weatherCondition;
+    divCityName.innerHTML=CityName;
 
 
 
