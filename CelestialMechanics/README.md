@@ -1,6 +1,6 @@
 #The Great map of Sunrise and Sunset in the World #
 
-***Author:** Martin Couture, **Date:** September 2014, **For:** Tech Trek Idol 2014*
+**Author:** Martin Couture, **Date:** September 2014, **For:** Tech Trek Idol 2014
 
 
 ### **Try it at : [The Great map of Sunrise and Sunset in the World](http://membre.oricom.ca/publiccouture/sunrisesunset)** ###
@@ -36,7 +36,7 @@ After that, I created a JavaScript file to hold my map and my basic fonctions. T
 
 Plus, I created 1 Dojo object that contain the mathematical formulas. This is use to calculate the rotation and the angle of the earth for each day of the year. With this, the app can calculate the sunrise and sunset for each city. See [here](http://membre.oricom.ca/publiccouture/sunrisesunset/js/sunrisesunset.js). 
 
-Another Dojo object has been created to hold some reusable functions. By linking this object with another project, I will be able to reusable it (like the first dojo object created). See [here](http://membre.oricom.ca/publiccouture/sunrisesunset/js/coordinatesTools.js)
+Another Dojo object has been created to hold some reusable functions. By linking this object with another project, I will be able to reuse it (like the first dojo object created). See [here](http://membre.oricom.ca/publiccouture/sunrisesunset/js/coordinatesTools.js)
 
 To have a nice look of mixing color togheter, I created my own theme in dojo format. See [here](http://membre.oricom.ca/publiccouture/sunrisesunset/js/ephemeridesTheme.js)
 
