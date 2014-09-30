@@ -4,7 +4,7 @@
 *Citizens of Oz - the Wizard needs your help!* 
 -----------------------------------------------------
 
-Under the Wizard's decree, the army's team of GIS experts have created this web mapping application to help track and capture the Wicked Witch of the West. If you spot the Wicked Witch of the West, you, as a citizen of Oz, are expected to upload your location and any additional comments to this map. 
+Under the Wizard's decree, the army's team of GIS experts have created a web mapping application to help track and capture the Wicked Witch of the West. If you spot the Wicked Witch of the West, you, as a citizen of Oz, are expected to upload your location and any additional comments to this map. 
 
 As the citizens of Oz well know, the Wicked Witch is public enemy number one and her capture is imperative if we are to succeed in restoring peace and calm to all territories in the Land of Oz. If you spot the Wicked Witch of the West, You can comply with your civic duty to help the Wizard by uploading your location and contact information to this application. Under no circumstances should you attempt to engage with her; The Wicked Witch of the West should be considered armed and dangerous.  
 
