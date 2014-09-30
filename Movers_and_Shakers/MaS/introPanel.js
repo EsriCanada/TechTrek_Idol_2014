@@ -128,6 +128,7 @@ define([
                 this.clusterDetails.domNode.removeChild(this.clusterDetails.domNode.children[0]);
             }
             domStyle.set(this.clusterDetails.domNode,"display","none");
+            domStyle.set(this.nextButton.domNode,"display","none");
         },
         
         showProgress: function()
