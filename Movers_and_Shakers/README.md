@@ -16,7 +16,7 @@ People frequently need to purchase a home in an unfamiliar city. They do their h
 # DEMO: #
 
 1.	Try the application live:  ***[ONLY AVAILABLE TO ESRI CANADA USERS](http://gfx-dev/Movers_and_Shakers)***
-2.	Video demonstration: ***[ONLY AVAILABLE TO ESRI CANADA USERS](http://gfx-dev/Movers_and_Shakers/MaS/demo.webm)*** (Note: the WEBM video plays natively in Firefox/Chrome - other browsers may prompt to download...or try the (much larger) [AVI](http://gfx-dev/Movers_and_Shakers/MaS/demo.avi) version).
+2.	Video demonstration: ***[ONLY AVAILABLE TO ESRI CANADA USERS](http://gfx-dev/Movers_and_Shakers/MaS/Spore_demo_video/Spore_demo_video.html)***
 
 ----------
 
