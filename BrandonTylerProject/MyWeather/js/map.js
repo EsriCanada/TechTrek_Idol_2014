@@ -112,15 +112,15 @@ require([
           var graphicResult = new Graphic(geometryLocation, symbolMarker, attributesCandidate);
           mapMain.graphics.add(graphicResult);
 
-          //add a text symbol to the map listing the location of the matched address.
-              var displayText = candidate.address;
-              var font = new Font(
-                "16pt",
-                Font.STYLE_NORMAL,
-                Font.VARIANT_NORMAL,
-                Font.WEIGHT_BOLD,
-                "Helvetica"
-              );
+          // //add a text symbol to the map listing the location of the matched address.
+          //     var displayText = candidate.address;
+          //     var font = new Font(
+          //       "16pt",
+          //       Font.STYLE_NORMAL,
+          //       Font.VARIANT_NORMAL,
+          //       Font.WEIGHT_BOLD,
+          //       "Helvetica"
+          //     );
 
               var textSymbol = new TextSymbol(
                 displayText,
@@ -193,7 +193,6 @@ require([
 		Weather(cities, dates);
     }
 
-
     function extentChange (){
       var max_x = Math.max.apply(Math, xValues);
       console.log(max_x)
@@ -214,6 +213,7 @@ require([
       console.log("new Extent?")
 
     }
+
   });
 });
 
@@ -270,6 +270,8 @@ function logArrayElements1(element, index, array, counter) {
 		var daytemp = element.temp.day;
 		var weatherIcon = element.weather[0].icon;
 		var weatherUrl = "images/" + weatherIcon + ".png";
+    var weatherCondition = element.weather[0].description;
+    console.log(weatherCondition);
 
 
 		var div = document.createElement("div");
@@ -289,6 +291,9 @@ function logArrayElements1(element, index, array, counter) {
 		var divIcon = document.createElement("div");
 		divIcon.className = "DayDivsIcon";
 
+    var divDesc = document.createElement("div");
+    divDesc.className = "DayDivsDesc";
+
 		var divTemp = document.createElement("div");
 		divIcon.className = "DayDivsTemp";
 
@@ -297,11 +302,13 @@ function logArrayElements1(element, index, array, counter) {
 		var innerParentDiv = document.getElementById(weatherSquareID);
 		innerParentDiv.appendChild(divDate);
 		innerParentDiv.appendChild(divIcon);
+    innerParentDiv.appendChild(divDesc);
 		innerParentDiv.appendChild(divTemp);
 
 
-		var weatherText = document.createTextNode("Temp = " + daytemp);
+		var weatherText = document.createTextNode("Temp:" + "  " + daytemp + "°");
 		var weatherPhoto = document.createElement("img");
+
 
 		weatherPhoto.setAttribute('src', weatherUrl);
 		weatherPhoto.style.height = '80px';
@@ -310,6 +317,11 @@ function logArrayElements1(element, index, array, counter) {
 		divTemp.appendChild(weatherText);
 		divIcon.appendChild(weatherPhoto);
     divDate.innerHTML=todayDate2;
+    divDesc.innerHTML=weatherCondition;
+
+
 
 	}
+
+
 }
