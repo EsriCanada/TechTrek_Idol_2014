@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<configuration>
+    <geocoder visible="false">
+        <url>http://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer</url>
+        <useproxy>false</useproxy>
+        <zoomscale>10000</zoomscale>
+        <minscore>40</minscore>
+        <usemapservicesonly>true</usemapservicesonly>
+    </geocoder>
+    <links>
+        <link label="About The Wicked Witch Tracker">
+            <content closelabel=""><![CDATA[Citizens of Oz - the Wizard needs your help!<br><br>Under the Wizard's decree, the army's team of GIS experts have created a web mapping application to help track and capture the Wicked Witch of the West. If you spot the Wicked Witch of the West, you, as a citizen of Oz, are expected to upload your location and any additional comments to this map.<br><br>As the citizens of Oz well know, the Wicked Witch is public enemy number one and her capture is imperative if we are to succeed in restoring peace and calm to all territories in the Land of Oz. If you spot the Wicked Witch of the West, you can comply with your civic duty to help the Wizard by uploading your location and contact information to this application. Under no circumstances should you attempt to engage with her; The Wicked Witch of the West should be considered armed and dangerous.<br><br>Upon uploading your location, a small group of soilders will be distpatched to follow-up with you.<br><br>Aditionally, the Wizard has requested that his army closely monitor all social media mentions of the Wicked Witch of the West. The army will be watching this service closely and all locations where the Witch is mentioned will be considered at risk for an uprising - you are therefore not only endangering yourself, but your entire neighbourhood. Citizens found using Wicked Witch of the West hash tags as a means of sending messages to Witch Supporters are punishable by death. All 'Witch Talk' intercepted by the Wizard's army are displyed on this map; a hotspot analysis is run daily. <br><br>The Wizard and his army are committed to the returning the Land of Oz to a state of peace and safety; capture of the Wicked Witch of the West is integral to his success.<br><br>The Wizard's GIS team thanks you for your cooperation.<br><br>Jonathan Nowlan<br><br>Sarah Sibbett
+
+]]></content>
+        </link>
+    </links>
+</configuration>

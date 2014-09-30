@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<configuration>
+    <addfeatures>true</addfeatures>
+    <deletefeatures>true</deletefeatures>
+    <updategeometry>false</updategeometry>
+    <updateattributes>false</updateattributes>
+    <toolbarvisible>true</toolbarvisible>
+    <toolbarcutvisible>false</toolbarcutvisible>
+    <toolbarmergevisible>false</toolbarmergevisible>
+    <toolbarreshapevisible>false</toolbarreshapevisible>
+</configuration>

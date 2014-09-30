@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<configuration>
+    <title>Wicked Witch of the West Tracker</title>
+    <logo>assets/images/Untitled-1.jpg.article.jpg</logo>
+    <style>
+        <colors>0xffffff,0x9933,0x101010,0x0,0xffd700</colors>
+        <alpha>0.8</alpha>
+        <font name="Verdana"/>
+        <titlefont name="Verdana"/>
+        <subtitlefont name="Verdana"/>
+    </style>
+    <!-- replace the following url with your own geometryservice -->
+    <geometryservice url="http://tasks.arcgisonline.com/ArcGIS/rest/services/Geometry/GeometryServer"/>
+    <subtitle>Help us find the Wicked Witch of the West!</subtitle>
+    <widget url="widgets/Navigation/NavigationWidget.swf" config="widgets/Navigation/NavigationWidget.xml" left="10" top="50"/>
+    <widget url="widgets/HeaderController/HeaderControllerWidget.swf" config="widgets/HeaderController/HeaderControllerWidget.xml" left="0" top="0"/>
+    <widget url="widgets/Splash/SplashWidget.swf" config="widgets/Splash/SplashWidget.xml" label="Splash"/>
+    <widget url="widgets/StaticImage/StaticImageWidget.swf" config="widgets/StaticImage/StaticImageWidget.xml" label="Static Image" left="5" bottom="62"/>
+    <map attributionvisible="true" esrilogovisible="true" openhandcursorvisible="false" scalebarvisible="true" scalebar="default" zoomslidervisible="false" wraparound180="true" addarcgisbasemaps="true" itemid="e4f5dbf9c48f43f4acca6520a77a8b8e" top="40" portalurl="https://www.arcgis.com/"/>
+    <widgetcontainer layout="float">
+        <widget url="widgets/Edit/EditWidget.swf" config="widgets/Edit/EditWidget_1.xml" label="Upload your sightings" icon="assets/images/plus.png" preload="open"/>
+        <widget url="widgets/Bookmark/BookmarkWidget.swf" config="widgets/Bookmark/BookmarkWidget_1.xml" label="Zoom to Sightings" icon="assets/images/search.png"/>
+        <widget url="widgets/LayerList/LayerListWidget.swf" config="widgets/LayerList/LayerListWidget_1.xml" label="Layer List" icon="assets/images/i_layers.png"/>
+    </widgetcontainer>
+</configuration>
