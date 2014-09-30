@@ -2,7 +2,7 @@
 
 App:
 
-* [Plug My Ride](http://172.31.17.55/Cuttingsfinest/plugmyride/)
+* [Plug My Ride](http://74.216.225.103/plugmyride)
 
 Team Members:
 
