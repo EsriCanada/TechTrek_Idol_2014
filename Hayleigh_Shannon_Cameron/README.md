@@ -22,7 +22,7 @@ The name of the Operations View is “Solar Roadways Operations Dashboard” and
 ##How was this awesome app made?
  
  The customized widget was created using the ArcGIS Runtime SDK for WPF for Operations Dashboard. The sample widgets provided with the ArcGIS Runtime SDK for WPF were reviewed to achieve and understanding of developing custom add-ins for Operations Dashboard. In our sample application, we used a GTA road dataset retrieved from GeoBase.<br><br>
-The app can be configured to use with any numeric field in a Feature Service, but is purposed to be used with a length field of a Simple Line Feature Service.In order to be used with more datasets we assumed a 2 lane width for all roads in our dataset as we wanted users without access to Lane data to be able to use the widget.
+The app can be configured to use with any numeric field in a Feature Service, but is purposed to be used with a length field of a Simple Line Feature Service. In order to be used with more datasets we assumed a 2 lane width for all roads in our dataset as we wanted users without access to Lane data to be able to use the widget.
 
 
 
