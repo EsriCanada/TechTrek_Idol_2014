@@ -1,0 +1,26 @@
+﻿define({
+    outputUnit: "須_Output Unit_鷗",
+    wkid: "須_Output WKID_鷗",
+    label: "須_Output Label_鷗",
+    transformationWkid: '須_Transformation WKID_鷗',
+    transformationLabel: '須_Transformation Label_鷗',
+    transformForward: '須_Transform Forward_鷗',
+    actions: "須_Actions_鷗",
+    warning: "須_please input valid spatial reference WKID!_鷗",
+    tfWarning: "須_please input valid datum transformation WKID!_鷗",
+    spinnerLabel: "須_Round coordinate to:_鷗 ",
+    decimalPlace: "須_decimal places_鷗",
+    separator: "須_Show thousand separators_鷗",
+
+    add: "須_Add Output Coordinate System_鷗",
+    edit: "須_Edit Coordinate System_鷗",
+    output: "須_Output Coordinate System_鷗",
+    cName: "須_Coordinate system name_鷗",
+    units: "須_Display Units:_鷗 ",
+    datum: "須_Datum Transformation_鷗",
+    tName: "須_Transformation name_鷗",
+    forward: "須_Use transformation forward_鷗",
+    ok: "須_OK_鷗",
+    cancel: '須_Cancel_鷗',
+    REPEATING_ERROR: "須_The fllowing fields are repeated:_鷗 "
+});

@@ -1,0 +1,166 @@
+{
+  "theme": {
+    "name": "FoldableTheme",
+    "styles": [
+      "default",
+      "black",
+      "green",
+      "cyan",
+      "red"
+    ]
+  },
+  "portalUrl": "http://OntarioRegion.maps.arcgis.com/",
+  "appId": "Ma5hjLnhXHKcozXV",
+  "title": "Sandy McTire Canadian Geography Challenge",
+  "subtitle": "Ontario Region Professional Services",
+  "logo": "images/Canada_64.png",
+  "geometryService": "https://utility.arcgisonline.com/arcgis/rest/services/Geometry/GeometryServer",
+  "links": [],
+
+
+  "widgetOnScreen": {
+    "panel": {
+      "uri": "themes/FoldableTheme/panels/TitlePanel/Panel",
+      "positionRelativeTo": "map"
+    },
+    "widgets": [
+      {
+        "label": "Header Controller",
+        "uri": "themes/FoldableTheme/widgets/HeaderController/Widget",
+        "positionRelativeTo": "browser",
+        "position": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "height": 40
+        },
+        "id": "themes/FoldableTheme/widgets/HeaderController/Widget_1",
+        "name": "HeaderController",
+        "isThemeWidget": true
+      },
+      {
+        "label": "Scalebar",
+        "uri": "widgets/Scalebar/Widget",
+        "position": {
+          "left": 25,
+          "bottom": 25
+        },
+        "id": "widgets/Scalebar/Widget_2",
+        "positionRelativeTo": "map",
+        "name": "Scalebar"
+      },
+      {
+        "uri": "widgets/Geocoder/Widget",
+        "position": {
+          "left": 45,
+          "top": 5
+        },
+        "id": "widgets/Geocoder/Widget_3",
+        "positionRelativeTo": "map",
+        "name": "Geocoder",
+        "label": "Geocoder"
+      },
+      {
+        "label": "Coordinate",
+        "uri": "widgets/Coordinate/Widget",
+        "position": {
+          "left": 200,
+          "bottom": 20
+        },
+        "id": "widgets/Coordinate/Widget_4",
+        "positionRelativeTo": "map",
+        "name": "Coordinate"
+      },
+      {
+        "label": "OverviewMap",
+        "uri": "widgets/OverviewMap/Widget",
+        "position": {
+          "top": 0,
+          "right": 0
+        },
+        "id": "widgets/OverviewMap/Widget_8",
+        "positionRelativeTo": "map",
+        "name": "OverviewMap"
+      },
+      {
+        "uri": "widgets/HomeButton/Widget",
+        "position": {
+          "left": 7,
+          "top": 75
+        },
+        "id": "widgets/HomeButton/Widget_9",
+        "positionRelativeTo": "map",
+        "name": "HomeButton",
+        "label": "Home Button"
+      },
+      {
+        "uri": "widgets/MyLocation/Widget",
+        "position": {
+          "left": 7,
+          "top": 110
+        },
+        "id": "widgets/MyLocation/Widget_10",
+        "positionRelativeTo": "map",
+        "name": "MyLocation",
+        "label": "My Location"
+      },
+      {
+        "label": "Splash",
+        "uri": "widgets/Splash/Widget"
+      }
+    ]
+  },
+  "map": {
+    "3D": false,
+    "2D": true,
+    "position": {
+      "left": 0,
+      "top": 40,
+      "right": 0,
+      "bottom": 0
+    },
+    "itemId": "883f0d7d33384cba8ac25957193a7d2f",
+    "mapOptions": {
+      "extent": {
+        "xmin": -15696350,
+        "ymin": 5112617,
+        "xmax": -5857528,
+        "ymax": 17926123,
+        "spatialReference": {
+          "wkid": 102100
+        }
+      }
+    },
+    "id": "map",
+    "portalUrl": "http://OntarioRegion.maps.arcgis.com/"
+  },
+  "widgetPool": {
+    "panel": {
+      "uri": "themes/FoldableTheme/panels/FoldablePanel/Panel",
+      "positionRelativeTo": "map",
+      "position": {
+        "top": 5,
+        "right": 5,
+        "bottom": 5
+      }
+    },
+    "widgets": [
+      {
+        "name": "Demo",
+        "label": "",
+        "isThemeWidget": false,
+        "uri": "widgets/Demo/Widget",
+        "index": 5,
+        "openAtStart": true,
+        "id": "widgets/Demo/Widget_14"
+      }
+    ],
+    "groups": []
+  },
+  "widgetManifestsMerged": true,
+  "httpProxy": {
+    "useProxy": true,
+    "url": "/proxy.js"
+  }
+}
+

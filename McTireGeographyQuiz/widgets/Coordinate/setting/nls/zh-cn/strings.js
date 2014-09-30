@@ -1,0 +1,30 @@
+﻿define({
+    state: "默认情况下，会以当前地图的坐标系显示坐标值。" +
+    "若要获得其他坐标系下的坐标值，则需手动添加坐标系及相应的transformation。",
+    outputUnit: "输出单位",
+    wkid: "输出WKID",
+    label: "输出坐标系名称",
+    transformationWkid: 'Transformation WKID',
+    transformationLabel: 'Transformation名称',
+    transformForward: 'Transform Forward',
+    actions: "操作",
+    warning: "请输入有效的坐标系WKID！",
+    tfWarning: "请输入有效的datum transformation WKID！",
+    spinnerLabel: "坐标值截取：",
+    decimalPlace: "位小数",
+    separator: "显示千分位",
+    getVersionError: "无法获得Geometry Service的版本",
+
+    add: "添加新的输出坐标系",
+    edit: "编辑坐标系",
+    output: "输出坐标系",
+    cName: "坐标系名称",
+    units: "显示单位：",
+    datum: "Datum Transformation",
+    tName: "Transformation名称",
+    forward: "使用transformation forward",
+    ok: "确定",
+    cancel: '取消',
+    olderVersion: "Geometry Service不支持设置transformation",
+    REPEATING_ERROR: "指定的坐标系已存在"
+  });

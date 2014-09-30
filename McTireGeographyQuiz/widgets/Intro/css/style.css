@@ -1,0 +1,137 @@
+.jimu-widget-splash{
+  width: 100%;
+  height: 100%;
+  z-index: 999;  
+  background-color:rgba(214,214,214, 0.6);  
+}
+.jimu-widget-splash .overlay{
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+}
+.jimu-widget-splash .content{
+  width: 277px; /* 898px; */ 
+  height: 372px;/*348px;*/ 
+  border: 2px solid #993300;
+  position: absolute;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: none !important;
+  background-image: url(images/McTire.png);
+}
+.jimu-widget-splash .top-line{
+  width: 100%;
+  height: 0;
+  border-top: 1px solid rgba(255,255,255, 0.16);
+}
+.jimu-widget-splash .logo{
+  margin-top: 0px;
+  margin-left: 0px;
+  width: 130px;
+  float: left;
+}
+.jimu-widget-splash .right-part{
+  margin-top: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+  float: center;
+}
+.jimu-widget-splash .welcome{
+  color: #993300;
+  font: 24px Arial;
+  text-align: center;
+  style: bold;
+}
+.jimu-widget-splash .instructions{
+  color: #993300;
+  font: 14px Arial;
+  text-align: left;
+  margin-top: 20px;
+  overflow: hidden;
+}
+.jimu-widget-splash .licence .jimu-checkbox{
+  margin-top: 2px;
+  float: left;
+}
+.jimu-widget-splash .licence-text span{
+  display: inline-block;
+  float: left;
+  margin-left: 16px;
+}
+.jimu-widget-splash .licence-text{
+  color: white;
+  font: 12px Arial;
+  line-height: 15px;
+  float: left;
+  white-space: nowrap;
+}
+.jimu-widget-splash .jimu-state-error{
+  margin-top: 5px;
+  visibility: hidden;
+}
+.jimu-widget-splash a, .jimu-widget-splash a:visited{
+  color: #2ecc71;
+}
+.jimu-widget-splash .continue{
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 32px;
+  bottom: 10px;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.jimu-widget-splash .continue-btn{
+  margin: auto;
+  width: 90px;
+  height: 25px;
+  background-color: #993300 !important;
+  border: 1px solid #993300 !important;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  color: white;
+  font: 15px Arial;
+  text-align: center;
+  line-height: 25px;
+  cursor: pointer;
+}
+@media screen and (max-width:600px){
+  .jimu-widget-splash .content{
+    width: 80%; 
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 6px;
+    overflow: hidden;
+    margin: auto;
+  }
+  .jimu-widget-splash .logo{
+    margin-top: auto;
+    margin-left: auto;
+    width: auto;
+    float: none;
+  }
+  .jimu-widget-splash .right-part{
+    margin-top: auto;
+    margin-left: auto;
+    float: none;
+    text-align: center;
+  }
+  .jimu-widget-splash .licence .jimu-checkbox{
+    float: left;
+    display: inline-block;
+  }
+  .jimu-widget-splash .licence-text span{
+    display: inline-block;
+    float: left;
+    margin-left: 16px;
+  }
+  .jimu-widget-splash .licence-text{
+    float: none;
+    display: inline-block;
+  }
+  .jimu-widget-splash .welcome{
+    font: 22px Arial;
+  }
+}
