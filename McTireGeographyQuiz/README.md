@@ -9,7 +9,7 @@ The Canadian Geography Quiz application is a widget that can be used in the Web 
 
 ![Image of Canadian Quiz application](mctire.JPG "Canadian Quiz application")
 
-[Try it live](http://ctc-dev/McTireGeographyQuiz/ "Geography Quiz")
+### [Try it live](http://ctc-dev/McTireGeographyQuiz/ "Geography Quiz")
 
 ## Value Proposition
 
