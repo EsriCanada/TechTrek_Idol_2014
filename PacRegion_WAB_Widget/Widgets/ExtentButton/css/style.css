@@ -1,0 +1,6 @@
+.jimu-widget-extentbutton .ExtentButton .ExtentButton{
+  background-color: rgba(0,0,0,0.2);
+}
+.jimu-widget-extentbutton .ExtentButton .ExtentButton:hover{
+  background-color: rgba(0,0,0,0.4);
+}
