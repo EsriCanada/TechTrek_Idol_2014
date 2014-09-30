@@ -19,7 +19,7 @@ reac.TOR shows you what's going on in your neighbourhood and around the city tod
 
 ### reac.TOR shows you WHERE
 
-There are a number of different event listing sites - blogTO, InsideToronto, Just Shows, ... - and one thing they all have in common is that they don't map their events (or, at best, use Google Maps or OpenStreetMap to show the location of a single event). This makes it difficult for anyone unfamiliar with the city - or simply wanting to know what's happening around them - to find the events that matter to them.  With reac.TOR, all of the events are on one map. Choose from a pre-set list of neighbourhoods and regions or use the geocoder to zoom in and see what’s going on in your favourite part of the city.
+There are a number of different event listing sites - blogTO, InsideToronto, Just Shows, ... - and one thing they all have in common is that they don't map their events (or, at best, use Google Maps or OpenStre!etMap to show the location of a single event). This makes it difficult for anyone unfamiliar with the city - or simply wanting to know what's happening around them - to find the events that matter to them.  With reac.TOR, all of the events are on one map. Choose from a pre-set list of neighbourhoods and regions or use the geocoder to zoom in and see what’s going on in your favourite part of the city.
 
 ### reac.TOR is responsive
 
@@ -31,11 +31,11 @@ reac.TOR will only give you the essential information - what, when, where - when
 
 Every day, there are dozens of different events across the city. reac.TOR's filters allow you to choose the **date**, the **price**, and the **type of event** so you only see the events you want to see. You can also filter the events displayed on the map by source.
 
+### reac.TOR uses Esri technology
+
 <div style="z-index:1000;background:url(http://74.216.225.66/reac.TOR/assets/img/android-template.png);height:757px;width:398px;background-size:100%;position:relative;float:left;margin-right:30px;margin-left:20px;">
   <img src="http://74.216.225.66/reac.TOR/assets/img/tiff.gif" width="343px" height="578px" style="padding-top:90px;padding-left:28px;overflow:hidden;position:absolute;" align="right"></img>
 </div>
-
-### reac.TOR uses Esri technology
 
 #### Web app
 
@@ -53,9 +53,9 @@ reac.TOR was designed with extensibility in mind.  While reac.TOR is focused on 
 
 # Don't be proactive - get reactive!
 
-## Setup & Development
+### Setup & Development
 
-### Web app
+#### Web app
 
 To run the development environment for the reac.TOR Web app, you will need:
 
@@ -76,7 +76,7 @@ When developing, run the Grunt development task to watch SASS and Handlebars fil
 
     grunt dev
 
-### Web scraper
+#### Web scraper
 
 The following Python packages are required for running the reac.TOR scraping script:
 
