@@ -1,0 +1,132 @@
+button.modal-close {
+  padding: 0;
+  cursor: pointer;
+  background: 0 0;
+  border: 0;
+  -webkit-appearance: none;
+  float: right;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  opacity: .2;
+}
+
+button.modal-close:hover, button.modal-close:focus {
+  text-decoration: none;
+  cursor: pointer;
+  opacity: .5;
+  filter: alpha(opacity=50)
+}
+
+.modal-title {
+  font-size: $font-size-large;
+}
+
+.modal-content {
+  border-radius: $leaflet-popup-radius;
+  border: 0;
+}
+
+.modal-main .modal-details .modal-icon {
+  float: left;
+  margin-right: 5px;
+  position: relative;
+  top: 3px;
+}
+
+@each $type in $category-list {
+
+  .modal-icon-#{nth($type, 1)} {
+    background: #{nth($type, 2)}
+  }
+
+}
+
+.modal-icon-text {
+  color: $colour-font;
+  // font-size: $font-size-base;
+}
+
+.modal-category-text {
+  font-size: $font-size-large;
+  color: $gray;
+  line-height: 38px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.modal-icon {
+  cursor: default;
+  display: inline-block;
+  padding: 5px 0;
+  text-align: center;
+  text-shadow: rgba(0,0,0,0.1) 0 -1px 0;
+  width: 38px;
+  -moz-border-radius: $leaflet-round-radius;
+  -webkit-border-radius: $leaflet-round-radius;
+  border-radius: $leaflet-round-radius;
+}
+
+.popup-img {
+  padding-top: 15px;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+.modal-main td {
+  text-align: left;
+  vertical-align: top;
+}
+
+.modal-main a {
+  color: $colour-link;
+  text-decoration: none;
+}
+
+.modal-main a:hover {
+  text-decoration: underline;
+}
+
+.modal-label {
+  color: $gray;
+}
+
+.modal-category-container {
+  padding-left: 10px;
+}
+
+.modal-details {
+  font-size: 15px;
+  padding:  15px;
+  padding-bottom: 0px;
+  line-height: 1.6em;
+}
+
+.modal-description {
+  padding: 15px;
+  line-height: 18px;
+}
+
+.about-img {
+  width: 80%;
+  max-width: 80%;
+}
+
+.about-img-container {
+  text-align: center;
+  padding-left: 14px;
+}
+
+.about-details {
+  font-size: 15px;
+  padding:  15px;
+  padding-top: 0px;
+  line-height: 1.6em;
+}
+
+.font-red {
+  color: $colour-base;
+}

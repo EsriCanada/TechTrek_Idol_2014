@@ -1,0 +1,89 @@
+body {
+  background-color: $colour-body-bg;
+	margin: 0;
+	padding: 0;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: $colour-body-tap;
+  -webkit-touch-callout: none;
+}
+
+html, body {
+	height: 100%;
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+// .header {
+//   background-color: rgba($colour-base, 0.7);
+//   font-size: $font-size-xlarge;
+//   color: $colour-font;
+//   // line-height: $header-height;
+//   -webkit-box-sizing: border-box;
+//   -moz-box-sizing: border-box;
+//   box-sizing: border-box;
+//   // height: $header-height;
+//   width: $header-width;
+//   padding: 0 0;
+//   // padding-left: 45px;
+//   // text-align: center;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   z-index: 999;
+// }
+
+// .header a {
+//   background: center center no-repeat transparent;
+//   background-image: $header-menu-icon;
+//   display: block;
+//   height: $header-icon-height;
+//   width: $header-icon-width;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   z-index: 999;
+// }
+
+.no-display {
+  display: none;
+}
+
+
+.reactor-logo {
+  display: block;
+  text-indent: -9999px;
+  width: $header-icon-width;
+  height: $header-icon-height;
+  background: $header-reactor-icon;
+  background-size: $header-icon-width $header-icon-height;
+};
+
+.toolbar-header {
+  text-align: center;
+}
+
+@media (max-width: 690px) {
+
+  .geocoder-toggled {
+    visibility: hidden;
+  }
+
+}
+
+.geocoder {
+  position: absolute;
+  top: 10px;
+  right: 45px;
+  z-index: 1000;
+}

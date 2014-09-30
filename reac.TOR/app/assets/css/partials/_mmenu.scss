@@ -1,0 +1,30 @@
+.mm-page {
+  position: absolute;
+  margin: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.mm-title {
+  font-size: $font-size-large;
+  color: $colour-base-light;
+}
+
+.mm-header {
+  height: $header-height;
+  padding-top: $header-padding-top;
+}
+
+.mm-menu.mm-hasheader > .mm-panel.mm-list {
+  padding-top: $header-height;
+}
+
+.menu-icon {
+  fill: white;
+}
+
+.mm-header .mm-prev {
+  margin-bottom: $header-arrow-margin;
+}
