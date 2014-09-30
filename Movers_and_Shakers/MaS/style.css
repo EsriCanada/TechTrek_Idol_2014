@@ -92,7 +92,7 @@
     width:60px;
 }
 
-#pageContent_MaS .dijitTextBox .dijitButtonNode
+#pageContent_MaS .nihilo .dijitTextBox .dijitButtonNode
 {
     height:22px !important;
 }
@@ -125,7 +125,7 @@
 
 #pageContent_MaS .claro .dijitSpinner .dijitSpinnerButtonContainer .dijitArrowButton
 {
-    height:45%;
+    height:42%;
 }
 
 #pageContent_MaS.claro .calcite .dijitTextBox .dijitButtonNode
@@ -142,4 +142,9 @@
 #pageContent_MaS .simpleGeocoder .esriGeocoderResults
 {
     background-color: #ccc;
+}
+
+#MaS_searchForm
+{
+    overflow:hidden;
 }

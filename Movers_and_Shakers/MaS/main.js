@@ -227,7 +227,7 @@ define([
             this.intro.on('home-selected',lang.hitch(this,function(){
                 this.destination.setHomeCluster(this.homeClusterFeature);
                 this.destination.clearPanel();
-                this.daDisplayLayer.clear();
+                //this.daDisplayLayer.clear();
                 this.dropPanelContent();
                 this.contentPanel.setContent(this.destination.domNode);
             }));
@@ -337,7 +337,7 @@ define([
             {
                 console.log("No DA Found");
                 alert(i18n.alerts.noDestinationDAsFound);
-                this.destniation.hideProgress();
+                this.destination.hideProgress();
             }
             else
             {
@@ -422,7 +422,7 @@ define([
             {
                 console.log("No DA Found");
                 alert(i18n.alerts.noDestinationDAsFound);
-                this.destination.clearPanel();
+                this.destination.clearList();
                 this.destination.hideProgress();
             }
             else
@@ -436,7 +436,7 @@ define([
         {
             if (this._destinationDAFeatures && this._destinationDAFeatures.length>0)
             {
-                this.daDisplayLayer.clear();
+                //this.daDisplayLayer.clear();
                 var zoomExtent = this.daDestinationFeature.geometry.getExtent();
                 array.forEach(this._destinationDAFeatures,lang.hitch(this,function(da){
                     da.setInfoTemplate(popupTemplates.daTemplate);
