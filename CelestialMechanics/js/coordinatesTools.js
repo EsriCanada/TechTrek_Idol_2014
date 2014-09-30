@@ -35,10 +35,14 @@ DDtoDMStoTXT : function (value)
 	else
 		{posneg = 1}
 	absValue = Math.abs(value);	
-	deg = Math.trunc(Math.abs(absValue)); 
-	min = this._deuxchiffres(Math.trunc((absValue - deg)*60));  
-	sec = this._deuxchiffres(Math.trunc((((absValue - deg)*60)-min)*60));
-	
+	/*Math.trunc fonctionne uniquement avec Firefox.
+	//deg = Math.trunc(Math.abs(absValue)); 
+	//min = this._deuxchiffres(Math.trunc((absValue - deg)*60));  
+	//sec = this._deuxchiffres(Math.trunc((((absValue - deg)*60)-min)*60));
+	*/
+	deg = Math.floor(Math.abs(absValue)); 
+	min = this._deuxchiffres(Math.floor((absValue - deg)*60));  
+	sec = this._deuxchiffres(Math.floor((((absValue - deg)*60)-min)*60));
 	return deg * posneg + "&deg;" + min + "'" + sec + "''";
 	}
 

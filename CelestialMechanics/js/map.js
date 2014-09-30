@@ -142,7 +142,7 @@ require(
   		  
   		  
   		  //Set it in HTML format
-  		  html.set(dojo.byId("infosEphemerides"), "Sunrise: " + txtSunrise + "<br>Sunset: " + txtSunset +"<br>Daytime: " + txtDayTime +  "<br>Nigthtime: " +  txtNightTime);  
+  		  html.set(dojo.byId("infosEphemerides"), "Sunrise: " + txtSunrise + "<br>Sunset: " + txtSunset +"<br>Day length: " + txtDayTime +  "<br>Night length: " +  txtNightTime);  
 		 
 		
 		  //Set City info and time info in HTML format
