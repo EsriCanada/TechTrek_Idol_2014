@@ -1,0 +1,78 @@
+// Colours
+
+$colour-base: #FF2A2A !default;
+$colour-base-light: lighten($colour-base, 10%) !default;
+$colour-font: #fff !default;
+$colour-body-bg: #fff !default;
+$colour-body-tap: rgba(0, 0, 0, 0) !default;
+$colour-radio-blue: #4285f4 !default;
+$colour-link: darken($colour-radio-blue, 10%) !default;
+
+$colour-marker-red: rgb(237, 80, 59) !default;
+$colour-marker-orange: rgb(246, 150, 48) !default;
+$colour-marker-green: rgb(114, 175, 38) !default;
+$colour-marker-blue: rgb(57, 171, 222) !default;
+$colour-marker-purple: rgb(216, 90, 188) !default;
+$colour-marker-darkblue: rgb(0, 105, 161) !default;
+$colour-marker-darkpurple: rgb(90, 56, 106) !default;
+
+$colour-marker-arts: $colour-marker-red !default;
+$colour-marker-music: $colour-marker-orange !default;
+$colour-marker-film: $colour-marker-blue !default;
+$colour-marker-athletics: $colour-marker-darkblue !default;
+$colour-marker-community: $colour-marker-green !default;
+$colour-marker-other: $colour-marker-purple !default;
+
+$colour-marker-arts-dark: darken($colour-marker-arts, 10%) !default;
+$colour-marker-music-dark: darken($colour-marker-music, 10%) !default;
+$colour-marker-film-dark: darken($colour-marker-film, 10%) !default;
+$colour-marker-athletics-dark: darken($colour-marker-athletics, 10%) !default;
+$colour-marker-community-dark: darken($colour-marker-community, 10%) !default;
+$colour-marker-other-dark: darken($colour-marker-other, 10%) !default;
+
+$gray-darker: lighten(#000, 13.5%) !default; // #222
+$gray-dark: lighten(#000, 20%) !default;   // #333
+$gray: lighten(#000, 33.5%) !default; // #555
+$gray-light: lighten(#000, 60%) !default;   // #999
+$gray-lightish: lighten(#000, 80%) !default;
+$gray-lighter: lighten(#000, 93.5%) !default; // #eee
+
+// Fonts
+
+$font-family-base: Lato, sans-serif;
+
+$font-size-base: 14px !default;
+$font-size-large: ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-xlarge: ceil(($font-size-base * 1.7)) !default;
+$font-size-small: ceil(($font-size-base * 0.85)) !default; // ~12px
+
+// Header settings
+
+$header-height: 45px !default;
+$header-padding-top: 60px - $header-height;
+$header-width: 100% !default;
+$header-icon-height: 40px !default;
+$header-icon-width: 40px !default;
+$header-menu-icon: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADhJREFUeNpi/P//PwOtARMDHQBdLGFBYtMq3BiHT3DRPU4YR4NrNAmPJuHRJDyahEeT8Ii3BCDAAF0WBj5Er5idAAAAAElFTkSuQmCC) !default;
+$header-reactor-icon: url(../img/reactor-icon-white.svg);
+$header-arrow-margin: 9px;
+
+// Leaflet settings
+
+$leaflet-popup-radius: 3px !default;
+$leaflet-popup-width: 240px !default;
+$leaflet-geocoder-width: 240px !default;
+$leaflet-geocoder-offset-top: 30px !default;
+$leaflet-geocoder-offset-left: -5px !default;
+$leaflet-round-radius: 100px !default;
+
+// Lists
+
+$category-list: (
+  arts $colour-marker-arts $colour-marker-arts-dark,
+  music $colour-marker-music $colour-marker-music-dark,
+  film $colour-marker-film $colour-marker-film-dark,
+  athletics $colour-marker-athletics $colour-marker-athletics-dark,
+  community $colour-marker-community $colour-marker-community-dark,
+  other $colour-marker-other $colour-marker-other-dark
+);

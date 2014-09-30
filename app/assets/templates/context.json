@@ -1,0 +1,156 @@
+{
+	"components": "assets/components",
+	"assets": "assets",
+	"author": "Cameron Plouffe",
+	"title": "reac.TOR - Toronto Event Mapping",
+  "header": "reac.TOR",
+  "menu": {
+    "about": "About",
+    "types": "Event Types",
+    "filter": [
+      {
+        "label": "Arts",
+        "lower": "arts"
+      },
+      {
+        "label": "Music",
+        "lower": "music"
+      },
+      {
+        "label": "Film",
+        "lower": "film"
+      },
+      {
+        "label": "Community",
+        "lower": "community"
+      },
+      {
+        "label": "Athletics",
+        "lower": "athletics"
+      },
+      {
+        "label": "Other",
+        "lower": "other"
+      }
+    ],
+    "date": "Date",
+    "date-filter": [
+      {
+        "label": "Today",
+        "lower": "today"
+      },
+      {
+        "label": "Tomorrow",
+        "lower": "tomorrow"
+      },
+      {
+        "label": "This Week",
+        "lower": "week"
+      },
+      {
+        "label": "This Weekend",
+        "lower": "weekend"
+      },
+      {
+        "label": "Next Week",
+        "lower": "nextweek"
+      }
+    ],
+    "price": "Price",
+    "price-filter": [
+      {
+        "label": "All",
+        "lower": "all"
+      },
+      {
+        "label": "Priced",
+        "lower": "priced"
+      },
+      {
+        "label": "Free",
+        "lower": "free"
+      },
+      {
+        "label": "Unknown",
+        "lower": "unknown"
+      },
+    ],
+    "source": "Source",
+    "source-filter": [
+      {
+        "label": "All",
+        "lower": "all"
+      },
+      {
+        "label": "blogTO",
+        "lower": "blogto"
+      },
+      {
+        "label": "InsideToronto",
+        "lower": "insidetoronto"
+      },
+      {
+        "label": "concertsTO",
+        "lower": "concertsto"
+      },
+      {
+        "label": "Just Shows",
+        "lower": "justshows"
+      }
+    ],
+    "neighbourhoods": "Neighbourhoods",
+    "neighbourhood": [
+      {
+        "label": "Waterfront and The Islands",
+      },
+      {
+        "label": "Bay-Church Corridors",
+      },
+      {
+        "label": "Kensington-Chinatown-University",
+      },
+      {
+        "label": "Cabbagetown",
+      },
+      {
+        "label": "Little Italy-Trinity-Bellwoods",
+      },
+      {
+        "label": "The Beaches and Riverdale",
+      },
+      {
+        "label": "Davenport-Parkdale-High Park",
+      },
+      {
+        "label": "North Toronto",
+      },
+      {
+        "label": "East York",
+      },
+      {
+        "label": "North York (East)",
+      },
+      {
+        "label": "North York (West)",
+      },
+      {
+        "label": "Scarborough (Southwest)",
+      },
+      {
+        "label": "Scarborough (Northwest)",
+      },
+      {
+        "label": "Scarborough (East)",
+      },
+      {
+        "label": "Etobicoke York (North)",
+      },
+      {
+        "label": "Etobicoke York (Centre)",
+      },
+      {
+        "label": "Etobicoke York (South)",
+      }
+    ]
+  }
+}

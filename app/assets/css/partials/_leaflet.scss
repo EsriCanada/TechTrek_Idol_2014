@@ -1,0 +1,131 @@
+ // Zoom control position
+
+.leaflet-top {
+  padding-top: $header-height;
+}
+
+.leaflet-popup-content-wrapper {
+  font-size: 16px;
+  border-radius: $leaflet-popup-radius
+}
+
+.leaflet-popup-content {
+  max-width: $leaflet-popup-width
+}
+
+.leaflet-container {
+  font-size: $font-size-base;
+}
+
+.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+  // border: 1px solid;
+  // border-color: $colour-base-light;
+}
+
+.leaflet-popup-tip-container {
+  // margin-top: -2px;
+}
+
+.popup-body a {
+  color: $colour-link;
+  text-decoration: none;
+}
+
+.popup-body a:hover {
+  text-decoration: underline;
+}
+
+.popup-title {
+  font-weight: bold;
+  line-height: 24px;
+  color: $colour-base-light;
+}
+
+.popup-body {
+  line-height: 20px;
+  font-size: $font-size-base;
+  color: $gray-light;
+}
+
+.popup-body i {
+  color: $gray;
+}
+
+@each $type in $category-list {
+
+  .category-#{nth($type, 1)} {
+    fill: #{nth($type, 2)};
+    stroke: #{nth($type, 3)};
+    background: #{nth($type, 2)};
+    border-color: #{nth($type, 3)};
+  }
+
+}
+
+.marker-cluster-pie g.arc{
+  fill-opacity: 0.5;
+}
+
+.marker-cluster-pie-label {
+  font-size: $font-size-xlarge;
+  font-weight: bold;
+  font-family: $font-family-base;
+  fill: $colour-font;
+}
+
+// Geocoder
+
+.geocoder-control-input,
+.leaflet-touch .geocoder-control-input {
+  background: $colour-body-tap;
+  color: $colour-font;
+  font-weight: bold;
+  font-family: $font-family-base;
+}
+
+.geocoder-control-input.leaflet-bar {
+  box-shadow: none;
+}
+
+.geocoder-control-input.geocoder-control-loading,
+.leaflet-touch .geocoder-control-input.geocoder-control-loading {
+  background-image: none;
+}
+
+.geocoder-control {
+  display: none;
+}
+
+.geocoder-control-expanded,
+.leaflet-touch .geocoder-control-expanded {
+  width: $leaflet-geocoder-width;
+  display: inline-block;
+}
+
+.geocoder-control-suggestions {
+  top: $leaflet-geocoder-offset-top;
+  left: $leaflet-geocoder-offset-left;
+}
+
+.geocoder-control-suggestions .geocoder-control-suggestion.geocoder-control-selected,
+.geocoder-control-suggestions .geocoder-control-suggestion:hover {
+  background: $colour-base-light;
+  border-color: $colour-base-light;
+  color: $colour-font;
+  transition: ease 0.1s;
+  -webkit-transition: ease 0.1s;
+}
+
+.leaflet-control-container .leaflet-bar {
+  border-radius: $leaflet-round-radius;
+}
+
+.leaflet-control-container .leaflet-bar a:first-child {
+  border-top-left-radius: $leaflet-round-radius;
+  border-top-right-radius: $leaflet-round-radius;
+}
+
+.leaflet-control-container .leaflet-bar a:last-child {
+  border-bottom-left-radius: $leaflet-round-radius;
+  border-bottom-right-radius: $leaflet-round-radius;
+}

@@ -1,0 +1,136 @@
+{
+  "eventLayerUrl": "http://services.arcgis.com/hNP0AsFlTAoVqfxx/ArcGIS/rest/services/events/FeatureServer/0",
+  "neighbourhoodLayerUrl": "http://services.arcgis.com/hNP0AsFlTAoVqfxx/arcgis/rest/services/Neighbourhoods/FeatureServer/0",
+  "eventLayerUrlNew": "http://services.arcgis.com/hNP0AsFlTAoVqfxx/arcgis/rest/services/reacTOR/FeatureServer/0",
+  "mixPanelToken": "3592a4097d2a9a62627d7c72034d93ec",
+  "labels": {
+      "info": "More Info"
+    },
+  "map": {
+    "settings": {
+      "zoomControl": false
+    },
+    "view": {
+      "center": [43.66259406729767, -79.39046859741211],
+      "zoom": 12
+    }
+  },
+  "popup": {
+    "maxWidth": 270
+  },
+  "locateControl": {
+    "position": "topright",
+    "locateOptions": {
+      "maxZoom": 17
+    },
+    "showPopup": true,
+    "strings": {
+        "title": "Find my current location",
+        "popup": "You are within {distance} {unit} of this point.",
+        "outsideMapBoundsMsg": "You are currently located outside the boundaries of the map."
+    }
+  },
+  "basemap": {
+    "type": "Topographic",
+    "settings": {
+      "detectRetina": true
+    }
+  },
+  "zoomControl": {
+    "position": "topright"
+  },
+  "mmenu": {
+    "settings": {
+      "offCanvas": true,
+      "classes": "mm-light",
+      "header": {
+        "add": true,
+        "update": true,
+        "title": "reac.TOR"
+      }
+    }
+  },
+  "neighbourhoods": {
+    "field": "community",
+    "name": [
+      "toronto",
+      "york",
+      "east-york",
+      "north-york",
+      "etobicoke",
+      "scarborough"
+    ]
+  },
+  "eventTypes": {
+    "field": "category",
+    "category": [
+      "arts",
+      "music",
+      "film",
+      "community",
+      "athletics",
+      "other"
+    ]
+  },
+  "priceTypes": {
+    "field": "price",
+    "price": [
+      "all",
+      "priced",
+      "free",
+      "unknown"
+    ]
+  },
+  "sourceTypes": {
+    "field": "source",
+    "source": [
+      "all",
+      "blogto",
+      "insidetoronto",
+      "concertsto",
+      "justshows"
+    ]
+  },
+  "timeField": "time",
+  "timeFilterMode": "server",
+  "d3": {
+    "field": "category",
+    "rmax": 25
+  },
+  "about": {
+    "img": "assets/img/reactor-logo.png",
+    "desc": "<h3>Why plan ahead when you can <span class='font-red'>live in the moment</span>?</h3><p>Welcome to reac.TOR - your premiere source for finding out what's happening in Toronto.  reac.TOR shows you what's going on in your neighbourhood and around the city today, tomorrow, or this weekend.</p><p>reac.TOR aggregates data from several popular event listing sites, drawing them all on a single map so you can see what's happening where you are or where you'll be.  Decide whether you want to go listen to an up-and-coming band at the local pub, cheer on your favourite team, take in a show, or join in the fun at a community festival...</p><h3>reac.TOR puts <span class='font-red'>you in control</span></h3><p>Every day, there are dozens of different events across the city. reac.TOR's filters allow you to choose the <b>date</b>, the <b>price</b>, and the <b>type of event</b> so you only see the events you want to see. You can also filter the events displayed on the map by <b>source</b>.</p><h3>reac.TOR is <span class='font-red'>responsive</span></h3><p>Designed for mobile devices, event clustering keeps the map from getting too cluttered at any scale and at any screen size. Simply click on a cluster to break it into smaller clusters or individual events. Colour-coded map markers help you quickly spot the events you're most interested in.</p><h3>Getting started</h3><p>When you open reac.TOR, you'll automatically see all the events happening in Toronto for that given day. Click on an <b>event marker</b> to see essential information - what, when, where - about a particular event.  If you're intrigued, click <b>more info</b> to open an expanded popup with event details.</p><p>Click the <b><i class='fa fa-bars'></i> menu</b> button in the top-left corner, and you'll see a list of filters to help you narrow down what's displayed on the map to only <b>what/when/where</b> you're interested in.</p><p>Use the <b>neighbourhood selector</b> to zoom to an area of your choice, or click the <b><i class='fa fa-map-marker'></i> geolocator</b> (underneath the zoom controls) to find exactly where you are on the map.  If all else fails, click the <b><i class='fa fa-search'></i> magnifying glass</b> in the top-right corner to search and zoom to an address on the map.</p><h3>Why go through the trouble of sorting through countless events yourself when you don't have to?</h3><h3>Don't be proactive - get <span class='font-red'>reactive</span>!</h3>"
+  },
+  "markers": {
+    "music": {
+      "icon": "music",
+      "prefix": "fa",
+      "markerColor": "orange"
+    },
+    "athletics": {
+      "icon": "futbol-o",
+      "prefix": "fa",
+      "markerColor": "darkblue"
+    },
+    "arts": {
+      "icon": "paint-brush",
+      "prefix": "fa",
+      "markerColor": "red"
+    },
+    "film": {
+      "icon": "film",
+      "prefix": "fa",
+      "markerColor": "blue"
+    },
+    "community": {
+      "icon": "group",
+      "prefix": "fa",
+      "markerColor": "green"
+    },
+    "other": {
+      "icon": "ellipsis-h",
+      "prefix": "fa",
+      "markerColor": "purple"
+    }
+  }
+}

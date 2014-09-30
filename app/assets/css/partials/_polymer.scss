@@ -1,0 +1,120 @@
+[unresolved] {
+  opacity: 0;
+}
+
+.menu-toggle {
+  position: absolute;
+  right: 25px;
+  top: 12px;
+}
+
+@each $type in $category-list {
+
+  // Chrome
+
+  paper-toggle-button.toggle-button-#{nth($type, 1)}::shadow paper-radio-button::shadow #ink[checked] {
+    color: #{nth($type, 2)};
+  }
+
+  paper-toggle-button.toggle-button-#{nth($type, 1)}::shadow paper-radio-button::shadow #onRadio {
+    background-color: #{nth($type, 2)};
+  }
+
+  paper-toggle-button.toggle-button-#{nth($type, 1)}::shadow #toggleBar[checked] {
+    background-color: #{nth($type, 2)};
+  }
+
+  // Other Browsers
+
+  paper-toggle-button.toggle-button-#{nth($type, 1)} paper-radio-button #ink[checked] {
+    color: #{nth($type, 2)};
+  }
+
+  paper-toggle-button.toggle-button-#{nth($type, 1)} paper-radio-button #onRadio {
+    background-color: #{nth($type, 2)};
+  }
+
+  paper-toggle-button.toggle-button-#{nth($type, 1)} #toggleBar[checked] {
+    background-color: #{nth($type, 2)};
+  }
+
+}
+
+paper-radio-group {
+  width: 100%;
+}
+
+paper-radio-button.menu-radio {
+  width: 100%;
+  margin-left: 20px;
+  padding-left: 0;
+  border-color: rgba(0, 0, 0, 0.1);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+// Chrome
+
+paper-radio-group.menu-radio-group paper-radio-button::shadow #ink[checked] {
+  color: $colour-radio-blue;
+}
+
+paper-radio-group.menu-radio-group paper-radio-button::shadow #onRadio {
+  background-color: $colour-radio-blue;
+}
+
+// Other Browsers
+
+paper-radio-group.menu-radio-group paper-radio-button #ink[checked] {
+  color: $colour-radio-blue;
+}
+
+paper-radio-group.menu-radio-group paper-radio-button #onRadio {
+  background-color: $colour-radio-blue;
+}
+
+core-header-panel {
+  background: white;
+  /* height: 100% fails here on some browsers */
+  height: 100vh;
+  width: 100%;
+}
+
+core-toolbar {
+  background-color: rgba($colour-base, 0.6);
+  font-size: $font-size-xlarge;
+  color: $colour-font;
+  // line-height: $header-height;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  // height: $header-height;
+  width: $header-width;
+  padding: 0 0;
+  // text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  -webkit-transition: ease 0.5s;
+  transition: ease 0.5s;
+}
+
+core-toolbar:hover {
+  background-color: rgba($colour-base, 0.8);
+}
+
+core-toolbar > span {
+  text-align: center;
+}
+
+// /* narrow layout */
+// core-toolbar.narrow {
+//   height: $header-height;
+// }
+
+// core-toolbar.narrow .toolbar-tools {
+//   height: $header-height;
+//   padding: 0;
+// }
+
