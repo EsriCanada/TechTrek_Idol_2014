@@ -29,6 +29,7 @@ Territories - a layer displaying the current boundaries of all territories withi
 If any citizen of Oz is found using the information contained in this basemap data to create any web mapping applications in support of the Wicked Witch of the West, he/she is punishable by death and will be detained by the Wizard's army in Southstairs until the matter can be looked into in full. 
 
 
-Thw Wizard's GIS team thanks you for your cooperation
+The Wizard's GIS team thanks you for your cooperation
+
 *Jonathan Nowlan*
 *Sarah Sibbett*
