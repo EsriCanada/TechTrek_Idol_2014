@@ -20,6 +20,16 @@ People frequently need to purchase a home in an unfamiliar city. They do their h
 
 ----------
 
+# PREVIEW: #
+
+![step1](https://raw.githubusercontent.com/mgleahy/TechTrek_Idol_2014/master/Movers_and_Shakers/MaS/screenshots/step1.png)
+
+![step2](https://raw.githubusercontent.com/mgleahy/TechTrek_Idol_2014/master/Movers_and_Shakers/MaS/screenshots/step2.png)
+
+![step3](https://raw.githubusercontent.com/mgleahy/TechTrek_Idol_2014/master/Movers_and_Shakers/MaS/screenshots/step3.png)
+
+----------
+
 # APPLICATION WORKFLOW: #
 1.	Users enter a postal code from a neighbourhood they are familiar with or that is of the type they are looking for in the unfamiliar city. 
 2.	Based on the dissemination area of the selected postal code, the application returns a social profile or social cluster (the  demographic and behavioral characteristics of an area) for that neighbourhood. 
