@@ -1,0 +1,26 @@
+C:\Users\CMcEvenue\AppData\Local\Temporary Projects\SolarRoadwaysWidget\obj\Debug\SolarRoadwaysWidget.vbprojResolveAssemblyReference.cache
+C:\Users\CMcEvenue\AppData\Local\Temporary Projects\SolarRoadwaysWidget\obj\Debug\Config\Solar_Energy_CalculatorDialog.baml
+C:\Users\CMcEvenue\AppData\Local\Temporary Projects\SolarRoadwaysWidget\obj\Debug\Solar_Energy_Calculator.baml
+C:\Users\CMcEvenue\AppData\Local\Temporary Projects\SolarRoadwaysWidget\obj\Debug\Config\Solar_Energy_CalculatorDialog.g.vb
+C:\Users\CMcEvenue\AppData\Local\Temporary Projects\SolarRoadwaysWidget\obj\Debug\Solar_Energy_Calculator.g.vb
+C:\Users\CMcEvenue\AppData\Local\Temporary Projects\SolarRoadwaysWidget\obj\Debug\SolarRoadwaysWidget_MarkupCompile.cache
+C:\Users\CMcEvenue\AppData\Local\Temporary Projects\SolarRoadwaysWidget\obj\Debug\SolarRoadwaysWidget.g.resources
+C:\Users\CMcEvenue\AppData\Local\Temporary Projects\SolarRoadwaysWidget\obj\Debug\SolarRoadwaysWidget.Resources.resources
+C:\Users\CMcEvenue\AppData\Local\Temporary Projects\SolarRoadwaysWidget\obj\Debug\SolarRoadwaysWidget.vbproj.GenerateResource.Cache
+C:\Users\CMcEvenue\AppData\Local\Temporary Projects\SolarRoadwaysWidget\bin\Debug\SolarRoadwaysWidget.dll
+C:\Users\CMcEvenue\AppData\Local\Temporary Projects\SolarRoadwaysWidget\bin\Debug\SolarRoadwaysWidget.pdb
+C:\Users\CMcEvenue\AppData\Local\Temporary Projects\SolarRoadwaysWidget\obj\Debug\SolarRoadwaysWidget.dll
+C:\Users\CMcEvenue\AppData\Local\Temporary Projects\SolarRoadwaysWidget\obj\Debug\SolarRoadwaysWidget.pdb
+C:\Users\CMcEvenue\Desktop\FINAL_GITHUB\SolarRoadwaysWidget\bin\Debug\SolarRoadwaysWidget.dll
+C:\Users\CMcEvenue\Desktop\FINAL_GITHUB\SolarRoadwaysWidget\bin\Debug\SolarRoadwaysWidget.pdb
+C:\Users\CMcEvenue\Desktop\FINAL_GITHUB\SolarRoadwaysWidget\obj\Debug\SolarRoadwaysWidget.vbprojResolveAssemblyReference.cache
+C:\Users\CMcEvenue\Desktop\FINAL_GITHUB\SolarRoadwaysWidget\obj\Debug\Config\Solar_Energy_CalculatorDialog.baml
+C:\Users\CMcEvenue\Desktop\FINAL_GITHUB\SolarRoadwaysWidget\obj\Debug\Solar_Energy_Calculator.baml
+C:\Users\CMcEvenue\Desktop\FINAL_GITHUB\SolarRoadwaysWidget\obj\Debug\Config\Solar_Energy_CalculatorDialog.g.vb
+C:\Users\CMcEvenue\Desktop\FINAL_GITHUB\SolarRoadwaysWidget\obj\Debug\Solar_Energy_Calculator.g.vb
+C:\Users\CMcEvenue\Desktop\FINAL_GITHUB\SolarRoadwaysWidget\obj\Debug\SolarRoadwaysWidget_MarkupCompile.cache
+C:\Users\CMcEvenue\Desktop\FINAL_GITHUB\SolarRoadwaysWidget\obj\Debug\SolarRoadwaysWidget.g.resources
+C:\Users\CMcEvenue\Desktop\FINAL_GITHUB\SolarRoadwaysWidget\obj\Debug\SolarRoadwaysWidget.Resources.resources
+C:\Users\CMcEvenue\Desktop\FINAL_GITHUB\SolarRoadwaysWidget\obj\Debug\SolarRoadwaysWidget.vbproj.GenerateResource.Cache
+C:\Users\CMcEvenue\Desktop\FINAL_GITHUB\SolarRoadwaysWidget\obj\Debug\SolarRoadwaysWidget.dll
+C:\Users\CMcEvenue\Desktop\FINAL_GITHUB\SolarRoadwaysWidget\obj\Debug\SolarRoadwaysWidget.pdb
