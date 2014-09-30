@@ -1,6 +1,8 @@
 **Introducing: The Wicked Witch of the West Tracker**
 ====================================================
 
+http://cutsp57.esri.local/flexviewers/wickedwitchTracker/
+
 *Citizens of Oz - the Wizard needs your help!* 
 -----------------------------------------------------
 
