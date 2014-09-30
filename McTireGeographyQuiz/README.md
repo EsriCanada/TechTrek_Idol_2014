@@ -7,7 +7,7 @@ Canadian Geography Quiz with Sandy McTire
 
 The Canadian Geography Quiz application is a widget that can be used in the Web App Builder. The application uses a feature service published with questions and answers. This widget can be used for many purposes, from organizations engaging clients, to teachers helping students learn through interactive quizzes.
 
-![Image of Canadian Quiz application](mctire.jpg "Canadian Quiz application")
+![Image of Canadian Quiz application](mctire.JPG "Canadian Quiz application")
 
 [Try it live](http://ctc-dev/McTireGeographyQuiz/ "Geography Quiz")
 
@@ -23,11 +23,11 @@ And finally it's take your parent to school day and all you have to talk about a
 
 ### Getting Started
 
-*Zoom or use the locator to find your answer
-*Click to drop a point and submit your guess
-*The application will deduct the distance to the correct answer from your answer in kilometres. You only have so many McTires (kilometres) to play with. 
-*If you end up with the correct answer you will not lose any McTires. 
-*The goal is to finish the quiz without losing all your McTires. 
+* Zoom or use the locator to find your answer
+* Click to drop a point and submit your guess
+* The application will deduct the distance to the correct answer from your answer in kilometres. You only have so many McTires (kilometres) to play with. 
+* If you end up with the correct answer you will not lose any McTires. 
+* The goal is to finish the quiz without losing all your McTires. 
 
 
 ## Resources
