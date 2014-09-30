@@ -19,12 +19,12 @@ The Wizard and his army are committed to the returning the Land of Oz to a state
 
 This basemap data was collected and created by the Wizard's personal GIS team. The basemap includes the following layers: 
 
-Cities - a complete list of cities within the Land of Oz
-Places of Interest - examples include Kiamo Ko, Apple Press Farms, and Emerald City Palace
-Transportation - a complete list of all transportation around the Land of Zz, including the Railroad, the Yellow Brick Road, and foot trails
-Rivers - a complete list of all rivers throughout the Land of Oz
-Lakes - a complete list of all lakes throughout the Land of Oz
-Territories - a layer displaying the current boundaries of all territories within the Land of Oz
+-Cities - a complete list of cities within the Land of Oz
+-Places of Interest - examples include Kiamo Ko, Apple Press Farms, and Emerald City Palace
+-Transportation - a complete list of all transportation around the Land of Zz, including the Railroad, the Yellow Brick Road, and foot trails
+-Rivers - a complete list of all rivers throughout the Land of Oz
+-Lakes - a complete list of all lakes throughout the Land of Oz
+-Territories - a layer displaying the current boundaries of all territories within the Land of Oz
 
 If any citizen of Oz is found using the information contained in this basemap data to create any web mapping applications in support of the Wicked Witch of the West, he/she is punishable by death and will be detained by the Wizard's army in Southstairs until the matter can be looked into in full. 
 
