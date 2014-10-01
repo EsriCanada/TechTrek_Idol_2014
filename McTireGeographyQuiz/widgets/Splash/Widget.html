@@ -1,0 +1,30 @@
+<div>
+  <div class="overlay" data-dojo-attach-point="overlayNode" data-dojo-attach-event="click:onOverlayClick"></div>
+  <div class="content jimu-main-bgcolor" data-dojo-attach-point="contentNode">
+    <div class="top-line"></div>
+    <img class="logo" data-dojo-attach-point="logoNode">
+    <div class="right-part">
+      <div class="welcome">
+        ${nls.welcomeMessage}
+      </div>
+
+      <div class="instructions">
+        ${nls.instructions}
+      </div>
+      <!-- <div class="licence">
+        
+        <div class="licence-text">
+          <div data-dojo-attach-point="agreeChkNode" data-dojo-type="jimu/dijit/CheckBox"></div>
+          <span>${nls.licenceAgree}</span>
+          <a href="#">${nls.licenceTerm}</a>
+        </div>
+      </div>
+      <div class="jimu-state-error"></div>       -->
+    </div>
+    
+    <div class="continue">
+      <div class="continue-btn" data-dojo-attach-point="continueBtnNode" data-dojo-attach-event="click:doContinue,mousedown:onMouseDown, mouseup:onMouseUp">${nls.labelContinue}</div>
+    </div>
+  </div>
+  
+</div>

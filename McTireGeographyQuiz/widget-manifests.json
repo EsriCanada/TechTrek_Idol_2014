@@ -1,0 +1,168 @@
+{
+  "themes/FoldableTheme/widgets/HeaderController/Widget": {
+    "name": "HeaderController",
+    "label": "Header Controller",
+    "2D": true,
+    "3D": true,
+    "platform": "HTML",
+    "version": "0.0.1",
+    "author": "Esri R&D Center Beijing",
+    "description": "",
+    "copyright": "",
+    "license": "http://www.apache.org/licenses/LICENSE-2.0",
+    "properties": {
+      "inPanel": false,
+      "isController": true,
+      "isThemeWidget": true
+    }
+  },
+  "widgets/Scalebar/Widget": {
+    "name": "Scalebar",
+    "platform": "HTML",
+    "version": "",
+    "author": "Esri R&D Center Beijing",
+    "description": "",
+    "copyright": "",
+    "license": "http://www.apache.org/licenses/LICENSE-2.0",
+    "properties": {
+      "inPanel": false,
+      "hasLocale": false,
+      "hasUIFile": false
+    }
+  },
+  "widgets/Geocoder/Widget": {
+    "name": "Geocoder",
+    "platform": "HTML",
+    "version": "",
+    "author": "Esri R&D Center Beijing",
+    "description": "",
+    "copyright": "",
+    "license": "http://www.apache.org/licenses/LICENSE-2.0",
+    "properties": {
+      "inPanel": false,
+      "hasLocale": false,
+      "hasUIFile": false
+    }
+  },
+  "widgets/Coordinate/Widget": {
+    "name": "Coordinate",
+    "platform": "HTML",
+    "version": "",
+    "author": "Esri R&D Center Beijing",
+    "description": "",
+    "copyright": "",
+    "license": "http://www.apache.org/licenses/LICENSE-2.0",
+    "properties": {
+      "inPanel": false
+    }
+  },
+  "widgets/OverviewMap/Widget": {
+    "name": "OverviewMap",
+    "label": "Overview Map",
+    "platform": "HTML",
+    "version": "",
+    "author": "Esri R&D Center Beijing",
+    "description": "",
+    "copyright": "",
+    "license": "http://www.apache.org/licenses/LICENSE-2.0",
+    "properties": {
+      "inPanel": false,
+      "hasLocale": false,
+      "hasUIFile": false,
+      "hasStyle": false
+    }
+  },
+  "widgets/HomeButton/Widget": {
+    "name": "HomeButton",
+    "label": "Home Button",
+    "platform": "HTML",
+    "version": "",
+    "author": "Esri R&D Center Beijing",
+    "description": "",
+    "copyright": "",
+    "license": "http://www.apache.org/licenses/LICENSE-2.0",
+    "properties": {
+      "inPanel": false,
+      "hasLocale": false,
+      "hasUIFile": false,
+      "hasConfig": false
+    }
+  },
+  "widgets/MyLocation/Widget": {
+    "name": "MyLocation",
+    "label": "My Location",
+    "platform": "HTML",
+    "version": "",
+    "author": "Esri R&D Center Beijing",
+    "description": "",
+    "copyright": "",
+    "license": "http://www.apache.org/licenses/LICENSE-2.0",
+    "properties": {
+      "inPanel": false,
+      "hasUIFile": false
+    }
+  },
+  "widgets/AttributeTable/Widget": {
+    "name": "AttributeTable",
+    "label": "Attribute Table",
+    "platform": "HTML",
+    "version": "",
+    "author": "Esri R&D Center Beijing",
+    "description": "",
+    "copyright": "",
+    "license": "http://www.apache.org/licenses/LICENSE-2.0",
+    "properties": {
+      "inPanel": false,
+      "hasUIFile": false
+    }
+  },
+  "widgets/Legend/Widget": {
+    "name": "Legend",
+    "platform": "HTML",
+    "version": "",
+    "author": "Esri R&D Center Beijing",
+    "description": "",
+    "copyright": "",
+    "license": "http://www.apache.org/licenses/LICENSE-2.0",
+    "properties": {
+      "hasLocale": false
+    }
+  },
+  "widgets/LayerList/Widget": {
+    "name": "LayerList",
+    "label": "Layer List",
+    "2D": true,
+    "platform": "HTML",
+    "version": "0.0.1",
+    "author": "Esri R&D Center Beijing",
+    "description": "",
+    "copyright": "",
+    "license": "http://www.apache.org/licenses/LICENSE-2.0"
+  },
+  "widgets/Demo/Widget": {
+    "name": "Demo",
+    "label": "Canadian Geography Quiz",
+    "platform": "HTML",
+    "version": "0.0.1",
+    "author": "Esri R&D Center Beijing",
+    "description": "This is the widget used in developer guide",
+    "copyright": "",
+    "license": "http://www.apache.org/licenses/LICENSE-2.0"
+  },
+  "widgets/Splash/Widget": {
+  "name": "Splash",
+  "label": "Splash",
+  "2D": true,
+  "3D": true,
+  "platform": "HTML",
+  "version": "0.0.1",
+  "author": "Esri R&D Center Beijing",
+  "description": "",
+  "copyright": "",
+  "license": "http://www.apache.org/licenses/LICENSE-2.0",
+  "properties": {
+    "inPanel": false,
+    "hasConfig": false
+    }
+  }
+}

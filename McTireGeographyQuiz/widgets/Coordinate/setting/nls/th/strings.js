@@ -1,0 +1,26 @@
+﻿define({
+    outputUnit: "ก้_Output Unit_ษฺ",
+    wkid: "ก้_Output WKID_ษฺ",
+    label: "ก้_Output Label_ษฺ",
+    transformationWkid: 'ก้_Transformation WKID_ษฺ',
+    transformationLabel: 'ก้_Transformation Label_ษฺ',
+    transformForward: 'ก้_Transform Forward_ษฺ',
+    actions: "ก้_Actions_ษฺ",
+    warning: "ก้_please input valid spatial reference WKID!_ษฺ",
+    tfWarning: "ก้_please input valid datum transformation WKID!_ษฺ",
+    spinnerLabel: "ก้_Round coordinate to:_ษฺ ",
+    decimalPlace: "ก้_decimal places_ษฺ",
+    separator: "ก้_Show thousand separators_ษฺ",
+
+    add: "ก้_Add Output Coordinate System_ษฺ",
+    edit: "ก้_Edit Coordinate System_ษฺ",
+    output: "ก้_Output Coordinate System_ษฺ",
+    cName: "ก้_Coordinate system name_ษฺ",
+    units: "ก้_Display Units:_ษฺ ",
+    datum: "ก้_Datum Transformation_ษฺ",
+    tName: "ก้_Transformation name_ษฺ",
+    forward: "ก้_Use transformation forward_ษฺ",
+    ok: "ก้_OK_ษฺ",
+    cancel: 'ก้_Cancel_ษฺ',
+    REPEATING_ERROR: "ก้_The fllowing fields are repeated:_ษฺ "
+});
