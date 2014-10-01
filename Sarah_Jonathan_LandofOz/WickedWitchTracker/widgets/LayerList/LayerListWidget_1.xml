@@ -1,0 +1,5 @@
+<?xml version="1.0" ?>
+<configuration>
+    <includelegenditems>true</includelegenditems>
+    <excludelayer>background - land of Oz</excludelayer>
+</configuration>

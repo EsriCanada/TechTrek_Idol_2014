@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<configuration>
+    <width>0</width>
+    <height>0</height>
+    <content><![CDATA[<img src="http://cantechsupport.maps.arcgis.com/sharing/rest/content/items/740569e2fbea46a1a6d95bc1b8a59294/data"/><br><b>Citizens of Oz -Oz is in danger!<br><br>Help us catch the Wicked Witch of the West</b><br><br>Use this application to upload sightings of the Witch, as well as identify areas at risk for social uprising based on sympathetic social media activity for the Witch.
+             ]]></content>
+    <labels>
+        <btnlabel>OK</btnlabel>
+    </labels>
+</configuration>
