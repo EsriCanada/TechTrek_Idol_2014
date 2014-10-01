@@ -60,6 +60,7 @@ define([
         templateString: template,
         i18n: i18n,
         map:null,
+        spinnerImageUrl: require.toUrl("./templates/spinner.gif"),
         startup: function(opts)
         {
             this.map = opts.map;
@@ -74,6 +75,7 @@ define([
             this.searchButton = new Button({style:"margin-left:0.5em;",label:this.i18n.destinationPanel.searchButton},this.searchButton);
             this.searchButton.startup();
             this.searchButton.on('click',lang.hitch(this,function(){
+                this.showProgress();
                 this.clearList();
                 this.emit('search-clicked',{insideDAs:this.radioInsideMyDAs.checked});
             }));
@@ -97,13 +99,14 @@ define([
         
         setRealestateListings: function(listings,totalpossible)
         {
+            this.hideProgress();
             if (listings && listings.length>0)
             {
                 this._listings = listings;
+                this.clearList();
                 domStyle.set(this.summaryPane,"display","block");
                 this.currentListingsLabel.innerHTML = this._listings.length;
                 this.totalListingsCount.innerHTML = totalpossible;
-                this.clearList();
                 
                 var i = 1;
                 array.forEach(this._listings,lang.hitch(this,function(listing){
@@ -129,6 +132,9 @@ define([
         
         clearList:function()
         {
+            domStyle.set(this.summaryPane,"display","none");
+            this.currentListingsLabel.innerHTML = "0";
+            this.totalListingsCount.innerHTML = "0";
             while (!!this.summaryList.children[0])
             {
                 this.summaryList.removeChild(this.summaryList.children[0]);
@@ -138,6 +144,16 @@ define([
         clearPanel: function()
         {
             this.clearList();
+        },
+        
+        showProgress: function()
+        {
+            domStyle.set(this.progressIndicator,"display","block");
+        },
+        
+        hideProgress: function()
+        {
+            domStyle.set(this.progressIndicator,"display","none");
         },
         
         clickedListing: function(e)

@@ -16,7 +16,17 @@ People frequently need to purchase a home in an unfamiliar city. They do their h
 # DEMO: #
 
 1.	Try the application live:  ***[ONLY AVAILABLE TO ESRI CANADA USERS](http://gfx-dev/Movers_and_Shakers)***
-2.	Video demonstration: ***[ONLY AVAILABLE TO ESRI CANADA USERS](http://gfx-dev/Movers_and_Shakers/MaS/demo.webm)*** (Note: the WEBM video plays natively in Firefox/Chrome - other browsers may prompt to download...or try the (much larger) [AVI](http://gfx-dev/Movers_and_Shakers/MaS/demo.avi) version).
+2.	Video demonstration: ***[ONLY AVAILABLE TO ESRI CANADA USERS](http://gfx-dev/Movers_and_Shakers/MaS/Spore_demo_video/Spore_demo_video.html)***
+
+----------
+
+# PREVIEW: #
+
+![step1](https://raw.githubusercontent.com/mgleahy/TechTrek_Idol_2014/master/Movers_and_Shakers/MaS/screenshots/step1.png)
+
+![step2](https://raw.githubusercontent.com/mgleahy/TechTrek_Idol_2014/master/Movers_and_Shakers/MaS/screenshots/step2.png)
+
+![step3](https://raw.githubusercontent.com/mgleahy/TechTrek_Idol_2014/master/Movers_and_Shakers/MaS/screenshots/step3.png)
 
 ----------
 
@@ -80,3 +90,11 @@ The SPORE source code will not function out-of-the-box due to its dependency on 
 4.  Similar to the rsConfig.js module, you will need to copy [rsModule-sample.js](https://github.com/mgleahy/TechTrek_Idol_2014/blob/master/Movers_and_Shakers/MaS/rsModule-sample.js) to rsModule.js, and implement the code that submits requests for real estate listings based on parameters provided by the SPORE module and the corresponding rsConfig properties.  It must returns any listings found by the service as esri Graphic objects with the rsListing popup template (from puopupTemplates.js) applied to them.  The attributes of the graphics must match the properties required by the rsListing template defined in popupTemplates.js.
 5.  The [clustergraphics](https://github.com/mgleahy/TechTrek_Idol_2014/tree/master/Movers_and_Shakers/MaS/clustergraphics) folder in the MaS package must be populated with descriptive graphics for all PrizmC2 clusters.  These must be each named ClusterGraphic_1.png through ClusterGraphic_66.png (ClusterGraphic_67.png is a placeholder representing location that could not be characterized with one of the PrizmC2© clusters).
 6.  If you specify a proxy rule to be used in either the defaults.js or rsConfig.js parameters, it is your responsibility to implement the proxy. The [Esri Resource Proxy](https://github.com/Esri/resource-proxy) is an ideal solution if you require a proxy.
+
+----------
+
+#KNOWN ISSUES: #
+
+1.  The widget is designed to work within the UI layout/framework of the Esri Basic Viewer template.  Some custom styles were implemented for devices with large enough screens to display a larger panel for the SPORE application.  It will operate well for browsers on desktop/tablet devices.  However, the widget has not been adapted/tested to work on smaller mobile devices.  The demo version of the application, for example, uses information graphics that may be difficult to read on small screens.
+2.  Some browsers may display popup windows underneath the surrounding toolbar or panel elements (e.g., Chrome/Safari).  Most other browsers will display popup windows on top of all other content.  This issue is inherent to the use of the Esri Basic Viewer template, but may be mitigated in the future by updating the widget to reposition features on the map (when apppropriate) to make use of available space.
+3.  Real Estate listings search results depend on the available data and functionality of the service that is used with the SPORE widget.  Some APIs, for example, may only support searching by extent (not by geometry).  They may also limit the number of results per request.  Both of these constraints apply to the service adpated to the demo application.  For this reason, the demo application will return only a limited number of results (to minimize the number of requests to the serivce).  This will have a noticeable effect if you are searching for listings in multiple smaller areas that are separated by large distances.
