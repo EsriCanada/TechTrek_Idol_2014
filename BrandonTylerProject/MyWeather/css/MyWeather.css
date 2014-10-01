@@ -1,0 +1,221 @@
+html, body, #map {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #FFF;
+  overflow: hidden;
+  font-family: 'Play', sans-serif;
+}
+#bcMain {
+  width: 100%;
+  height: 100%;
+}
+#cpCenter {
+  position:absolute;
+  align:middle;
+  width:98%;
+  height:73%;
+}
+/* the pane holding the City textareas and the forecasts */
+#cpHeader {
+  position:absolute;
+  top:74%;
+  width:98%;
+  height:35%;
+}
+#InputDiv{
+  float:left;
+  height:100%;
+  width:15%;
+  padding-left:.5%;
+  background-color:#87a4e7;
+}
+/* Specifically the first City textarea */
+#taAddress {
+  position:relative;
+  height:24px;
+  width:150px;
+  font-size:1.2em;
+  font-family: 'Play', sans-serif;
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+/* a class for the 2nd-5th city textareas */
+.taAddressClass {
+  position:relative;
+  height:100%;
+  width:150px;
+  font-size:1.2em;
+  font-family: 'Play', sans-serif;
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+/* div of list of cities for testing */
+#TheWeather {
+  float:left;
+  height:96.5%;
+  width:82%;
+  padding-top:1%;
+  padding-left:1%;
+  background-color:#87a4e7;
+  }
+.DayDivs {
+	height:auto;
+	width: 100px;
+	float:left;	
+	padding:12px;
+	margin: 5px;
+	background-color:#f4f4f4;
+	border:1.5px solid #dedede;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	border-radius:3px
+}
+
+#locatebtnDiv {
+  position:relative;
+  top:43px;
+  height:30px;
+  width:150px;
+  font-size:1.2em;
+  font-family: 'Play', sans-serif;
+}
+#weatherbtnDiv {
+  position:relative;
+  top:-8.7%;
+  left:163px;
+  height:0px;
+  width:150px;
+  font-size:1.2em;
+  font-family: 'Play', sans-serif;
+}
+#btnLocate{
+  width:140px;
+
+}
+#FirstCityDiv {
+  position:relative;
+  top:5%;
+  height:15%;
+  width:97%;
+}
+#FirstCityTextDiv {
+  position:relative;
+  float:left;
+  height:97%;
+  width:80%;
+
+}
+.dijitDateTextBox {
+  width:17px;
+}
+
+#FirstCityDateDiv {
+  position:relative;
+  float:left;
+  height:90%;
+  width:10%;
+  padding-top:5px;
+  padding-left:15px;
+
+}
+#SecCityDiv {
+  position:relative;
+  top:7%;
+  height:15%;
+  width:97%;
+}
+#SecondCityTextDiv {
+  position:relative;
+  float:left;
+  height:97%;
+  width:80%;
+
+}
+#taAddress2 {
+  height:24px;
+}
+#SecondCityDateDiv {
+  position:relative;
+  float:left;
+  height:90%;
+  width:10%;
+  padding-top:5px;
+  padding-left:15px;
+
+}
+#ThirdCityDiv {
+  position:relative;
+  top:9%;
+  height:15%;
+  width:97%;
+}
+#ThirdCityTextDiv {
+  position:relative;
+  float:left;
+  height:97%;
+  width:80%;
+
+}
+#taAddress3 {
+  height:24px;
+}
+#ThirdCityDateDiv {
+  position:relative;
+  float:left;
+  height:90%;
+  width:10%;
+  padding-top:5px;
+  padding-left:15px;
+}
+#FourthCityDiv {
+  position:relative;
+  top:11%;
+  height:15%;
+  width:97%;
+}
+#FourthCityTextDiv {
+  position:relative;
+  float:left;
+  height:97%;
+  width:80%;
+
+}
+#taAddress4 {
+  height:24px;
+}
+#FourthCityDateDiv {
+  position:relative;
+  float:left;
+  height:90%;
+  width:10%;
+  padding-top:5px;
+  padding-left:15px;
+}
+#FifthCityDiv {
+  position:relative;
+  top:13%;
+  height:15%;
+  width:97%;
+}
+#FifthCityTextDiv {
+  position:relative;
+  float:left;
+  height:97%;
+  width:80%;
+
+}
+#taAddress5 {
+  height:24px;
+}
+#FifthCityDateDiv {
+  position:relative;
+  float:left;
+  height:90%;
+  width:10%;
+  padding-top:5px;
+  padding-left:15px;
+}

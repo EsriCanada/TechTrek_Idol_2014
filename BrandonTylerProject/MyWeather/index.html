@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!-- Authors: Tyler Wilson and Brandon Strongman
+     Company: Esri Canada
+     Application Name:
+     Purpose: Tech-Trek Idol 2014 entry.
+     Description: A weather webmap which displays the weather conditions
+                  for up to 5 locations over 5 days as one continuous
+                  5-day forecast.
+     Source: Geocoding Exercise #3 from
+             the Esri "Building Web Applications using the Arcgis API for
+             JavaScript" course.
+
+     Enjoy :) -->
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>MyWeather</title>
+
+    <!-- Configure dojo for asynchronous module loading -->
+    <script>
+      var dojoConfig = {
+        async : true
+      };
+    </script>
+
+    <!-- Reference libraries. The first CSS is a Dojo theme that gives dijits a consistent style. -->
+
+    <link rel="stylesheet" href="http://js.arcgis.com/3.8/js/dojo/dijit/themes/nihilo/nihilo.css">
+    <link rel="stylesheet" href="http://js.arcgis.com/3.8/js/esri/css/esri.css">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+    <link href='http://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
+    <script src="http://js.arcgis.com/3.8/"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+	<script src="js/map.js"></script>
+	<link rel="stylesheet" href="css/MyWeather.css"/>
+
+  </head>
+
+  <body class="nihilo"> <!-- left over from the example document -->
+    <div id="bcMain" data-dojo-type="dijit/layout/BorderContainer"
+          data-dojo-props="design:'headline'" >
+      <!--Div that holds the Map  -->
+      <div id="cpCenter" data-dojo-type="dijit/layout/ContentPane"
+          data-dojo-props="region:'center'">
+      </div>
+      <!--Div to hold the city textareas  -->
+      <div id="cpHeader" class="BottomContent" align="left"
+          data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'bottom'">
+          <!-- Divs to organize/stack the City textareas -->
+
+         <div id="InputDiv">
+		    <div id="FirstCityDiv">
+				<div id="FirstCityTextDiv">
+					  <input id="taAddress" class="taAddressClass" type="text" placeholder="First City" tabindex="1"></input>
+				</div>
+				<div id="FirstCityDateDiv">
+					<input type="text" name="date1" id="date1"  value="NULL" data-dojo-type="dijit/form/DateTextBox" required="true" />
+				</div>
+		    </div>
+		      <div id="SecCityDiv">
+            <div id="SecondCityTextDiv">
+			      <input id="taAddress2" class="taAddressClass" type="text" placeholder="Second City" tabindex="2"></input>
+            </div>
+            <div id="SecondCityDateDiv">
+            <input type="text" name="date2" id="date2" value="NULL"
+                data-dojo-type="dijit/form/DateTextBox" required="false" />
+            </div>
+		      </div>
+
+          <div id="ThirdCityDiv">
+            <div id="ThirdCityTextDiv">
+				<input id="taAddress3" class="taAddressClass" type="text" placeholder="Third City" tabindex="3"></input>
+            </div>
+            <div id="ThirdCityDateDiv">
+            <input type="text" name="date3" id="date3" value="NULL" data-dojo-type="dijit/form/DateTextBox" required="false" />
+            </div>
+          </div>
+
+          <div id="FourthCityDiv">
+            <div id="FourthCityTextDiv">
+				<input id="taAddress4" class="taAddressClass" type="text" placeholder="Fourth City" tabindex="4"></input>
+            </div>
+            <div id="FourthCityDateDiv">
+            <input type="text" name="date4" id="date4" value="NULL"
+                data-dojo-type="dijit/form/DateTextBox" required="false" />
+            </div>
+          </div>
+
+          <div id="FifthCityDiv">
+            <div id="FifthCityTextDiv">
+				<input id="taAddress5" class="taAddressClass" type="text" placeholder="Fifth City" tabindex="5"></input>
+            </div>
+            <div id="FifthCityDateDiv">
+				<input type="text" name="date5" id="date5" value="NULL" data-dojo-type="dijit/form/DateTextBox" required="false" />
+            </div>
+          </div>
+            <div id="locatebtnDiv">
+				<button id="btnLocate" data-dojo-type="dijit/form/Button">Get Weather</button>
+          </div>
+        </div>
+		<div id="TheWeather">
+		</div>
+
+    </div>
+  </body>
+</html>
