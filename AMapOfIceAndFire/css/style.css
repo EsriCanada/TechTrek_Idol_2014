@@ -1,0 +1,133 @@
+﻿@font-face {
+    font-family: "Avenir LT W01 65 Medium";
+    src: url("fonts/AvenirLTStd-Light.otf");
+}
+
+@font-face {
+    font-family: "Avenir LT W01 85 Heavy";
+    src: url("fonts/AvenirLTStd-Heavy.otf");
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: "Open Sans";
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+    font-family: 'Avenir LT W01 65 Medium', Verdana, Geneva, sans-serif !important;
+}
+
+p {
+    padding: 0px;
+    margin: 0px;
+}
+
+#mapDiv {
+    position: relative;
+    padding: 0;
+    height: 100%;
+    background-color: #4B6673;
+}
+
+a:focus {
+    outline: none;
+}
+
+.topRightFloatingContainer {
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    min-height: 400px;
+    width: 510px;
+    padding-left:10px;
+    padding-right:10px;
+    z-index: 50;
+    margin: 0 auto;
+    display: none;
+}
+
+.credits {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    z-index: 50;
+    margin: 0 auto;
+}
+
+    .credits img {
+        width: 25px;
+    }
+
+.popBody {
+    margin-left: 20px;
+    margin-right: 20px;
+    background: #E8D9BA;
+    box-shadow: 3px 0px 0px #36382B, inset -3px 0px 0px #C6B081, inset 3px 0px 0px #C6B081;
+}
+
+.popBodyHeader {
+    visibility: hidden;
+    text-align: right;
+    padding-right: 12px;
+    padding-top: 5px;
+}
+
+.popBodyContent {
+    padding-top: 0px;
+    padding-bottom: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+    background: #E8D9BA;
+    box-shadow: 3px 0px 0px #36382B, inset -3px 0px 0px #C6B081, inset 3px 0px 0px #C6B081;
+    overflow: hidden;
+}
+
+.popTitle {
+    margin: 0;
+    padding-top: 26px;
+    z-index: 55;
+    height: 65px;
+    background: url(../images/AncientScrollEnd.png) no-repeat center top;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.popImage {
+    max-width: 100%;
+}
+
+#popSummary {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+
+    #popSummary p {
+        padding: 12px;
+    }
+    
+.pictureGallery {
+    position: relative;
+    min-height: 170px;
+    padding: 10px;
+}
+
+.pictureStack {
+    border: 2px solid #fff;
+    border-radius: 2px;
+}
+
+.pictureStackOver {
+    width: 120px;
+    height: 120px;
+}
+
+.pictureStackUnder {
+    width: 120px;
+    height: 120px;
+}

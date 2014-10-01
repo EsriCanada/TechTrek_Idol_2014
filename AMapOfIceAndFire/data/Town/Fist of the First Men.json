@@ -1,0 +1,15 @@
+{
+    "category": "Towns", 
+    "images": [
+        {
+            "url": "http://awoiaf.westeros.org/images/thumb/6/6c/Westeros_-_Byound_the_wall.jpg/400px-Westeros_-_Byound_the_wall.jpg", 
+            "caption": ""
+        }, 
+        {
+            "url": "http://awoiaf.westeros.org/images/thumb/5/5c/Fist_of_the_First_Men.jpg/350px-Fist_of_the_First_Men.jpg", 
+            "caption": "\\xc2\\xa9 Fantasy Flight Games"
+        }
+    ], 
+    "name": "Fist of the First Men", 
+    "summary": "<p>The <b>Fist of the First Men</b> is a hill found <a href=\"http://awoiaf.westeros.org/index.php/Beyond_the_Wall\" title=\"Beyond the Wall\">north of the wall</a>.  It is the location of the <a href=\"http://awoiaf.westeros.org/index.php/Battle_of_the_Fist_of_the_First_Men\" title=\"Battle of the Fist of the First Men\">Battle of the Fist of the First Men</a>."
+}

@@ -1,0 +1,11 @@
+{
+    "category": "NobleHouses", 
+    "images": [
+        {
+            "url": "http://awoiaf.westeros.org/images/thumb/0/06/Chester.png/250px-Chester.png", 
+            "caption": ""
+        }
+    ], 
+    "name": "House Chester", 
+    "summary": "<p><b>House Chester of Greenshield</b> rules over <a href=\"http://awoiaf.westeros.org/index.php/Greenshield\" title=\"Greenshield\">Greenshield</a>, one of the <a href=\"http://awoiaf.westeros.org/index.php/Shield_Islands\" title=\"Shield Islands\">Shield Islands</a> of <a href=\"http://awoiaf.westeros.org/index.php/The_Reach\" title=\"The Reach\">the Reach</a>."
+}

@@ -1,0 +1,19 @@
+{
+    "category": "Towns", 
+    "images": [
+        {
+            "url": "http://awoiaf.westeros.org/images/thumb/6/6c/Westeros_-_Byound_the_wall.jpg/400px-Westeros_-_Byound_the_wall.jpg", 
+            "caption": ""
+        }, 
+        {
+            "url": "http://awoiaf.westeros.org/images/thumb/2/29/Marc_Simonetti_crasters_keep.jpg/350px-Marc_Simonetti_crasters_keep.jpg", 
+            "caption": "Craster\\'s Keep. \\xc2\\xa9 Marc Simonetti"
+        }, 
+        {
+            "url": "http://awoiaf.westeros.org/images/thumb/2/20/Crasters_Keep.jpg/350px-Crasters_Keep.jpg", 
+            "caption": "Craster\\'s Keep. \\xc2\\xa9 Fantasy Flight Games"
+        }
+    ], 
+    "name": "Craster's Keep", 
+    "summary": "<p><b>Craster's Keep</b> is the home of <a href=\"http://awoiaf.westeros.org/index.php/Craster\" title=\"Craster\">Craster</a>, an ornery <a href=\"http://awoiaf.westeros.org/index.php/Wildling\" title=\"Wildling\" class=\"mw-redirect\">wildling</a> <a href=\"http://awoiaf.westeros.org/index.php/Beyond_the_Wall\" title=\"Beyond the Wall\">beyond the Wall</a> who is a friend to the Night's Watch. It is not an actual <a href=\"http://awoiaf.westeros.org/index.php/Keep\" title=\"Keep\">keep</a>, but is only given that title by members of the <a href=\"http://awoiaf.westeros.org/index.php/Night%27s_Watch\" title=\"Night's Watch\">Night's Watch</a>."
+}

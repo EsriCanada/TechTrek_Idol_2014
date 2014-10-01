@@ -1,0 +1,15 @@
+{
+    "category": "NobleHouses", 
+    "images": [
+        {
+            "url": "http://awoiaf.westeros.org/images/thumb/a/ad/QorgyleCoA.png/251px-QorgyleCoA.png", 
+            "caption": ""
+        }, 
+        {
+            "url": "http://awoiaf.westeros.org/images/thumb/4/42/Tomasz_Jedruszek_banner_of_House_Qorgyle.jpg/300px-Tomasz_Jedruszek_banner_of_House_Qorgyle.jpg", 
+            "caption": "House Qorgyle \\xe2\\x80\\x93 by Tomasz Jedruszek. \\xc2\\xa9 Fantasy Flight Games"
+        }
+    ], 
+    "name": "House Qorgyle", 
+    "summary": "<p><b>House Qorgyle of Sandstone</b> is a noble house from <a href=\"http://awoiaf.westeros.org/index.php/Sandstone\" title=\"Sandstone\">Sandstone</a> in western <a href=\"http://awoiaf.westeros.org/index.php/Dorne\" title=\"Dorne\">Dorne</a>. They are sworn to <a href=\"http://awoiaf.westeros.org/index.php/House_Martell\" title=\"House Martell\">House Martell</a> of <a href=\"http://awoiaf.westeros.org/index.php/Sunspear\" title=\"Sunspear\">Sunspear</a>."
+}

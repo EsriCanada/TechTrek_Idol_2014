@@ -1,0 +1,31 @@
+{
+    "category": "Castles", 
+    "images": [
+        {
+            "url": "http://awoiaf.westeros.org/images/thumb/5/5a/Harenhal_by_MarcSimonetti.jpg/350px-Harenhal_by_MarcSimonetti.jpg", 
+            "caption": ""
+        }, 
+        {
+            "url": "http://awoiaf.westeros.org/images/thumb/d/d0/The_Riverlands.png/350px-The_Riverlands.png", 
+            "caption": "The Riverlands and the location of Harrenhal"
+        }, 
+        {
+            "url": "http://awoiaf.westeros.org/images/thumb/2/2d/Lino_Drieghe_Harrenhal.jpg/350px-Lino_Drieghe_Harrenhal.jpg", 
+            "caption": "HarrenhalGods Eye lake. By Lino Drieghe. \\xc2\\xa9 FFG"
+        }, 
+        {
+            "url": "http://awoiaf.westeros.org/images/thumb/f/f6/Harenhal_tvseries.jpg/350px-Harenhal_tvseries.jpg", 
+            "caption": "Harrenhal in Game of Thrones"
+        }, 
+        {
+            "url": "http://awoiaf.westeros.org/images/thumb/9/91/Harrenhall_by_crisurdiales.jpg/350px-Harrenhall_by_crisurdiales.jpg", 
+            "caption": "Harrenhall by Cris Urdiales \\xc2\\xa9"
+        }, 
+        {
+            "url": "http://awoiaf.westeros.org/images/thumb/2/20/The_Ghost_in_HarrenhalMarc_Simonetti.jpg/350px-The_Ghost_in_HarrenhalMarc_Simonetti.jpg", 
+            "caption": "Arya in Harrenhal. \\xc2\\xa9 FFG"
+        }
+    ], 
+    "name": "Harrenhal", 
+    "summary": "<p><b>Harrenhal</b> is the largest castle in the <a href=\"http://awoiaf.westeros.org/index.php/Seven_Kingdoms\" title=\"Seven Kingdoms\">Seven Kingdoms</a> and is the seat of <a href=\"http://awoiaf.westeros.org/index.php/House_Whent\" title=\"House Whent\">House Whent</a> in the <a href=\"http://awoiaf.westeros.org/index.php/Riverlands\" title=\"Riverlands\">Riverlands</a>, on the north shore of the <a href=\"http://awoiaf.westeros.org/index.php/Gods_Eye\" title=\"Gods Eye\">Gods Eye</a> lake. Since the <a href=\"http://awoiaf.westeros.org/index.php/War_of_Conquest\" title=\"War of Conquest\">War of Conquest</a>, however, it has become a dark and ruinous place."
+}
