@@ -9,10 +9,7 @@ The application was built using ArcGIS Online, Geoforms, Briefing Books, and Ope
  * The Briefing Book-based application is for public consultation
  * The Operations Dashboard is for internal staff to view more detailed metrics including personal contact information.
  
- To Run it:
- 1. Copy to IIS WWWROOT
- 2. Publish the Application: http://solutions.arcgis.com/local-government/help/briefing-book/get-started/publish-application/
- 3. Use http://localhost/BriefingBook/default.htm
+ Here is the link to the app: http://65.52.115.204/BriefingBook/?bookId=8eb7753e16a84c94a220983d76544cb6
  
  The Application is "shared" to public, but may require login:
  contact nenge@esri.ca to get the login use to create the application.
