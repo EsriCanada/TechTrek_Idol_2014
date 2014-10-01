@@ -15,6 +15,7 @@ Tech Trek Idol 2014
 * [reac.TOR](https://github.com/EsriCanada/TechTrek_Idol_2014/tree/master/reac.TOR)
 * [MyWeather](https://github.com/EsriCanada/TechTrek_Idol_2014/tree/master/BrandonTylerProject)
 * [Canadian Geography Quiz with Sandy McTire](https://github.com/EsriCanada/TechTrek_Idol_2014/tree/master/McTireGeographyQuiz)
+* [The Wicked Witch of the West Tracker](https://github.com/EsriCanada/TechTrek_Idol_2014/tree/master/Sarah_Jonathan_LandofOz)
 
 ## Instructions:
 These are the instructions for sharing your work on GitHub. Even if you're not coding, you should create a repo here and minimally fill out a ReadMe.md [This link will show you how to create cool markdown](http://markdownlivepreview.com).  Designate someone on your team to create a repo for your project; the general flow will be to fork the "TechTrek_Idol_2014" repo to your own account, clone it in desktop, commit and sync often.  
