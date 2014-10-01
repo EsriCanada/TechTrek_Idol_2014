@@ -1,0 +1,111 @@
+﻿/*global define */
+/*jslint browser:true,sloppy:true,nomen:true,unparam:true,plusplus:true,indent:4 */
+/*
+ | Copyright 2013 Esri
+ |
+ | Licensed under the Apache License, Version 2.0 (the "License");
+ | you may not use this file except in compliance with the License.
+ | You may obtain a copy of the License at
+ |
+ |    http://www.apache.org/licenses/LICENSE-2.0
+ |
+ | Unless required by applicable law or agreed to in writing, software
+ | distributed under the License is distributed on an "AS IS" BASIS,
+ | WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ | See the License for the specific language governing permissions and
+ | limitations under the License.
+ */
+define({
+    noPages: "@@fr@@ No pages found",
+    tocContentsCaption: "@@fr@@ Contents",
+    homeTitle: "@@fr@@ Home",
+    addPageTitle: "@@fr@@ Add Page",
+    alertDialogTitle: "@@fr@@ Alert",
+    confirmDialogTitle: "@@fr@@ Confirm",
+    downloadBookTitle: "@@fr@@ Download Book",
+    refreshBookTitle: "@@fr@@ Refresh",
+    editTitle: "@@fr@@ Edit Book",
+    deleteTitle: "@@fr@@ Delete Page",
+    descriptionNotAvailable: "@@fr@@ Description is not available",
+    removeBookTitle: "@@fr@@ Remove Book",
+    tocTitle: "@@fr@@ Contents",
+    addPageText: "@@fr@@ Add",
+    addBookTitle: "@@fr@@ New Book",
+    saveBookShelf: "@@fr@@ Save Book",
+    copyBookShelf: "@@fr@@ Copy Book",
+    defaultItemId: "@@fr@@ newItem",
+    contentsPageTitle: "@@fr@@ Contents",
+    pageRequireMessage: "@@fr@@ Page Title is required",
+    page: "@@fr@@ Page",
+    of: "@@fr@@ of",
+    okButtonText: "@@fr@@ OK",
+    saveButtonText: "@@fr@@ Save",
+    cancelButtonText: "@@fr@@ Cancel",
+    closeButtonTitle: "@@fr@@ Close",
+    untitled: "@@fr@@ Untitled",
+    legendTitle: "@@fr@@ Legend",
+    fullScreen: "@@fr@@ Toggle full screen",
+    dndModuleText: "@@fr@@ Drag and Drop Modules",
+    selectAnyLayout: "@@fr@@ Select a page layout",
+    fieldIsEmpty: "@@fr@@ Field can not be empty",
+    webMapIconTitle: "@@fr@@ Map",
+    freeFormIconTitle: "@@fr@@ HTML",
+    textAreaIconTitle: "@@fr@@ Text Area",
+    imageIconTitle: "@@fr@@ Image",
+    videoIconTitle: "@@fr@@ Video",
+    flickrIconTitle: "@@fr@@ Flickr",
+    editMentEditTitle: "@@fr@@ Edit",
+    editMentDeleteTitle: "@@fr@@ Delete",
+    confirmModuleDeleting: "@@fr@@ Do you want to delete this module?",
+    authorName: "@@fr@@ Author name",
+    settingDialogTitle: "@@fr@@ Edit ${modType}",
+    mapbookDefaultTitle: "@@fr@@ Briefing Book Title Goes Here",
+    confirmPageDeleting: "@@fr@@ This page will be removed. Click Ok to confirm.",
+    confirmCopyOfSelectedBook: "@@fr@@ Do you want to copy this book?",
+    confirmDeletingOfSelectedBook: "@@fr@@ ${bookName} will be removed. Click 'OK' to confirm removal.",
+    confirmAppReloading: "@@fr@@ Briefing book gallery will be reloaded and you may lose the edits.",
+    validateBookOwner: "@@fr@@ You do not have permission to edit this book.",
+    validateOrganizationUser: "@@fr@@ You are not the member of this Organization.",
+    copyKeyword: "@@fr@@ Copy - ",
+    signInText: "@@fr@@ Sign In",
+    signOutText: "@@fr@@ Sign Out",
+    unitInPixel: "@@fr@@  (px)",
+    unLockBookTitle: "@@fr@@ Unlocked Book",
+    lockBookTitle: "@@fr@@ Locked Book",
+    selectedWebmapText: "@@fr@@ Currently displaying <b>${webmapName}</b>. Click 'Select map' to choose a different map",
+    selectWebmapBtnText: "@@fr@@ Select map",
+    selectWebmapDialogTitle: "@@fr@@ Select map",
+    searchWebmapPlaceHolder: "@@fr@@ Enter search term",
+    validateUnSavedEdits: '@@fr@@ There are unsaved changes in this book. Click "Cancel" to stay on this page. Click "OK" to continue without saving. <br/> Warning: If you do not save this book, all edits done in this session may be lost.',
+    bookNotSaved: '@@fr@@ This book is not saved yet. Click "Save" icon to save this book.',
+    webmapCountStatus: "@@fr@@ ${start} - ${end} of ${total}",
+    noWebmapFound: "@@fr@@ No map found",
+    loadingWebmap: "@@fr@@ Loading...",
+    shareBookTitle: "@@fr@@ Share Book",
+    shareBookDialogTitle: "@@fr@@ Sharing Options",
+    shareToOrgText: "@@fr@@ Organization",
+    shareToEveryoneText: "@@fr@@ Everyone (public)",
+    protectCopyBookText: "@@fr@@ Copy protect this book",
+    copyRestricted: "@@fr@@ Cannot copy, the owner of this book has protected it from copying.",
+    orientationNotSupported: "@@fr@@ App does not support this orientation",
+    errorMessages: {
+        webmapSearchFailed: "@@fr@@ An error occurred while searching the map",
+        widgetNotLoaded: "@@fr@@ Widget not loaded",
+        updatingItemError: "@@fr@@ Updating of the selected item failed",
+        contentPageRequired: "@@fr@@ Content Page Required",
+        moduleFieldsEmpty: "@@fr@@ Some module fields are not filled",
+        invalidMapUrl: "@@fr@@ Invalid map url",
+        downloadZipFileFailed: "@@fr@@ Downloading failed",
+        fieldInputIsNotValid: "@@fr@@ Invalid input",
+        addingItemError: "@@fr@@ Adding new item failed",
+        deletingItemError: "@@fr@@ Deleting selected item failed",
+        updaingItemError: "@@fr@@ Updating selected item failed",
+        copyItemError: "@@fr@@ Copying of selected item failed",
+        contentQueryError: "@@fr@@ Failed to load user contents",
+        webmapError: "@@fr@@ An error occurred while loading the map",
+        permissionDenied: "@@fr@@ You do not have permissions to access this resource.",
+        shareItemError: "@@fr@@ Updating selected item failed",
+        organizationNotSet: "@@fr@@ Please configure your URL for your ArcGIS Online Organization or Portal for ArcGIS site.",
+        configurationError: "@@fr@@ Please check your configuration"
+    }
+});

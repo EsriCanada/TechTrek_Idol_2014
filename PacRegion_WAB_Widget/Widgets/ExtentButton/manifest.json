@@ -1,0 +1,13 @@
+{
+  "name": "ExtentButton",
+  "platform": "HTML",
+  "version": "0.0.1",
+  "author": "Esri Canada Ltd",
+  "description": "This is a very simple widget",
+  "copyright": "",
+  "license": "http://www.apache.org/licenses/LICENSE-2.0",
+  "properties": {
+    "inPanel":  false,
+    "hasUIFile": true
+  }
+}
