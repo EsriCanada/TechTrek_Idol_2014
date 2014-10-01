@@ -1,0 +1,15 @@
+{
+    "category": "NobleHouses", 
+    "images": [
+        {
+            "url": "http://awoiaf.westeros.org/images/thumb/2/29/Dejan_Delic_Rhaegal_on_his_pyramid.jpg/450px-Dejan_Delic_Rhaegal_on_his_pyramid.jpg", 
+            "caption": "The Pyramid of YherizanRhaegal\\'s new home - by Dejan Delic \\xc2\\xa9"
+        }, 
+        {
+            "url": "http://awoiaf.westeros.org/images/thumb/6/6d/Rhaegal_yherizan_mereen.png/450px-Rhaegal_yherizan_mereen.png", 
+            "caption": "Rhaegal makes his lair on the pyramid of Yherizan - by Ashley Hunter Rice \\xc2\\xa9"
+        }
+    ], 
+    "name": "House of Yherizan", 
+    "summary": "<p>The <b>House of Yherizan</b> is one of the ancient slaving families of <a href=\"http://awoiaf.westeros.org/index.php/Meereen\" title=\"Meereen\">Meereen</a>. The Pyramid of Yherizan is huge and is made up of black bricks."
+}

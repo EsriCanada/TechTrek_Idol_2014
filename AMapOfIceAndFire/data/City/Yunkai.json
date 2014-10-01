@@ -1,0 +1,19 @@
+{
+    "category": "Cities", 
+    "images": [
+        {
+            "url": "http://awoiaf.westeros.org/images/thumb/d/db/Tom_Garden_YunkaiI.png/350px-Tom_Garden_YunkaiI.png", 
+            "caption": "Yunkai. \\xc2\\xa9 Fantasy Flight Games"
+        }, 
+        {
+            "url": "http://awoiaf.westeros.org/images/thumb/0/09/Slavers_Bay.png/300px-Slavers_Bay.png", 
+            "caption": "Slaver\\'s Bay and the location of Yunkai"
+        }, 
+        {
+            "url": "http://awoiaf.westeros.org/images/1/18/YunkaiHarpie.png", 
+            "caption": "Yunkai emblem"
+        }
+    ], 
+    "name": "Yunkai", 
+    "summary": "<p><b>Yunkai</b>, dubbed <b>the Yellow City</b>, is a city on the eastern coast of <a href=\"http://awoiaf.westeros.org/index.php/Slaver%27s_Bay\" title=\"Slaver's Bay\">Slaver's Bay</a>. To the west lies the island of <a href=\"http://awoiaf.westeros.org/index.php/Yaros\" title=\"Yaros\">Yaros</a>.<sup id=\"cite_ref-0\" class=\"reference\"><a href=\"http://awoiaf.westeros.org/index.php/Yunkai#cite_note-0\">[1]</a></sup> North of Yunkai is no-man's land.  Its main export is <a href=\"http://awoiaf.westeros.org/index.php/Slave\" title=\"Slave\" class=\"mw-redirect\">slaves</a>. Its main trade is in bed slaves."
+}

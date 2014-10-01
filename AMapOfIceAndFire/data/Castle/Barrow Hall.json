@@ -1,0 +1,11 @@
+{
+    "category": "Castles", 
+    "images": [
+        {
+            "url": "http://awoiaf.westeros.org/images/thumb/f/f3/The_North.png/400px-The_North.png", 
+            "caption": "The North and the location of Barrow Hall"
+        }
+    ], 
+    "name": "Barrow Hall", 
+    "summary": "<p><b>Barrow Hall</b> is a castle in the town of <a href=\"http://awoiaf.westeros.org/index.php/Barrowton\" title=\"Barrowton\">Barrowton</a> in <a href=\"http://awoiaf.westeros.org/index.php/The_North\" title=\"The North\">the North</a>. It is the residence of <a href=\"http://awoiaf.westeros.org/index.php/House_Dustin\" title=\"House Dustin\">House Dustin</a>. The <a href=\"http://awoiaf.westeros.org/index.php/Goldgrass\" title=\"Goldgrass\">keep</a> of <a href=\"http://awoiaf.westeros.org/index.php/House_Stout\" title=\"House Stout\">House Stout</a> near Barrowton's eastern gates is less than a mile away."
+}

@@ -1,0 +1,23 @@
+{
+    "category": "NobleHouses", 
+    "images": [
+        {
+            "url": "http://awoiaf.westeros.org/images/thumb/5/51/House_Stark.PNG/250px-House_Stark.PNG", 
+            "caption": ""
+        }, 
+        {
+            "url": "http://awoiaf.westeros.org/images/thumb/f/f3/John_Picacio_Ned_Stark.jpg/300px-John_Picacio_Ned_Stark.jpg", 
+            "caption": "Eddard Stark \\xe2\\x80\\x8e- \\xc2\\xa9 2012 John Picacio"
+        }, 
+        {
+            "url": "http://awoiaf.westeros.org/images/thumb/4/4f/Tomasz_Jedruszek_Battle_for_Westeros.jpg/400px-Tomasz_Jedruszek_Battle_for_Westeros.jpg", 
+            "caption": "King Robb launched a wildly successful invasion of the Westerlands \\xe2\\x80\\x93 by Tomasz Jedruszek. \\xc2\\xa9 Fantasy Flight Games"
+        }, 
+        {
+            "url": "http://awoiaf.westeros.org/images/thumb/8/80/Zippo514_youngwolf.jpg/250px-Zippo514_youngwolf.jpg", 
+            "caption": "The Freys murdered Robb Stark and sewed his wolf\\'s head on his body (by Zippo514 \\xc2\\xa9)"
+        }
+    ], 
+    "name": "House Stark", 
+    "summary": "<p><b>House Stark of Winterfell</b> is one of the great houses of <a href=\"http://awoiaf.westeros.org/index.php/Westeros\" title=\"Westeros\">Westeros</a> and the principal noble house of <a href=\"http://awoiaf.westeros.org/index.php/The_North\" title=\"The North\">the North</a>; many lesser houses are sworn to them. In days of old they ruled as <a href=\"http://awoiaf.westeros.org/index.php/King_in_the_North\" title=\"King in the North\">Kings of Winter</a>; since the <a href=\"http://awoiaf.westeros.org/index.php/Wars_of_Conquest\" title=\"Wars of Conquest\" class=\"mw-redirect\">Targaryen Conquest</a> they have been <a href=\"http://awoiaf.westeros.org/index.php/Warden_of_the_North\" title=\"Warden of the North\">Wardens of the North</a>.  Their seat, <a href=\"http://awoiaf.westeros.org/index.php/Winterfell\" title=\"Winterfell\">Winterfell</a>, is an ancient castle renowned for its strength."
+}

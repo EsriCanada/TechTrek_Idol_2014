@@ -1,0 +1,15 @@
+{
+    "category": "Castles", 
+    "images": [
+        {
+            "url": "http://awoiaf.westeros.org/images/thumb/7/7f/The_Westerlands.png/400px-The_Westerlands.png", 
+            "caption": "The Westerlands and the location of Hornvale"
+        }, 
+        {
+            "url": "http://awoiaf.westeros.org/images/thumb/d/d7/Hornvale.jpg/350px-Hornvale.jpg", 
+            "caption": "\\xc2\\xa9 Fantasy Flight Games"
+        }
+    ], 
+    "name": "Hornvale", 
+    "summary": "<p><b>Hornvale</b> is the seat of <a href=\"http://awoiaf.westeros.org/index.php/House_Brax\" title=\"House Brax\">House Brax</a> in the eastern <a href=\"http://awoiaf.westeros.org/index.php/Westerlands\" title=\"Westerlands\" class=\"mw-redirect\">Westerlands</a>.<sup id=\"cite_ref-Rasosappendix.7B.7B.7B3.7D.7D.7D_0-0\" class=\"reference\"><a href=\"http://awoiaf.westeros.org/index.php/Hornvale#cite_note-Rasosappendix.7B.7B.7B3.7D.7D.7D-0\">[1]</a></sup> It is situated in hilly and mountainous terrain near the headwaters of the <a href=\"http://awoiaf.westeros.org/index.php/Red_Fork\" title=\"Red Fork\">Red Fork</a>, south of the <a href=\"http://awoiaf.westeros.org/index.php/Golden_Tooth\" title=\"Golden Tooth\">Golden Tooth</a> and north of <a href=\"http://awoiaf.westeros.org/index.php/Deep_Den\" title=\"Deep Den\">Deep Den</a> and the <a href=\"http://awoiaf.westeros.org/index.php/Goldroad\" title=\"Goldroad\">Goldroad</a>.<sup id=\"cite_ref-1\" class=\"reference\"><a href=\"http://awoiaf.westeros.org/index.php/Hornvale#cite_note-1\">[2]</a></sup>"
+}

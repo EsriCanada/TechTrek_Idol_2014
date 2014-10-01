@@ -1,0 +1,11 @@
+{
+    "category": "Castles", 
+    "images": [
+        {
+            "url": "http://awoiaf.westeros.org/images/thumb/d/d0/The_Riverlands.png/350px-The_Riverlands.png", 
+            "caption": "The Riverlands and the location of Raventree Hall [1]"
+        }
+    ], 
+    "name": "Raventree Hall", 
+    "summary": "<p><b>Raventree Hall</b> is the seat of <a href=\"http://awoiaf.westeros.org/index.php/House_Blackwood\" title=\"House Blackwood\">House Blackwood</a>. It is located in <a href=\"http://awoiaf.westeros.org/index.php/Blackwood_Vale\" title=\"Blackwood Vale\">Blackwood Vale</a> in the <a href=\"http://awoiaf.westeros.org/index.php/Riverlands\" title=\"Riverlands\">Riverlands</a>."
+}

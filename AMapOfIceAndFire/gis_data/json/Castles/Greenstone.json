@@ -1,0 +1,11 @@
+{
+    "category": "Castles", 
+    "images": [
+        {
+            "url": "http://awoiaf.westeros.org/images/thumb/5/5f/The_Stormlands.png/400px-The_Stormlands.png", 
+            "caption": "The Stormlands and the location of Greenstone"
+        }
+    ], 
+    "name": "Greenstone", 
+    "summary": "<p><b>Greenstone</b> is the seat of <a href=\"http://awoiaf.westeros.org/index.php/House_Estermont\" title=\"House Estermont\">House Estermont</a> on the island of <a href=\"http://awoiaf.westeros.org/index.php/Estermont\" title=\"Estermont\">Estermont</a> in the <a href=\"http://awoiaf.westeros.org/index.php/Stormlands\" title=\"Stormlands\">Stormlands</a>."
+}

@@ -1,0 +1,15 @@
+{
+    "category": "Castles", 
+    "images": [
+        {
+            "url": "http://awoiaf.westeros.org/images/thumb/f/f5/Dorne.png/400px-Dorne.png", 
+            "caption": "Dorne and the location of Hellholt"
+        }, 
+        {
+            "url": "http://awoiaf.westeros.org/images/thumb/a/aa/Folko_Streese_Streets_of_Hellholt.jpg/350px-Folko_Streese_Streets_of_Hellholt.jpg", 
+            "caption": "Streets of Hellholt. \\xc2\\xa9 FFG"
+        }
+    ], 
+    "name": "Hellholt", 
+    "summary": "<p>The <b>Hellholt</b> is the seat of <a href=\"http://awoiaf.westeros.org/index.php/House_Uller\" title=\"House Uller\">House Uller</a> in southern <a href=\"http://awoiaf.westeros.org/index.php/Dorne\" title=\"Dorne\">Dorne</a>. It is located near the source of the river <a href=\"http://awoiaf.westeros.org/index.php/Brimstone\" title=\"Brimstone\">Brimstone</a>, east of <a href=\"http://awoiaf.westeros.org/index.php/Sandstone\" title=\"Sandstone\">Sandstone</a> and west of <a href=\"http://awoiaf.westeros.org/index.php/Vaith\" title=\"Vaith\">Vaith</a>.<sup id=\"cite_ref-0\" class=\"reference\"><a href=\"http://awoiaf.westeros.org/index.php/Hellholt#cite_note-0\">[1]</a></sup>"
+}

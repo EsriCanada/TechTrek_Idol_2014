@@ -1,0 +1,18 @@
+ArcGIS Online Service URLs
+==========================
+
+GoTFeatures_FINAL (Feature Service)
+http://cantechsupport.maps.arcgis.com/home/item.html?id=aea90f6d1d0641b0b5f2bd2f4d77cc19
+
+REST
+http://services.arcgis.com/EgePHk52tsFjmhbJ/ArcGIS/rest/services/GoTFeatures_FINAL/FeatureServer
+
+
+
+GoT_Basemap_FINAL (Tile Layer)
+http://cantechsupport.maps.arcgis.com/home/item.html?id=59048ed7b3b044e89e03473352779956
+
+
+
+GoT Web Map - FINAL (Web Map)
+http://cantechsupport.maps.arcgis.com/home/item.html?id=467f5ba8ee084363a54ed3792d3f7a79

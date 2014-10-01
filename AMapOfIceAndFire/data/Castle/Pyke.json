@@ -1,0 +1,27 @@
+{
+    "category": "Castles", 
+    "images": [
+        {
+            "url": "http://awoiaf.westeros.org/images/thumb/e/eb/Iron_Islands.png/300px-Iron_Islands.png", 
+            "caption": ""
+        }, 
+        {
+            "url": "http://awoiaf.westeros.org/images/thumb/f/fe/The_iron_islands_by_reneaigner.jpg/300px-The_iron_islands_by_reneaigner.jpg", 
+            "caption": "Pyke by Rene Aigner\\xc2\\xa9"
+        }, 
+        {
+            "url": "http://awoiaf.westeros.org/images/thumb/6/6a/PIKE_by_AbePapakhian.jpg/300px-PIKE_by_AbePapakhian.jpg", 
+            "caption": "Pyke by Abe Papakhian\\xc2\\xa9"
+        }, 
+        {
+            "url": "http://awoiaf.westeros.org/images/thumb/f/f5/Pyke_by_Feliche.jpg/300px-Pyke_by_Feliche.jpg", 
+            "caption": "Pyke by Feliche\\xc2\\xa9"
+        }, 
+        {
+            "url": "http://awoiaf.westeros.org/images/thumb/9/9d/Pyke_HBO.jpg/300px-Pyke_HBO.jpg", 
+            "caption": "Pyke in Game of Thrones"
+        }
+    ], 
+    "name": "Pyke", 
+    "summary": "<p><b>Pyke</b> is a castle located on <a href=\"http://awoiaf.westeros.org/index.php/Pyke_(island)\" title=\"Pyke (island)\">the island of the same name</a>, which is one of the eight major <a href=\"http://awoiaf.westeros.org/index.php/Iron_Islands\" title=\"Iron Islands\">Iron Islands</a>. It is the seat of <a href=\"http://awoiaf.westeros.org/index.php/House_Greyjoy\" title=\"House Greyjoy\">House Greyjoy</a>, the rulers of the Iron Islands."
+}
