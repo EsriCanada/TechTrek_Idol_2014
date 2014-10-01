@@ -2,6 +2,8 @@
 
 By: [Erica Morra](https://github.com/emorra), [Amr Eldib](https://github.com/AmrEldib), [Adam Marinelli](https://github.com/amarinelli).
 
+[Live Demo](http://amreldib.github.io/AMapOfIceAndFire/index.html)
+
 You may have read the books. You probably watched the show. But you definitely know about Game of Thrones. And, if there’s one thing to know, it’s that: it’s SO. DAMN. COMPLICATED. 
 
 …which is a good thing. We love you, Mr, Martin.
