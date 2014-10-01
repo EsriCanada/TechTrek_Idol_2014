@@ -1,0 +1,19 @@
+{
+    "category": "Cities", 
+    "images": [
+        {
+            "url": "http://awoiaf.westeros.org/images/thumb/7/72/Casterly_rock_by_feliche.jpg/400px-Casterly_rock_by_feliche.jpg", 
+            "caption": ""
+        }, 
+        {
+            "url": "http://awoiaf.westeros.org/images/thumb/7/7f/The_Westerlands.png/350px-The_Westerlands.png", 
+            "caption": ""
+        }, 
+        {
+            "url": "http://awoiaf.westeros.org/images/thumb/e/ef/Hall_of_Heroes.jpg/350px-Hall_of_Heroes.jpg", 
+            "caption": "The Hall of Heroes\\xc2\\xa9 Fantasy Flight Games"
+        }
+    ], 
+    "name": "Casterly Rock", 
+    "summary": "<p><b>Casterly Rock</b>, nicknamed <b>the Rock</b>, is a fortress and the seat of <a href=\"http://awoiaf.westeros.org/index.php/House_Lannister\" title=\"House Lannister\">House Lannister</a>. The capital of the <a href=\"http://awoiaf.westeros.org/index.php/Westerlands\" title=\"Westerlands\" class=\"mw-redirect\">Westerlands</a>, it overlooks the harbor of <a href=\"http://awoiaf.westeros.org/index.php/Lannisport\" title=\"Lannisport\">Lannisport</a> and the <a href=\"http://awoiaf.westeros.org/index.php/Sunset_Sea\" title=\"Sunset Sea\">Sunset Sea</a>. Nearby strongholds include <a href=\"http://awoiaf.westeros.org/index.php/Kayce\" title=\"Kayce\">Kayce</a> and <a href=\"http://awoiaf.westeros.org/index.php/Feastfires\" title=\"Feastfires\">Feastfires</a> to the west, <a href=\"http://awoiaf.westeros.org/index.php/Sarsfield\" title=\"Sarsfield\">Sarsfield</a> to the north, and <a href=\"http://awoiaf.westeros.org/index.php/Cornfield\" title=\"Cornfield\">Cornfield</a> and <a href=\"http://awoiaf.westeros.org/index.php/Clegane%27s_Keep\" title=\"Clegane's Keep\">Clegane's Keep</a> to the south."
+}

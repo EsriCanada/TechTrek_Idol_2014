@@ -1,0 +1,19 @@
+{
+    "category": "Castles", 
+    "images": [
+        {
+            "url": "http://awoiaf.westeros.org/images/thumb/f/f5/Dorne.png/350px-Dorne.png", 
+            "caption": ""
+        }, 
+        {
+            "url": "http://awoiaf.westeros.org/images/thumb/8/85/Sunspear.jpg/350px-Sunspear.jpg", 
+            "caption": "\\xc2\\xa9 Fantasy Flight Games"
+        }, 
+        {
+            "url": "http://awoiaf.westeros.org/images/thumb/6/63/Yann_Tiseron_The_Old_Palace.JPG/350px-Yann_Tiseron_The_Old_Palace.JPG", 
+            "caption": "The Old Palace. \\xc2\\xa9 Fantasy Flight Games"
+        }
+    ], 
+    "name": "Sunspear", 
+    "summary": "<p><b>Sunspear</b> is the ancient stronghold of <a href=\"http://awoiaf.westeros.org/index.php/House_Martell\" title=\"House Martell\">House Martell</a> and the capital of <a href=\"http://awoiaf.westeros.org/index.php/Dorne\" title=\"Dorne\">Dorne</a>. It is located on the far southeastern coast of <a href=\"http://awoiaf.westeros.org/index.php/Westeros\" title=\"Westeros\">Westeros</a> and is surrounded on three sides by the sea. The princely <a href=\"http://awoiaf.westeros.org/index.php/Water_Gardens\" title=\"Water Gardens\">Water Gardens</a> lie three leagues away on the coastal road."
+}

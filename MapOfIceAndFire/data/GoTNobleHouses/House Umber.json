@@ -1,0 +1,15 @@
+{
+    "category": "NobleHouses", 
+    "images": [
+        {
+            "url": "http://awoiaf.westeros.org/images/thumb/f/f2/Umbercrest.png/250px-Umbercrest.png", 
+            "caption": ""
+        }, 
+        {
+            "url": "http://awoiaf.westeros.org/images/thumb/1/1d/Diego_de_Almeida_Umber_Champion.JPG/300px-Diego_de_Almeida_Umber_Champion.JPG", 
+            "caption": "House Umber champion. \\xc2\\xa9 FFG"
+        }
+    ], 
+    "name": "House Umber", 
+    "summary": "<p><b>House Umber of the Last Hearth</b> is a noble house from <a href=\"http://awoiaf.westeros.org/index.php/Last_Hearth\" title=\"Last Hearth\">Last Hearth</a> in <a href=\"http://awoiaf.westeros.org/index.php/The_North\" title=\"The North\">the North</a>. They are sworn to <a href=\"http://awoiaf.westeros.org/index.php/Winterfell\" title=\"Winterfell\">Winterfell</a> and <a href=\"http://awoiaf.westeros.org/index.php/House_Stark\" title=\"House Stark\">House Stark</a>, to whom they are fiercely loyal. The head of the house is Lord <a href=\"http://awoiaf.westeros.org/index.php/Jon_Umber_(Greatjon)\" title=\"Jon Umber (Greatjon)\">Jon Umber</a>, called \"the Greatjon\"."
+}

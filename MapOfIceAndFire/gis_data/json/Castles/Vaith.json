@@ -1,0 +1,15 @@
+{
+    "category": "Castles", 
+    "images": [
+        {
+            "url": "http://awoiaf.westeros.org/images/thumb/f/f5/Dorne.png/400px-Dorne.png", 
+            "caption": "Dorne and the location of Vaith"
+        }, 
+        {
+            "url": "http://awoiaf.westeros.org/images/thumb/2/2e/Vaith.jpg/350px-Vaith.jpg", 
+            "caption": "Art by Cris Urdiales"
+        }
+    ], 
+    "name": "Vaith", 
+    "summary": "<p><b>Vaith</b> is the seat of <a href=\"http://awoiaf.westeros.org/index.php/House_Vaith\" title=\"House Vaith\">House Vaith</a> in <a href=\"http://awoiaf.westeros.org/index.php/Dorne\" title=\"Dorne\">Dorne</a>. It lies on the river <a href=\"http://awoiaf.westeros.org/index.php/Vaith_(river)\" title=\"Vaith (river)\">Vaith</a>.<sup id=\"cite_ref-0\" class=\"reference\"><a href=\"http://awoiaf.westeros.org/index.php/Vaith#cite_note-0\">[1]</a></sup> There is a town beneath its walls.<sup id=\"cite_ref-Rawoiaf_.22vaith_.28castle.29.22_entry.7B.7B.7B3.7D.7D.7D_1-0\" class=\"reference\"><a href=\"http://awoiaf.westeros.org/index.php/Vaith#cite_note-Rawoiaf_.22vaith_.28castle.29.22_entry.7B.7B.7B3.7D.7D.7D-1\">[2]</a></sup> West of Vaith are the deep sands of Dorne.<sup id=\"cite_ref-Raffc21.7B.7B.7B3.7D.7D.7D_2-0\" class=\"reference\"><a href=\"http://awoiaf.westeros.org/index.php/Vaith#cite_note-Raffc21.7B.7B.7B3.7D.7D.7D-2\">[3]</a></sup>"
+}

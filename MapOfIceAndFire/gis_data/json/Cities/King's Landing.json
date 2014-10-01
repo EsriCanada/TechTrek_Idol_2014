@@ -1,0 +1,27 @@
+{
+    "category": "Cities", 
+    "images": [
+        {
+            "url": "http://awoiaf.westeros.org/images/thumb/6/64/Tomasz_Jedruszek_Kings_Landing.jpg/400px-Tomasz_Jedruszek_Kings_Landing.jpg", 
+            "caption": ""
+        }, 
+        {
+            "url": "http://awoiaf.westeros.org/images/thumb/2/26/Crownlands.png/400px-Crownlands.png", 
+            "caption": "The Crownlands and the location of King\\'s Landing"
+        }, 
+        {
+            "url": "http://awoiaf.westeros.org/images/4/46/Kings_landing_map.png", 
+            "caption": "1Road to Rosby - 2Dragon Gate - 3Iron Gate - 4Dragonpit- 5: mansion of Shae - 6: brothel of Chataya - 7Old Gate - 8Flea Bottom - 9Red Keep - 10: Street of Sisters - 11Gate of the Gods - 12: Cobbler Square - 13Guildhall of the Alchemists - 14: The Hook - 15Great Sept of Baelor - 16: Muddy Way - 17: Fishmonger\\'s Square - 18River Gate - 19Tobho Mott\\'s store - 20: Street of Steel - 21: Harbor- 22Lion Gate - 23: River Row - 24: Fish Market - 25: Tourney ground - 26: The King\\'s Gate - 27Kingsroad"
+        }, 
+        {
+            "url": "http://awoiaf.westeros.org/images/thumb/b/bb/MarcFishman_KL_street.jpg/300px-MarcFishman_KL_street.jpg", 
+            "caption": "A street in King\\'s Landing - by Marc Fishman \\xc2\\xa9"
+        }, 
+        {
+            "url": "http://awoiaf.westeros.org/images/thumb/7/72/Tyrion_in_Kings_landing_by_MarcSimonetti.jpg/250px-Tyrion_in_Kings_landing_by_MarcSimonetti.jpg", 
+            "caption": "Tyrion in King\\'s Landing - by MarcSimonetti \\xc2\\xa9"
+        }
+    ], 
+    "name": "King's Landing", 
+    "summary": "<p><b>King's Landing</b> is the capital of the <a href=\"http://awoiaf.westeros.org/index.php/Seven_Kingdoms\" title=\"Seven Kingdoms\">Seven Kingdoms</a>, located in the <a href=\"http://awoiaf.westeros.org/index.php/Crownlands\" title=\"Crownlands\">Crownlands</a> on the east coast of <a href=\"http://awoiaf.westeros.org/index.php/Westeros\" title=\"Westeros\">Westeros</a>. It is situated along the <a href=\"http://awoiaf.westeros.org/index.php/Kingsroad\" title=\"Kingsroad\">kingsroad</a> at the mouth of the <a href=\"http://awoiaf.westeros.org/index.php/Blackwater_Rush\" title=\"Blackwater Rush\">Blackwater Rush</a> and overlooks <a href=\"http://awoiaf.westeros.org/index.php/Blackwater_Bay\" title=\"Blackwater Bay\">Blackwater Bay</a>. It is the site of the <a href=\"http://awoiaf.westeros.org/index.php/Iron_Throne\" title=\"Iron Throne\">Iron Throne</a> and the <a href=\"http://awoiaf.westeros.org/index.php/Red_Keep\" title=\"Red Keep\">Red Keep</a>, which is the seat of the king, <a href=\"http://awoiaf.westeros.org/index.php/Robert_Baratheon\" title=\"Robert Baratheon\">Robert Baratheon</a> from <a href=\"http://awoiaf.westeros.org/index.php/House_Baratheon_of_King%27s_Landing\" title=\"House Baratheon of King's Landing\">House Baratheon of King's Landing</a>."
+}

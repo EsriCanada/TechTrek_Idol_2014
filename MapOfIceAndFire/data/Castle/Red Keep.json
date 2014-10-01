@@ -1,0 +1,27 @@
+{
+    "category": "Castles", 
+    "images": [
+        {
+            "url": "http://awoiaf.westeros.org/images/thumb/2/22/Red_Keep.jpg/400px-Red_Keep.jpg", 
+            "caption": "The Red Keep as depicted in Game of Thrones"
+        }, 
+        {
+            "url": "http://awoiaf.westeros.org/images/thumb/9/98/Red_Keep_Dragon_Cellar_by_Kim_Pope.jpg/300px-Red_Keep_Dragon_Cellar_by_Kim_Pope.jpg", 
+            "caption": "Dragon skulls in the Red Keep cellars\\xc2\\xa9 Fantasy Flight Games"
+        }, 
+        {
+            "url": "http://awoiaf.westeros.org/images/thumb/a/af/Tower_of_the_Hand.jpg/300px-Tower_of_the_Hand.jpg", 
+            "caption": "Tower of the Hand\\xc2\\xa9 Fantasy Flight Games"
+        }, 
+        {
+            "url": "http://awoiaf.westeros.org/images/thumb/1/11/White_Sword_Tower.jpg/300px-White_Sword_Tower.jpg", 
+            "caption": "The White Sword Tower\\xc2\\xa9 Fantasy Flight Games"
+        }, 
+        {
+            "url": "http://awoiaf.westeros.org/images/thumb/c/c3/Red_Keep_tunnels.jpg/300px-Red_Keep_tunnels.jpg", 
+            "caption": "Red Keep underground secret passages\\xc2\\xa9 Fantasy Flight Games"
+        }
+    ], 
+    "name": "Red Keep", 
+    "summary": "<p>The <b>Red Keep</b> is a castle and the home of the kings of the <a href=\"http://awoiaf.westeros.org/index.php/Seven_Kingdoms\" title=\"Seven Kingdoms\">Seven Kingdoms</a>. It located in <a href=\"http://awoiaf.westeros.org/index.php/King%27s_Landing\" title=\"King's Landing\">King's Landing</a>, the capital of the Seven Kingdoms, where it sits on <a href=\"http://awoiaf.westeros.org/index.php/Aegon%27s_Hill\" title=\"Aegon's Hill\" class=\"mw-redirect\">Aegon's Hill</a>."
+}

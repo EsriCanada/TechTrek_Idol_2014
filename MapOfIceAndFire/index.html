@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
+
+    <title>A Map of Ice and Fire</title>
+
+    <link href="http://js.arcgis.com/3.10/js/dojo/dijit/themes/claro/claro.css" rel="stylesheet" />
+    <link href="http://js.arcgis.com/3.10/js/esri/css/esri.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+
+    <!-- Add jQuery library -->
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+
+    <!-- Add fancyBox -->
+    <link rel="stylesheet" href="lib/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+    <script type="text/javascript" src="lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+    <!-- Optionally add helpers - button, thumbnail and/or media -->
+    <link rel="stylesheet" href="lib/fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" media="screen" />
+    <script src="lib/fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+    <script src="lib/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+
+    <script src="http://js.arcgis.com/3.10/"></script>
+    <script src="script/map.js"></script>
+    
+</head>
+
+<body class="claro">
+    <div id="mapDiv">
+        <div id="panel" class="topRightFloatingContainer">
+            <div class="popBody">
+                <div class="popBodyContent">
+                    <div id="popSummary"></div>
+                </div>
+            </div>
+            
+            <div id="popTitle" class="popTitle"></div>
+        </div>
+
+        <ul style="list-style: none;">
+            <li>
+                <a class="credits" href="#creditsPopup"><img src="images/CreativeCommonsLogo.png" /></a>
+            </li>
+        </ul>
+        <div id="creditsPopup" style="width:400px;display: none;">
+            <h2>A Map of Ice and Fire</h2>
+            <h3>The known world of 'A Song of Ice and Fire' fantasy novel.</h3>
+            <p>
+                Intellectual property of <i>A Song of Ice and Fire</i>, and all locations copyright <b>George RR Martain</b>.<br/>
+                This map was created based on the work of <a href="http://www.sermountaingoat.co.uk/map/" target="_blank"><i>theMountainGoat</i></a> and <a href="http://www.cartographersguild.com/finished-maps/6683-westeros-fan-project.html" target="_blank"><i>Tear</i> of the <i>Cartographer's Guild</i></a>. It's offered under the <b>Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</b>.<br/>
+            </p>
+            <br/>
+            <p>
+                This map and application was created by: <a href="http://www.amreldib.com" target="_blank">Amr Eldib</a>, <a href="https://www.linkedin.com/pub/adam-marinelli/29/627/510" target="_blank">Adam Marinelli</a> and <a href="https://www.linkedin.com/pub/erica-morra/34/a83/874" target="_blank">Erica Morra</a>.<br />
+                This map was created by digitizing the original work to convert it into Vector format before cartography work and data preparation. The work was done using Esri software. The data is hosted on ArcGIS Online.<br />
+                This map is offered under the <b>Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</b>. You are free to Share and Remix. You must attribute the work to its original creators. You may NOT use this work for commercial purposes. Your resulting work may be distributed under the same or similar license. Thank you.<br />
+            </p>
+        </div>
+    </div>
+</body>
+</html>
