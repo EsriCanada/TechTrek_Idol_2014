@@ -2,7 +2,7 @@
 
 App:
 
-!(https://github.com/adambodnar/TechTrek_Idol_2014/blob/master/CuttingsFinest/plugmyride/Code/images/splash.png)
+![My image](https://github.com/adambodnar/TechTrek_Idol_2014/blob/master/CuttingsFinest/plugmyride/Code/images/splash.png)
 
 * [Demo](http://74.216.225.103/plugmyride)
 
@@ -18,7 +18,7 @@ Welcome to Plug My Ride.
 
 Enjoy freedom with your electric vehicle. There are more charging stations available every day.  Let Plug My Ride help you discover how your lifestyle will ride in an electric vehicle!
 
-It’s easy. Just choose your vehicle, starting point and destination. Plug My Ride will show you the best route with stops for charging, as well a visual representation of a single charge driving range for the vehicle.
+It’s easy. Just choose your vehicle, starting point and destination. <img href="https://github.com/adambodnar/TechTrek_Idol_2014/blob/master/CuttingsFinest/plugmyride/Code/images/input.png"></img>Plug My Ride will show you the best route with stops for charging, as well a visual representation of a single charge driving range for the vehicle.
 
 Let’s go exploring.
 
