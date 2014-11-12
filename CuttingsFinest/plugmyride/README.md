@@ -28,9 +28,11 @@ Plug My Ride will show you the best route with stops for charging, as well a vis
 
 Let’s go exploring.
 
+Note: Each analysis will consume 1 AGOL credit and requires signin with a valid AGOL account
+
 ![My image](https://github.com/adambodnar/TechTrek_Idol_2014/blob/master/CuttingsFinest/plugmyride/Code/images/result.png)
 
-Note: Each analysis will consume 1 AGOL credit and requires signin with a valid AGOL account
+
 
 ## Why this app is cool
 
