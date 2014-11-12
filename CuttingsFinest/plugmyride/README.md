@@ -2,7 +2,7 @@
 
 App:
 
-![My image](https://github.com/EsriCanada/TechTrek_Idol_2014/blob/master/CuttingsFinest/plugmyride/Code/images/Electric-Current.gif)
+![My image](https://github.com/adambodnar/TechTrek_Idol_2014/blob/master/CuttingsFinest/plugmyride/Code/images/splash.png)
 
 * [Plug My Ride](http://74.216.225.103/plugmyride)
 
@@ -22,6 +22,7 @@ It’s easy. Just choose your vehicle, starting point and destination. Plug My R
 
 Let’s go exploring.
 
+![My image](https://github.com/adambodnar/TechTrek_Idol_2014/blob/master/CuttingsFinest/plugmyride/Code/images/result.png)
 
 Note: Each analysis will consume 1 AGOL credit and requires signin with a valid AGOL account
 
