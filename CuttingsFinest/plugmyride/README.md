@@ -2,9 +2,9 @@
 
 App:
 
-![My image](https://github.com/adambodnar/TechTrek_Idol_2014/blob/master/CuttingsFinest/plugmyride/Code/images/splash.png)
+!(https://github.com/adambodnar/TechTrek_Idol_2014/blob/master/CuttingsFinest/plugmyride/Code/images/splash.png)
 
-* [Plug My Ride](http://74.216.225.103/plugmyride)
+* [Demo](http://74.216.225.103/plugmyride)
 
 Team Members:
 
