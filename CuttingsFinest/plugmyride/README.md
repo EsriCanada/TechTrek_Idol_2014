@@ -1,8 +1,10 @@
 # Cutting's Finest
 
-App:
+<p align="center">
+  <img src="https://github.com/adambodnar/TechTrek_Idol_2014/blob/master/CuttingsFinest/plugmyride/Code/images/splash.png" alt="Plug My Ride"/>
+</p>
 
-* [Plug My Ride](http://74.216.225.103/plugmyride)
+* [Demo](http://74.216.225.103/plugmyride)
 
 Team Members:
 
@@ -11,17 +13,26 @@ Team Members:
 * Simon Biickert
 
 ## Description
-
+<div style="z-index:1000;height:757px;width:398px;background-size:100%;position:relative;float:left;margin-right:30px;margin-left:20px;">
+  <img src="https://github.com/adambodnar/TechTrek_Idol_2014/blob/master/CuttingsFinest/plugmyride/Code/images/input.png" width="343px" style="padding-top:90px;padding-left:28px;overflow:hidden;position:absolute;" align="right"></img>
+</div>
 Welcome to Plug My Ride.
 
 Enjoy freedom with your electric vehicle. There are more charging stations available every day.  Let Plug My Ride help you discover how your lifestyle will ride in an electric vehicle!
 
-It’s easy. Just choose your vehicle, starting point and destination. Plug My Ride will show you the best route with stops for charging, as well a visual representation of a single charge driving range for the vehicle.
+It’s easy. Just choose your vehicle, starting point and destination. 
+
+
+
+Plug My Ride will show you the best route with stops for charging, as well a visual representation of a single charge driving range for the vehicle.
 
 Let’s go exploring.
 
-
 Note: Each analysis will consume 1 AGOL credit and requires signin with a valid AGOL account
+
+![My image](https://github.com/adambodnar/TechTrek_Idol_2014/blob/master/CuttingsFinest/plugmyride/Code/images/result.png)
+
+
 
 ## Why this app is cool
 
